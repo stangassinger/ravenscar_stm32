@@ -34,7 +34,7 @@
 --  (Ravenscar version)
 
 with System.Tasking;
-with System.OS_Interface;
+--  with System.OS_Interface;
 
 package System.Tasking.Debug is
    pragma Preelaborate;

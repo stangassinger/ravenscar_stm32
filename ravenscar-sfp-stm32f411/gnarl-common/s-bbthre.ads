@@ -42,7 +42,7 @@ with System;
 with System.Parameters;
 with System.BB.CPU_Primitives;
 with System.BB.Time;
-with System.BB.Interrupts;
+--  with System.BB.Interrupts;
 with System.Multiprocessors;
 with System.BB.CPU_Primitives.Multiprocessors;
 

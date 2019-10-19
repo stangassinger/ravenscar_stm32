@@ -26,11 +26,11 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Interfaces;
+--  with Interfaces;
 
 package body System.Multiprocessors.Spin_Locks is
 
-   use Interfaces;
+--   use Interfaces;
 
    ----------
    -- Lock --

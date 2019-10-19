@@ -39,7 +39,7 @@
 --  It is made a child of System to allow visibility of various
 --  runtime system internal data and operations.
 
-with System.Tasking.Protected_Objects.Single_Entry;
+with System.Tasking;
 
 with System.OS_Interface;
 --  used for Max_Interrupt
