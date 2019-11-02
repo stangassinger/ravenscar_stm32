@@ -37,7 +37,7 @@
 
 package body Ada.Strings.Maps is
 
-   use Ada.Characters.Latin_1;
+--   use Ada.Characters.Latin_1;
 
    ---------
    -- "-" --

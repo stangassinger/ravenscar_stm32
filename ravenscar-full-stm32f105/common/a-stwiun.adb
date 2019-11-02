@@ -35,7 +35,7 @@ with Ada.Unchecked_Deallocation;
 
 package body Ada.Strings.Wide_Unbounded is
 
-   use Ada.Finalization;
+--   use Ada.Finalization;
 
    ---------
    -- "&" --

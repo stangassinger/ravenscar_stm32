@@ -45,7 +45,7 @@ with System.BB.Time;
 
 package body System.BB.Interrupts is
 
-   use System.Multiprocessors;
+--    use System.Multiprocessors;
    use System.BB.Board_Support.Multiprocessors;
    use System.BB.Threads;
    use System.BB.Time;

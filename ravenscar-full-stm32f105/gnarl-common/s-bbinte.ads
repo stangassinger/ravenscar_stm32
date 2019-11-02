@@ -41,7 +41,7 @@ pragma Restrictions (No_Elaboration_Code);
 
 with System;
 with System.BB.Parameters;
-with System.Multiprocessors;
+--  with System.Multiprocessors;
 
 package System.BB.Interrupts is
    pragma Preelaborate;

@@ -2,7 +2,7 @@ with "runtime_build.gpr";
 
 project Ravenscar_Build is
   for Create_Missing_Dirs use "True";
-  for Languages use ("Ada", "C", "Asm_Cpp");
+  for Languages use ("Ada");
 
   for Library_Auto_Init use "False";
   for Library_Name use "gnarl";

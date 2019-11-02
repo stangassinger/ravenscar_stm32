@@ -32,7 +32,7 @@
 --  This is a bare board implementation of this package
 
 with System.BB.CPU_Primitives;
-with System.BB.Parameters;     use System.BB.Parameters;
+--  with System.BB.Parameters;     use System.BB.Parameters;
 with System.Tasking;
 
 package body System.Init is

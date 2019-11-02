@@ -37,7 +37,7 @@ pragma Restrictions (No_Elaboration_Code);
 --  We want to guarantee the absence of elaboration code because the binder
 --  does not handle references to this package.
 
-with System.Parameters;
+--  with System.Parameters;
 with System.BB.Interrupts;
 
 package body System.BB.Threads.Stack_Checking is

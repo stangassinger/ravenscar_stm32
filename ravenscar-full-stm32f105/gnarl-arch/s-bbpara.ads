@@ -40,7 +40,7 @@
 
 pragma Restrictions (No_Elaboration_Code);
 
-with Interfaces.STM32.RCC;
+--  with Interfaces.STM32.RCC;
 with System.STM32;
 with System.BB.Board_Parameters;
 with System.BB.MCU_Parameters;
