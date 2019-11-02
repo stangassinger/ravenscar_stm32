@@ -1,1 +1,1 @@
-gprbuild --target=arm-eabi  -P ravenscar-sfp-stm32f411/ravenscar_build.gpr
+gprbuild --target=arm-eabi  -P  ravenscar-full-stm32f105/ravenscar_build.gpr
