@@ -61,7 +61,7 @@ package body System.Tasking.Restricted.Stages is
 
    use System.Secondary_Stack;
    use System.Task_Primitives.Operations;
-   use System.Task_Info;
+--   use System.Task_Info;
 
    Tasks_Activation_Chain : Task_Id;
    --  Chain of all the tasks to activate, when the sequential elaboration

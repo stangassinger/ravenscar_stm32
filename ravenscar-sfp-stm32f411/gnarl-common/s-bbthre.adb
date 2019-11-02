@@ -37,11 +37,12 @@
 pragma Restrictions (No_Elaboration_Code);
 
 with System.Storage_Elements;
-with System.BB.Parameters;
+--  with System.BB.Parameters;
 with System.BB.Board_Support;
 with System.BB.Protection;
 with System.BB.Threads.Queues;
 
+with System.BB.Interrupts;
 with Ada.Unchecked_Conversion;
 
 package body System.BB.Threads is
@@ -50,11 +51,11 @@ package body System.BB.Threads is
    use System.BB.CPU_Primitives;
    use System.BB.CPU_Primitives.Multiprocessors;
    use System.BB.Time;
-   use System.BB.Parameters;
-   use Board_Support;
+--   use System.BB.Parameters;
+--   use Board_Support;
 
-   use type System.Address;
-   use type System.Parameters.Size_Type;
+--   use type System.Address;
+--   use type System.Parameters.Size_Type;
    use type System.Storage_Elements.Storage_Offset;
 
    Slave_Stack_Size : constant System.Storage_Elements.Storage_Count := 1024;

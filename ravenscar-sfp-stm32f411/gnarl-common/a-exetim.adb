@@ -36,7 +36,7 @@ with Ada.Unchecked_Conversion;
 
 with System.Tasking;
 with System.Task_Primitives.Operations;
-with System.OS_Interface; use System.OS_Interface;
+--  with System.OS_Interface; use System.OS_Interface;
 
 with System.BB.Execution_Time;
 with System.BB.Time;
@@ -130,7 +130,7 @@ package body Ada.Execution_Time is
       SC : out Ada.Real_Time.Seconds_Count;
       TS : out Ada.Real_Time.Time_Span)
    is
-      use type Ada.Real_Time.Time;
+--  use type Ada.Real_Time.Time;
    begin
       Ada.Real_Time.Split (Ada.Real_Time.Time (T), SC, TS);
    end Split;

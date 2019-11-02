@@ -27,8 +27,8 @@
 ------------------------------------------------------------------------------
 
 with System.BB.Parameters;
-with System.BB.Board_Support;
-with System.BB.Threads.Queues;
+--  with System.BB.Board_Support;
+--  with System.BB.Threads.Queues;
 with System.BB.Protection;
 
 with System.Multiprocessors;
@@ -61,7 +61,7 @@ package body System.BB.Execution_Time is
    CPU_Clock : array (CPU) of System.BB.Time.Time;
    --  Date of the last Interrupt
 
-   Disabled : array (CPU) of Boolean := (1 => False, others => True);
+   Disabled : array (CPU) of Boolean := (1 => False);
    --  If the CPU clock is disabled the next elapsed time will be discarded (to
    --  handle CPU idle time). At the start, only the first CPU is enabled.
 

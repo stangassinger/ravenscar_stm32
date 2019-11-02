@@ -38,7 +38,7 @@ pragma Restrictions (No_Elaboration_Code);
 
 with System.BB.CPU_Primitives;
 with System.BB.Parameters;
-with System.BB.Board_Support;
+--  with System.BB.Board_Support;
 with System.BB.Threads;
 with System.BB.Time;
 
