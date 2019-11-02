@@ -39,9 +39,10 @@
 --  It is made a child of System to allow visibility of various
 --  runtime system internal data and operations.
 
-with System.Tasking.Protected_Objects.Single_Entry;
+--  with System.Tasking.Protected_Objects.Single_Entry;
 
 with System.OS_Interface;
+with System.Tasking;
 --  used for Max_Interrupt
 
 package System.Interrupts is

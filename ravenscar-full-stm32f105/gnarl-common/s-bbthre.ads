@@ -42,7 +42,7 @@ with System;
 with System.Storage_Elements;
 with System.BB.CPU_Primitives;
 with System.BB.Time;
-with System.BB.Interrupts;
+--  with System.BB.Interrupts;
 with System.BB.Board_Support;
 with System.Multiprocessors;
 

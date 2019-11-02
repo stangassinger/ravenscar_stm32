@@ -37,7 +37,7 @@
 pragma Restrictions (No_Elaboration_Code);
 
 with System.Parameters;
-with System.BB.Parameters;
+--  with System.BB.Parameters;
 with System.BB.Protection;
 with System.BB.Threads.Queues;
 
@@ -49,11 +49,11 @@ package body System.BB.Threads is
    use System.BB.CPU_Primitives;
    use System.BB.Board_Support.Multiprocessors;
    use System.BB.Time;
-   use System.BB.Parameters;
+--   use System.BB.Parameters;
    use Board_Support;
 
-   use type System.Address;
-   use type System.Parameters.Size_Type;
+--   use type System.Address;
+--   use type System.Parameters.Size_Type;
    use type System.Storage_Elements.Storage_Offset;
 
    procedure Initialize_Thread
@@ -221,7 +221,7 @@ package body System.BB.Threads is
 
       --  First initialize interrupt stacks
 
-      Interrupts.Initialize_Interrupts;
+--      Interrupts.Initialize_Interrupts;
 
       --  Then the CPU (which set interrupt stack pointer)
 

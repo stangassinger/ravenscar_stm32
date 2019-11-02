@@ -34,6 +34,7 @@ with System.BB.Threads.Queues;
 with System.BB.Protection;
 with System.BB.Timing_Events;
 with System.BB.Time;
+with System.Multiprocessors;
 
 package body System.BB.CPU_Primitives.Multiprocessors is
    use System.Multiprocessors;
@@ -58,7 +59,7 @@ package body System.BB.CPU_Primitives.Multiprocessors is
    ------------------
 
    procedure Poke_Handler is
-      use type Threads.Thread_States;
+--      use type Threads.Thread_States;
 
       Now : Time.Time;
 

@@ -31,7 +31,7 @@
 
 --  This is the generic bare board version of this package
 
-with System.Task_Primitives.Operations;
+--  with System.Task_Primitives.Operations;
 
 package body Ada.Synchronous_Task_Control with
   SPARK_Mode => Off

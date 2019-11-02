@@ -38,7 +38,7 @@ pragma Restrictions (No_Elaboration_Code);
 
 with System.BB.CPU_Primitives;
 with System.BB.Parameters;
-with System.BB.Board_Support;
+--  with System.BB.Board_Support;
 with System.BB.Threads;
 with System.BB.Time;
 
@@ -74,7 +74,7 @@ package body System.BB.Protection is
 
    procedure Leave_Kernel is
       use System.BB.Time;
-      use type System.BB.Threads.Thread_Id;
+--      use type System.BB.Threads.Thread_Id;
       use type System.BB.Threads.Thread_States;
 
    begin

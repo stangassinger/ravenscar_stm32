@@ -27,7 +27,7 @@
 ------------------------------------------------------------------------------
 
 with System.BB.Parameters;
-with System.BB.Protection;
+--  with System.BB.Protection;
 with System.BB.Threads;
 with System.BB.Threads.Queues;
 with System.BB.Board_Support;

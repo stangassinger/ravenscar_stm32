@@ -35,7 +35,7 @@
 
 --  This is the generic bare board version of this package
 
-with System.Tasking;
+--  with System.Tasking;
 
 with Ada.Task_Identification;
 

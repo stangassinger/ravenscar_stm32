@@ -43,7 +43,7 @@ with System.BB.Parameters;
 with System.BB.Threads.Queues;
 with System.BB.Timing_Events;
 with System.Multiprocessors.Fair_Locks;
-with System.Multiprocessors.Spin_Locks;
+--  with System.Multiprocessors.Spin_Locks;
 
 package body System.BB.Time is
 
@@ -52,7 +52,7 @@ package body System.BB.Time is
    use Board_Support.Multiprocessors;
    use System.Multiprocessors;
    use System.Multiprocessors.Fair_Locks;
-   use System.Multiprocessors.Spin_Locks;
+--   use System.Multiprocessors.Spin_Locks;
    use Threads, Threads.Queues;
 
    -----------------------

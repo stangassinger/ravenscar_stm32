@@ -130,7 +130,7 @@ package body Ada.Execution_Time is
       SC : out Ada.Real_Time.Seconds_Count;
       TS : out Ada.Real_Time.Time_Span)
    is
-      use type Ada.Real_Time.Time;
+--      use type Ada.Real_Time.Time;
    begin
       Ada.Real_Time.Split (Ada.Real_Time.Time (T), SC, TS);
    end Split;

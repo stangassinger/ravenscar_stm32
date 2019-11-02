@@ -42,7 +42,7 @@ pragma Restrictions (No_Elaboration_Code);
 
 with System.Multiprocessors;
 with System.BB.Interrupts;
-with System.BB.CPU_Primitives;
+--  with System.BB.CPU_Primitives;
 with System.BB.Time;
 
 package System.BB.Board_Support is

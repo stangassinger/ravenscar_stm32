@@ -37,6 +37,7 @@
 with System.Machine_Code;
 
 with System.BB.Parameters; use System.BB.Parameters;
+with System.BB.CPU_Primitives;
 
 package body System.BB.Board_Support is
    use CPU_Primitives, BB.Interrupts, Machine_Code, Time;

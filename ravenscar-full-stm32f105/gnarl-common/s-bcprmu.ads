@@ -28,7 +28,7 @@
 
 pragma Restrictions (No_Elaboration_Code);
 
-with System.Multiprocessors;
+--  with System.Multiprocessors;
 
 package System.BB.CPU_Primitives.Multiprocessors is
    pragma Preelaborate;

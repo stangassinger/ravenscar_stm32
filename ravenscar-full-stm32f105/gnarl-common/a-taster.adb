@@ -53,7 +53,7 @@ package body Ada.Task_Termination is
 
    use System.Task_Primitives.Operations;
 
-   use type Ada.Task_Identification.Task_Id;
+--   use type Ada.Task_Identification.Task_Id;
 
    function To_TT is new Unchecked_Conversion
      (System.Tasking.Termination_Handler, Termination_Handler);
