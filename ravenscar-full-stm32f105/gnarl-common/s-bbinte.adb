@@ -42,10 +42,11 @@ with System.BB.Threads;
 with System.BB.Threads.Queues;
 with System.BB.Board_Support;
 with System.BB.Time;
+with System.Multiprocessors;
 
 package body System.BB.Interrupts is
 
---    use System.Multiprocessors;
+   use System.Multiprocessors;
    use System.BB.Board_Support.Multiprocessors;
    use System.BB.Threads;
    use System.BB.Time;
