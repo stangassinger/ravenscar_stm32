@@ -1,0 +1,1 @@
+/home/abc/bb-runtimes/arm/stm32/s-stm32.ads

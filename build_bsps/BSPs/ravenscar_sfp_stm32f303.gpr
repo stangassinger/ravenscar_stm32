@@ -1,0 +1,33 @@
+aggregate project Ravenscar_Sfp_Stm32F303 is
+
+   Base_BSP_Source_Dir   := Project'Project_Dir & "cortex-m/armv7-m/stm32/stm32f303/";
+   Base_Installation_Dir := "arm-eabi/lib/gnat/";
+   Board                 := "stm32f303";
+   Default_Prefix        := 
+     Base_Installation_Dir & "ravenscar-sfp-" & Board;
+   Install_Dir           := external ("PREFIX", Default_Prefix);
+
+   for external ("Add_Image_Enum") use "yes";
+   for external ("CPU_Family") use "arm";
+   for external ("Has_FPU") use "yes";
+   for external ("Has_libc") use "no";
+   for external ("Memory_Profile") use "small";
+   for external ("RTS_Profile") use "ravenscar-sfp";
+   for external ("Text_IO") use "semihosting";
+   for external ("Timer") use "timer32";
+
+   for external ("INSTALL_PREFIX") use Install_Dir;
+
+   for Target use "arm-eabi";
+   for Runtime ("Ada") use Base_BSP_Source_Dir &
+       "ravenscar-sfp";
+
+   for Project_Path use
+     (Base_BSP_Source_Dir & "ravenscar-sfp",
+      "../lib/gnat");
+   for Project_Files use
+     (Base_BSP_Source_Dir & "ravenscar-sfp/libgnat.gpr",
+      Base_BSP_Source_Dir & "ravenscar-sfp/libgnarl.gpr",
+      Base_BSP_Source_Dir & "ravenscar-sfp/install.gpr");
+
+end Ravenscar_Sfp_Stm32F303;

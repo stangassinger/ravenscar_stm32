@@ -1,0 +1,1 @@
+/home/abc/bb-runtimes/arm/stm32/stm32f303/svd/i-stm32-usart.ads
