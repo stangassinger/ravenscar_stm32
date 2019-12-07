@@ -613,6 +613,8 @@ class Stm32(ArmV7MTarget):
     def cortex(self):
         if self.mcu.startswith('stm32f4'):
             return 'cortex-m4'
+        elif self.mcu.startswith('stm32f303'):
+            return 'cortex-m4'
         elif self.mcu.startswith('stm32f7'):
             return 'cortex-m7'
         else:
@@ -641,6 +643,8 @@ class Stm32(ArmV7MTarget):
             self.mcu = 'stm32f40x'
         elif self.board == 'stm32f429disco':
             self.mcu = 'stm32f429x'
+        elif self.board == 'stm32f303':
+            self.mcu = 'stm32f303'
         elif self.board == 'openmv2':
             self.mcu = 'stm32f429x'
         elif self.board == 'stm32f469disco':
