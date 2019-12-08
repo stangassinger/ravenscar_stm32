@@ -1,1 +1,0 @@
-/home/abc/bb-runtimes/arm/stm32/start-common.S

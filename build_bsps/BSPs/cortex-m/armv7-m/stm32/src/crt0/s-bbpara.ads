@@ -1,1 +1,0 @@
-/home/abc/bb-runtimes/src/s-bbpara__stm32f4.ads

@@ -1,1 +1,0 @@
-/home/abc/bb-runtimes/arm/stm32/common-RAM.ld
