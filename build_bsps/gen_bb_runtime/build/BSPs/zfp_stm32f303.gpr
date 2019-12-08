@@ -1,0 +1,29 @@
+aggregate project Zfp_Stm32F303 is
+
+   Base_BSP_Source_Dir   := Project'Project_Dir & "cortex-m/armv7-m/stm32/stm32f303/";
+   Base_Installation_Dir := "arm-eabi/lib/gnat/";
+   Board                 := "stm32f303";
+   Default_Prefix        := 
+     Base_Installation_Dir & "zfp-" & Board;
+   Install_Dir           := external ("PREFIX", Default_Prefix);
+
+   for external ("Has_FPU") use "yes";
+   for external ("Has_libc") use "no";
+   for external ("Memory_Profile") use "small";
+   for external ("RTS_Profile") use "zfp";
+   for external ("Text_IO") use "semihosting";
+
+   for external ("INSTALL_PREFIX") use Install_Dir;
+
+   for Target use "arm-eabi";
+   for Runtime ("Ada") use Base_BSP_Source_Dir &
+       "zfp";
+
+   for Project_Path use
+     (Base_BSP_Source_Dir & "zfp",
+      "../lib/gnat");
+   for Project_Files use
+     (Base_BSP_Source_Dir & "zfp/libgnat.gpr",
+      Base_BSP_Source_Dir & "zfp/install.gpr");
+
+end Zfp_Stm32F303;
