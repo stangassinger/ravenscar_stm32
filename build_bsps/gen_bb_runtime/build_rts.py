@@ -14,7 +14,7 @@ from support.rts_sources.sources import all_scenarios, sources
 from support.docgen import docgen
 
 # PikeOS
-from pikeos import ArmPikeOS, ArmPikeOS42
+## from pikeos import ArmPikeOS, ArmPikeOS42
 
 # Cortex-M runtimes
 from arm.cortexm import Stm32, Sam, SmartFusion2, LM3S, M1AGL, Microbit, \
@@ -26,22 +26,22 @@ from arm.cortexm import Stm32, Sam, SmartFusion2, LM3S, M1AGL, Microbit, \
 from arm.cortexar import TMS570, Rpi2, Rpi2Mc, Zynq7000
 
 # Aarch64
-from aarch64 import Rpi3, Rpi3Mc, ZynqMP
+## from aarch64 import Rpi3, Rpi3Mc, ZynqMP
 
 # leon
-from sparc import Leon2, Leon3, Leon4
+## from sparc import Leon2, Leon3, Leon4
 
 # powerpc
-from powerpc import MPC8641, MPC8349e, P2020, P5566, P5634
+## from powerpc import MPC8641, MPC8349e, P2020, P5566, P5634
 
 # riscv
-from riscv import Spike, Unleashed, HiFive1, PicoRV32, RV32IMC
+## from riscv import Spike, Unleashed, HiFive1, PicoRV32, RV32IMC
 
 # visium
-from visium import Visium
+## from visium import Visium
 
 # native
-from native import X86Native, X8664Native
+## from native import X86Native, X8664Native
 
 import getopt
 import os
