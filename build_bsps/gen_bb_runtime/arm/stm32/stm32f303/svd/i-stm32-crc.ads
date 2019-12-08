@@ -2,7 +2,7 @@
 --  Copyright (C) 2019, AdaCore
 --
 
---  This spec has been automatically generated from stm32f303.svd
+--  This spec has been automatically generated from STM32F30x.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);

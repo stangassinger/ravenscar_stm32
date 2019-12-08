@@ -2,7 +2,7 @@
 --  Copyright (C) 2019, AdaCore
 --
 
---  This spec has been automatically generated from stm32f303.svd
+--  This spec has been automatically generated from STM32F30x.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -509,13 +509,5 @@ package Interfaces.STM32.GPIO is
    --  General-purpose I/Os
    GPIOF_Periph : aliased GPIO_Peripheral
      with Import, Address => GPIOF_Base;
-
-   --  General-purpose I/Os
-   GPIOG_Periph : aliased GPIO_Peripheral
-     with Import, Address => GPIOG_Base;
-
-   --  General-purpose I/Os
-   GPIOH_Periph : aliased GPIO_Peripheral
-     with Import, Address => GPIOH_Base;
 
 end Interfaces.STM32.GPIO;

@@ -2,9 +2,9 @@
 --  Copyright (C) 2019, AdaCore
 --
 
---  This spec has been automatically generated from stm32f303.svd
+--  This spec has been automatically generated from STM32F30x.svd
 
---  This is a version for the STM32F303 MCU
+--  This is a version for the STM32F30x MCU
 package Ada.Interrupts.Names is
 
    --  All identifiers in this unit are implementation defined
@@ -162,9 +162,6 @@ package Ada.Interrupts.Names is
    --  ADC3 global interrupt
    ADC3_Interrupt                : constant Interrupt_ID := 47;
 
-   --  FSMC global interrupt
-   FMC_Interrupt                 : constant Interrupt_ID := 48;
-
    --  SPI3 global interrupt
    SPI3_Interrupt                : constant Interrupt_ID := 51;
 
@@ -209,12 +206,6 @@ package Ada.Interrupts.Names is
    --  COMP7 interrupt combined with EXTI Line 33 interrupt
    COMP7_Interrupt               : constant Interrupt_ID := 66;
 
-   --  I2C3 Event interrupt
-   I2C3_EV_Interrupt             : constant Interrupt_ID := 72;
-
-   --  I2C3 Error interrupt
-   I2C3_ER_Interrupt             : constant Interrupt_ID := 73;
-
    --  USB High priority interrupt
    USB_HP_Interrupt              : constant Interrupt_ID := 74;
 
@@ -224,22 +215,7 @@ package Ada.Interrupts.Names is
    --  USB wakeup from Suspend and EXTI Line 18
    USB_WKUP_EXTI_Interrupt       : constant Interrupt_ID := 76;
 
-   --  TIM20 Break interrupt
-   TIM20_BRK_Interrupt           : constant Interrupt_ID := 77;
-
-   --  TIM20 Upgrade interrupt
-   TIM20_UP_Interrupt            : constant Interrupt_ID := 78;
-
-   --  TIM20 Trigger and Commutation interrupt
-   TIM20_TRG_COM_Interrupt       : constant Interrupt_ID := 79;
-
-   --  TIM20 Capture Compare interrupt
-   TIM20_CC_Interrupt            : constant Interrupt_ID := 80;
-
    --  FPU global interrupt
    FPU_Interrupt                 : constant Interrupt_ID := 81;
-
-   --  SPI4 Global interrupt
-   SPI4_Interrupt                : constant Interrupt_ID := 84;
 
 end Ada.Interrupts.Names;

@@ -2,7 +2,7 @@
 --  Copyright (C) 2019, AdaCore
 --
 
---  This spec has been automatically generated from stm32f303.svd
+--  This spec has been automatically generated from STM32F30x.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -247,7 +247,7 @@ package Interfaces.STM32.TIMs is
       CC3DE          : DIER_CC3DE_Field := 16#0#;
       --  Capture/Compare 4 DMA request enable
       CC4DE          : DIER_CC4DE_Field := 16#0#;
-      --  COM DMA request enable
+      --  Reserved
       COMDE          : DIER_COMDE_Field := 16#0#;
       --  Trigger DMA request enable
       TDE            : DIER_TDE_Field := 16#0#;
@@ -2373,10 +2373,6 @@ package Interfaces.STM32.TIMs is
    --  Advanced timer
    TIM1_Periph : aliased TIM1_Peripheral
      with Import, Address => TIM1_Base;
-
-   --  Advanced timer
-   TIM20_Periph : aliased TIM1_Peripheral
-     with Import, Address => TIM20_Base;
 
    type TIM2_Disc is
      (Output,

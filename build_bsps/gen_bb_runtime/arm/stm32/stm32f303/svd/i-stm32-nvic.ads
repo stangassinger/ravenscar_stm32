@@ -2,7 +2,7 @@
 --  Copyright (C) 2019, AdaCore
 --
 
---  This spec has been automatically generated from stm32f303.svd
+--  This spec has been automatically generated from STM32F30x.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -16,6 +16,23 @@ package Interfaces.STM32.NVIC is
    ---------------
    -- Registers --
    ---------------
+
+   subtype ICTR_INTLINESNUM_Field is Interfaces.STM32.UInt4;
+
+   --  Interrupt Controller Type Register
+   type ICTR_Register is record
+      --  Read-only. Total number of interrupt lines in groups
+      INTLINESNUM   : ICTR_INTLINESNUM_Field;
+      --  unspecified
+      Reserved_4_31 : Interfaces.STM32.UInt28;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for ICTR_Register use record
+      INTLINESNUM   at 0 range 0 .. 3;
+      Reserved_4_31 at 0 range 4 .. 31;
+   end record;
 
    --  IPR_IPR_N array element
    subtype IPR_IPR_N_Element is Interfaces.STM32.Byte;
@@ -47,9 +64,9 @@ package Interfaces.STM32.NVIC is
 
    subtype STIR_INTID_Field is Interfaces.STM32.UInt9;
 
-   --  Software trigger interrupt register
+   --  Software Triggered Interrupt Register
    type STIR_Register is record
-      --  Software generated interrupt ID
+      --  Write-only. interrupt to be triggered
       INTID         : STIR_INTID_Field := 16#0#;
       --  unspecified
       Reserved_9_31 : Interfaces.STM32.UInt23 := 16#0#;
@@ -68,6 +85,8 @@ package Interfaces.STM32.NVIC is
 
    --  Nested Vectored Interrupt Controller
    type NVIC_Peripheral is record
+      --  Interrupt Controller Type Register
+      ICTR  : aliased ICTR_Register;
       --  Interrupt Set-Enable Register
       ISER0 : aliased Interfaces.STM32.UInt32;
       --  Interrupt Set-Enable Register
@@ -140,65 +159,54 @@ package Interfaces.STM32.NVIC is
       IPR19 : aliased IPR_Register;
       --  Interrupt Priority Register
       IPR20 : aliased IPR_Register;
+      --  Software Triggered Interrupt Register
+      STIR  : aliased STIR_Register;
    end record
      with Volatile;
 
    for NVIC_Peripheral use record
-      ISER0 at 16#0# range 0 .. 31;
-      ISER1 at 16#4# range 0 .. 31;
-      ISER2 at 16#8# range 0 .. 31;
-      ICER0 at 16#80# range 0 .. 31;
-      ICER1 at 16#84# range 0 .. 31;
-      ICER2 at 16#88# range 0 .. 31;
-      ISPR0 at 16#100# range 0 .. 31;
-      ISPR1 at 16#104# range 0 .. 31;
-      ISPR2 at 16#108# range 0 .. 31;
-      ICPR0 at 16#180# range 0 .. 31;
-      ICPR1 at 16#184# range 0 .. 31;
-      ICPR2 at 16#188# range 0 .. 31;
-      IABR0 at 16#200# range 0 .. 31;
-      IABR1 at 16#204# range 0 .. 31;
-      IABR2 at 16#208# range 0 .. 31;
-      IPR0  at 16#300# range 0 .. 31;
-      IPR1  at 16#304# range 0 .. 31;
-      IPR2  at 16#308# range 0 .. 31;
-      IPR3  at 16#30C# range 0 .. 31;
-      IPR4  at 16#310# range 0 .. 31;
-      IPR5  at 16#314# range 0 .. 31;
-      IPR6  at 16#318# range 0 .. 31;
-      IPR7  at 16#31C# range 0 .. 31;
-      IPR8  at 16#320# range 0 .. 31;
-      IPR9  at 16#324# range 0 .. 31;
-      IPR10 at 16#328# range 0 .. 31;
-      IPR11 at 16#32C# range 0 .. 31;
-      IPR12 at 16#330# range 0 .. 31;
-      IPR13 at 16#334# range 0 .. 31;
-      IPR14 at 16#338# range 0 .. 31;
-      IPR15 at 16#33C# range 0 .. 31;
-      IPR16 at 16#340# range 0 .. 31;
-      IPR17 at 16#344# range 0 .. 31;
-      IPR18 at 16#348# range 0 .. 31;
-      IPR19 at 16#34C# range 0 .. 31;
-      IPR20 at 16#350# range 0 .. 31;
+      ICTR  at 16#4# range 0 .. 31;
+      ISER0 at 16#100# range 0 .. 31;
+      ISER1 at 16#104# range 0 .. 31;
+      ISER2 at 16#108# range 0 .. 31;
+      ICER0 at 16#180# range 0 .. 31;
+      ICER1 at 16#184# range 0 .. 31;
+      ICER2 at 16#188# range 0 .. 31;
+      ISPR0 at 16#200# range 0 .. 31;
+      ISPR1 at 16#204# range 0 .. 31;
+      ISPR2 at 16#208# range 0 .. 31;
+      ICPR0 at 16#280# range 0 .. 31;
+      ICPR1 at 16#284# range 0 .. 31;
+      ICPR2 at 16#288# range 0 .. 31;
+      IABR0 at 16#300# range 0 .. 31;
+      IABR1 at 16#304# range 0 .. 31;
+      IABR2 at 16#308# range 0 .. 31;
+      IPR0  at 16#400# range 0 .. 31;
+      IPR1  at 16#404# range 0 .. 31;
+      IPR2  at 16#408# range 0 .. 31;
+      IPR3  at 16#40C# range 0 .. 31;
+      IPR4  at 16#410# range 0 .. 31;
+      IPR5  at 16#414# range 0 .. 31;
+      IPR6  at 16#418# range 0 .. 31;
+      IPR7  at 16#41C# range 0 .. 31;
+      IPR8  at 16#420# range 0 .. 31;
+      IPR9  at 16#424# range 0 .. 31;
+      IPR10 at 16#428# range 0 .. 31;
+      IPR11 at 16#42C# range 0 .. 31;
+      IPR12 at 16#430# range 0 .. 31;
+      IPR13 at 16#434# range 0 .. 31;
+      IPR14 at 16#438# range 0 .. 31;
+      IPR15 at 16#43C# range 0 .. 31;
+      IPR16 at 16#440# range 0 .. 31;
+      IPR17 at 16#444# range 0 .. 31;
+      IPR18 at 16#448# range 0 .. 31;
+      IPR19 at 16#44C# range 0 .. 31;
+      IPR20 at 16#450# range 0 .. 31;
+      STIR  at 16#F00# range 0 .. 31;
    end record;
 
    --  Nested Vectored Interrupt Controller
    NVIC_Periph : aliased NVIC_Peripheral
      with Import, Address => NVIC_Base;
-
-   --  Nested vectored interrupt controller
-   type NVIC_STIR_Peripheral is record
-      --  Software trigger interrupt register
-      STIR : aliased STIR_Register;
-   end record
-     with Volatile;
-
-   for NVIC_STIR_Peripheral use record
-      STIR at 0 range 0 .. 31;
-   end record;
-
-   --  Nested vectored interrupt controller
-   NVIC_STIR_Periph : aliased NVIC_STIR_Peripheral
-     with Import, Address => NVIC_STIR_Base;
 
 end Interfaces.STM32.NVIC;

@@ -2,7 +2,7 @@
 --  Copyright (C) 2019, AdaCore
 --
 
---  This spec has been automatically generated from stm32f303.svd
+--  This spec has been automatically generated from STM32F30x.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -557,9 +557,5 @@ package Interfaces.STM32.I2C is
    --  Inter-integrated circuit
    I2C2_Periph : aliased I2C_Peripheral
      with Import, Address => I2C2_Base;
-
-   --  Inter-integrated circuit
-   I2C3_Periph : aliased I2C_Peripheral
-     with Import, Address => I2C3_Base;
 
 end Interfaces.STM32.I2C;
