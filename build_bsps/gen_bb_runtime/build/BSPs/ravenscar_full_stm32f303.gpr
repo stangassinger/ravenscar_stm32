@@ -1,7 +1,7 @@
 aggregate project Ravenscar_Full_Stm32F303 is
 
    Base_BSP_Source_Dir   := Project'Project_Dir & "cortex-m/armv7-m/stm32/stm32f303/";
-   Base_Installation_Dir := "arm-eabi/lib/gnat/";
+   Base_Installation_Dir := "./";
    Board                 := "stm32f303";
    Default_Prefix        := 
      Base_Installation_Dir & "ravenscar-full-" & Board;
