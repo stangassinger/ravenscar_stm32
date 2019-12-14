@@ -49,6 +49,6 @@ package System.BB.MCU_Parameters is
    procedure PWR_Overdrive_Enable;
 
    --  function Is_PWR_Stabilized return Boolean
-   --  is (Interfaces.STM32.PWR.PWR_Periph.CSR.VOSRDY = 1);
+   --  is (Interfaces.STM32.PWR.PWR_Periph.CeSR.VOSRDY = 1);
 
 end System.BB.MCU_Parameters;
