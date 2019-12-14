@@ -45,7 +45,7 @@ package body System.BB.MCU_Parameters is
    begin
       --  Set the PWR to Scale 1 mode to stabilize the MCU when in high
       --  performance mode.
-      PWR_Periph.CR.VOS := 1;
+      null; -- PWR_Periph.CR.VOS := 1;
    end PWR_Initialize;
 
    --------------------------
