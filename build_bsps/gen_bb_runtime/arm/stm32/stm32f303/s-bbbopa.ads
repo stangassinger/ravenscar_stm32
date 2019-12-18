@@ -47,7 +47,7 @@ package System.BB.Board_Parameters is
    --  up to 200 MHz, but all other STM32F40x and STM32F41x MCUs can only do
    --  168 MHz.
 
-   --  HSE_Clock_Frequency : constant := 8_000_000;
+   HSE_Clock_Frequency : constant := 8_000_000;
    --  Frequency of High Speed External clock.
 
    FLASH_Latency : constant := 5;

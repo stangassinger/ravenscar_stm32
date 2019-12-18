@@ -40,7 +40,7 @@
 package System.BB.MCU_Parameters is
    pragma No_Elaboration_Code_All;
    pragma Preelaborate;
-   --  use type Interfaces.STM32.Bit;
+--   use type Interfaces.STM32.Bit;
 
    Number_Of_Interrupts : constant := 81;
 
@@ -48,7 +48,7 @@ package System.BB.MCU_Parameters is
 
    procedure PWR_Overdrive_Enable;
 
-   --  function Is_PWR_Stabilized return Boolean
-   --  is (Interfaces.STM32.PWR.PWR_Periph.CeSR.VOSRDY = 1);
-
+   function Is_PWR_Stabilized return Boolean
+--     is (Interfaces.STM32.PWR.PWR_Periph.CeSR.VOSRDY = 1);
+     is (True);
 end System.BB.MCU_Parameters;
