@@ -681,6 +681,9 @@ class Stm32(ArmV7MTarget):
         elif self.board == 'stm32f429disco':
             self.add_sources('crt0', [
                 'arm/stm32/stm32f429x/s-stm32.adb'])
+        elif self.board == 'stm32f303':
+            self.add_sources('crt0', [
+                'arm/stm32/stm32f303/s-stm32.adb'])                
         elif self.board == 'openmv2':
             self.add_sources('crt0', [
                 'arm/stm32/stm32f429x/s-stm32.adb'])
