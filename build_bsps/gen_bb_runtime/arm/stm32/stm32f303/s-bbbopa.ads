@@ -50,7 +50,7 @@ package System.BB.Board_Parameters is
    HSE_Clock_Frequency : constant := 8_000_000;
    --  Frequency of High Speed External clock.
 
-   FLASH_Latency : constant := 5;
+   FLASH_Latency : constant := 2;
    PLLP_Value    : constant := 2;
    PLLQ_Value    : constant := 7;
 

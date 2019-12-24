@@ -55,7 +55,7 @@ procedure Setup_Pll is
    LSI_Enabled     : constant Boolean := True;  -- use low-speed internal clock
 
    Activate_PLL       : constant Boolean := True;
-   Activate_Overdrive : constant Boolean := True;
+   Activate_Overdrive : constant Boolean := False;
    Activate_PLLI2S    : constant Boolean := False;
 
    pragma Compile_Time_Error (not (if Activate_PLL then HSE_Enabled),
@@ -74,7 +74,7 @@ procedure Setup_Pll is
       -------------------------------
 
       PLLCLKIN    : constant Integer := 1_000_000;
-      PLLM_Value  : constant Integer  := HSE_Clock / PLLCLKIN;
+--        PLLM_Value  : constant Integer  := HSE_Clock / PLLCLKIN;
       --  First divider M is set to produce a 1Mhz clock
 
       PLLN_Value  : constant Integer :=
@@ -91,11 +91,11 @@ procedure Setup_Pll is
         (PLLQ_Value not in PLLQ_Range,
          "Invalid PLLQ clock configuration value");
 
-      PLLM        : constant UInt6 := UInt6 (PLLM_Value);
-      PLLN        : constant UInt9 := UInt9 (PLLN_Value);
-      --  PLLP and PLLQ are configured in System.BB.Board_Parameters
-      PLLP        : constant UInt2 := UInt2 (PLLP_Value / 2 - 1);
-      PLLQ        : constant UInt4 := UInt4 (PLLQ_Value);
+--        PLLM        : constant UInt6 := UInt6 (PLLM_Value);
+--        PLLN        : constant UInt9 := UInt9 (PLLN_Value);
+--        --  PLLP and PLLQ are configured in System.BB.Board_Parameters
+--        PLLP        : constant UInt2 := UInt2 (PLLP_Value / 2 - 1);
+--        PLLQ        : constant UInt4 := UInt4 (PLLQ_Value);
 
       SW          : constant SYSCLK_Source :=
                       (if Activate_PLL then SYSCLK_SRC_PLL
@@ -215,11 +215,12 @@ procedure Setup_Pll is
 
          --  Configure the PLL clock source, multiplication and division
          --  factors
-         RCC_Periph.PLLCFGR :=
-           (PLLM   => PLLM,
-            PLLN   => PLLN,
-            PLLP   => PLLP,
-            PLLQ   => PLLQ,
+         RCC_Periph.CFGR :=
+           (
+--              PLLM   => PLLM,
+--              PLLN   => PLLN,
+--              PLLP   => PLLP,
+--              PLLQ   => PLLQ,
             PLLSRC => (if HSE_Enabled
                        then PLL_Source'Enum_Rep (PLL_SRC_HSE)
                        else PLL_Source'Enum_Rep (PLL_SRC_HSI)),
@@ -240,15 +241,18 @@ procedure Setup_Pll is
       --  Must be done before increasing the frequency, otherwise the CPU
       --  won't be able to fetch new instructions.
 
-      FLASH_Periph.ACR.ICEN := 0;
-      FLASH_Periph.ACR.DCEN := 0;
-      FLASH_Periph.ACR.ICRST := 1;
-      FLASH_Periph.ACR.DCRST := 1;
-      FLASH_Periph.ACR :=
-        (LATENCY => FLASH_Latency,
-         ICEN    => 1,
-         DCEN    => 1,
-         PRFTEN  => 1,
+--        Flash_Periph.ACR.ICEN := 0;
+--        Flash_Periph.ACR.DCEN := 0;
+--        Flash_Periph.ACR.ICRST := 1;
+--        Flash_Periph.ACR.DCRST := 1;
+      Flash_Periph.ACR.PRFTBE  := 0;
+      Flash_Periph.ACR.PRFTBS  := 0;
+      Flash_Periph.ACR.LATENCY := 2;
+
+      Flash_Periph.ACR :=
+        (LATENCY  => FLASH_Latency,
+         PRFTBE   => 0,
+         PRFTBS   => 0,
          others  => <>);
 
       --  Configure derived clocks
@@ -259,12 +263,11 @@ procedure Setup_Pll is
          PPRE    => (As_Array => True,
                      Arr      => (1 => To_APB (APB1_PRE),
                                   2 => To_APB (APB2_PRE))),
-         RTCPRE  => 16#0#,
+
          I2SSRC  => I2S_Clock_Selection'Enum_Rep (I2SSEL_PLL),
-         MCO1    => MC01_Clock_Selection'Enum_Rep (MC01SEL_HSI),
-         MCO1PRE => MC0x_Prescaler'Enum_Rep (MC0xPRE_DIV1),
-         MCO2    => MC02_Clock_Selection'Enum_Rep (MC02SEL_SYSCLK),
-         MCO2PRE => MC0x_Prescaler'Enum_Rep (MC0xPRE_DIV5),
+         MCO    =>  MC01_Clock_Selection'Enum_Rep (MC01SEL_HSI),
+         MCOF   =>  MC0x_Prescaler'Enum_Rep (MC0xPRE_DIV1),
+
          others  => <>);
 
       if Activate_PLL then
@@ -299,7 +302,7 @@ procedure Setup_Pll is
       RCC_Periph.CR.PLLON := 0;
 
       --  Reset PLL configuration register
-      RCC_Periph.PLLCFGR := (others => <>);
+      RCC_Periph.CFGR := (others => <>);
 
       --  Reset HSE bypass bit
       RCC_Periph.CR.HSEBYP := 0;
