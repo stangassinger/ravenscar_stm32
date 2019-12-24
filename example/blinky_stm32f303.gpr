@@ -6,32 +6,21 @@ project blink_stm32f303 is
    LOADER : LOADER_Type := external ("LOADER", "ROM");
 
    type RTS_Type is ("ravenscar-sfp", "ravenscar-full");
-   RTS : RTS_Type := External ("RTS_Profile", "ravenscar-sfp");
+   RTS : RTS_Type := External ("RTS_Profile", "ravenscar-full");
 
-   type LCH_Type is ("led", "lcd");
-   LCH : LCH_Type := external ("LCH", "led");
+   
 
    for Languages use ("Ada");
    for Target use "arm-eabi";
-   for Source_Dirs use ("gui");
+   for Source_Dirs use ("src");
 
    case RTS is
       when "ravenscar-sfp" =>
-         for Source_Dirs use Project'Source_Dirs & ("lch_sfp");
-         case LCH is
-            when "led" =>
-               for Source_Dirs use Project'Source_Dirs & ("lch_sfp/led");
-            when "lcd" =>
-               for Source_Dirs use Project'Source_Dirs & ("lch_sfp/lcd");
-         end case;
+         for Source_Dirs use Project'Source_Dirs & ("../build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp");
+        
       when "ravenscar-full" =>
-         for Source_Dirs use Project'Source_Dirs & ("lch_full");
-         case LCH is
-            when "led" =>
-               for Source_Dirs use Project'Source_Dirs & ("lch_full/led");
-            when "lcd" =>
-               for Source_Dirs use Project'Source_Dirs & ("lch_full/lcd");
-         end case;
+         for Source_Dirs use Project'Source_Dirs & ("../build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-full");
+         
    end case;
 
    package Linker is
@@ -54,8 +43,8 @@ project blink_stm32f303 is
   for Target use "arm-eabi";
   for Main use ("blinky.adb");
   for Languages use ("Ada");
-  for Source_Dirs use ("../shared/hello_world_blinky/src");
-  for Object_Dir use "../shared/hello_world_blinky/obj/stm32f429disco";
+  for Source_Dirs use ("./src");
+  for Object_Dir  use "./obj";
   for Create_Missing_Dirs use "True";
 
   package Compiler renames STM32F429_Discovery_Full.Compiler;
