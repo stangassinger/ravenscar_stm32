@@ -81,7 +81,7 @@ project blinky_stm32f303 is
 
 
 
-  for Runtime ("Ada") use Project'Project_Dir & "../build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-full";
+  for Runtime ("Ada") use Project'Project_Dir & "./runtimes/ravenscar-sfp-stm32f303";
   for Target use "arm-eabi";
   for Main use ("blinky.adb");
   for Languages use ("Ada");
