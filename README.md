@@ -8,4 +8,5 @@ rm -rf   ~/ravenscar_stm32/build_bsps/gen_bb_runtime/arm/stm32/stm32f303/svd
 cd  ~/ravenscar_stm32/build_bsps/gen_bb_runtime
 ./build_rts.py --bsps-only --output=build --prefix=. --link stm32f303
 cd ~/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs
-gprbuild -P  ravenscar_full_stm32f303.gpr   -j0 -f
+gprbuild   -P ravenscar_sfp_stm32f303.gpr   -j0 -f
+gprinstall -P ravenscar_sfp_stm32f303.gpr --prefix=../../../../example/runtimes -f -p 
