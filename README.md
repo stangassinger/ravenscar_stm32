@@ -10,3 +10,5 @@ cd  ~/ravenscar_stm32/build_bsps/gen_bb_runtime
 cd ~/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs
 gprbuild   -P ravenscar_sfp_stm32f303.gpr   -j0 -f
 gprinstall -P ravenscar_sfp_stm32f303.gpr --prefix=../../../../example/runtimes -f -p 
+cd ~/ravenscar_stm32/example
+gprbuild   -P blinky_stm32f303.gpr
