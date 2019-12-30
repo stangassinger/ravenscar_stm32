@@ -1,0 +1,222 @@
+V "GNAT Lib v2019"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U system.stm32%b	s-stm32.adb		53a9fe8b NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
+W interfaces.stm32.rcc%s  i-stm32-rcc.ads	i-stm32-rcc.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+
+U system.stm32%s	s-stm32.ads		26b42e1b NE OL PR PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
+W system%s		system.ads		system.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D ada.ads		20190518110050 76789da1 ada%s
+D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
+D i-stm32-rcc.ads	20191230162436 65bd2710 interfaces.stm32.rcc%s
+D system.ads		20191230162106 aa7dab5a system%s
+D s-bb.ads		20190518110050 09e072ae system.bb%s
+D s-bbbopa.ads		20191230162105 2d67a084 system.bb.board_parameters%s
+D s-bbmcpa.ads		20191230162105 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20191230162106 431abc17 system.bb.parameters%s
+D s-stm32.ads		20191230162105 49d2747d system.stm32%s
+D s-stm32.adb		20191230162105 ade995ca system.stm32%b
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [system_clocks system__stm32 48 13 none]
+G c Z s s [ahb_prescalerIP system__stm32 103 9 none]
+G c Z s s [mcu_id_registerIP system__stm32 79 9 none]
+G c Z s s [rcc_system_clocksIP system__stm32 39 9 none]
+G c Z s s [apb_prescalerIP system__stm32 119 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|28r6 94r34 96r34
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 12|28w10 94r38 96r38
+X 3 interfac.ads
+38K9*Interfaces 184e15 11|31r6 37r25 51r33 58r34 63r35 70r33 76r26 77r26
+. 80r18 81r18 82r18 12|32w6 32r33 33r6 33r33 34r6 34r33
+66M9*Unsigned_16
+74M9*Unsigned_32
+X 4 i-stm32.ads
+13K20*STM32 142e21 11|31w17 37r36 51r44 58r45 63r46 70r44 76r37 77r37 80r29
+. 81r29 82r29 12|33w17 33r44 34r17 34r44
+21M9*UInt32<3|74M9> 11|37r42 12|40r62 43r62 76r34 77r34 78r34 79r25 100r31
+. 105r31 110r31
+22M9*UInt16<3|66M9> 11|82r35
+24M9*Bit 11|58r51
+26M9*UInt2 11|51r50 63r52 70r50
+28M9*UInt3
+30M9*UInt4 11|76r43 77r43 81r35
+44M9*UInt12 11|80r35
+X 5 i-stm32-rcc.ads
+12K26*RCC 937e25 12|34w23 34r50
+81M12*CFGR_HPRE_Field{4|30M9} 12|95r13
+83M12*CFGR_PPRE_Element{4|28M9} 12|97r13
+86A9*CFGR_PPRE_Field_Array(83M12)<integer>
+99a13*Arr{86A9} 12|104r53 109r53
+122m7*SWS{80M12} 12|53r58
+124m7*HPRE{81M12} 12|99r73
+126r7*PPRE{90R9} 12|104r48 109r48
+130m7*PLLSRC{109M12} 12|82r53
+891r7*CFGR{118R9} 12|53r53 82r48 99r68 104r43 109r43
+934r4*RCC_Periph{887R9} 12|53r42 82r37 99r57 104r32 109r32
+X 6 system.ads
+60K9*System 174e11 11|33r9 35r25 189r45 197r5 12|30r6 36r14 38r26 135r5
+90M9*Address 11|189r45
+X 7 s-bb.ads
+40K16*BB 95e14 12|30r13 38r33
+X 10 s-bbpara.ads
+45K19*Parameters 155e25 12|30w16 38r36
+77N4*HSE_Clock 12|67r36 84r39
+79N4*HSI_Clock 12|62r36 86r39
+X 11 s-stm32.ads
+33K16*STM32 6|60k9 11|35r32 197l12 197e17 12|36b21 135l12 135t17
+37M12*Frequency{4|21M9} 40r17 41r17 42r17 43r17 44r17 45r17
+39R9*RCC_System_Clocks 46e14 48r34 12|50r34 54r22
+40m7*SYSCLK{37M12} 12|62m20 67m20 89m23 115r33
+41m7*HCLK{37M12} 12|115m17 116r33 117r33
+42m7*PCLK1{37M12} 12|116m17 120r38 122r38
+43m7*PCLK2{37M12} 12|117m17 126r38 128r38
+44m7*TIMCLK1{37M12} 12|120m20 122m20
+45m7*TIMCLK2{37M12} 12|126m20 128m20
+48V13*System_Clocks{39R9} 12|50b13 133l8 133t21
+51M12*GPIO_MODER_Values{4|26M9} 52r24 53r24 54r24 55r24
+52m4*Mode_IN{51M12}
+53m4*Mode_OUT{51M12}
+54m4*Mode_AF{51M12}
+55m4*Mode_AN{51M12}
+58M12*GPIO_OTYPER_Values{4|24M9} 59r26 60r26
+59m4*Push_Pull{58M12}
+60m4*Open_Drain{58M12}
+63M12*GPIO_OSPEEDR_Values{4|26M9} 64r28 65r28 66r28 67r28
+64m4*Speed_2MHz{63M12}
+65m4*Speed_25MHz{63M12}
+66m4*Speed_50MHz{63M12}
+67m4*Speed_100MHz{63M12}
+70M12*GPIO_PUPDR_Values{4|26M9} 71r25 72r25 73r25
+71m4*No_Pull{70M12}
+72m4*Pull_Up{70M12}
+73m4*Pull_Down{70M12}
+76m4*AF_USART1{4|30M9}
+77m4*AF_USART6{4|30M9}
+79R9*MCU_ID_Register 83e15 188r13
+80m7*DEV_ID{4|44M9}
+81m7*Reserved{4|30M9}
+82m7*REV_ID{4|22M9}
+87E9*PLL_Source 90e6 12|82r21
+88n7*PLL_SRC_HSI{87E9} 12|85r24
+89n7*PLL_SRC_HSE{87E9} 12|83r24
+92E9*SYSCLK_Source 96e6 12|52r31 53r23
+93n7*SYSCLK_SRC_HSI{92E9} 12|61r15
+94n7*SYSCLK_SRC_HSE{92E9} 12|66r15
+95n7*SYSCLK_SRC_PLL{92E9} 12|71r15
+98E9*AHB_Prescaler_Enum 101e6 105r17 105r39 12|40r39
+99n7*DIV2{98E9} 113r72
+99n14*DIV4{98E9}
+99n22*DIV8{98E9}
+99n30*DIV16{98E9}
+100n7*DIV64{98E9}
+100n14*DIV128{98E9}
+100n22*DIV256{98E9}
+100n30*DIV512{98E9}
+103R9*AHB_Prescaler 106e15 108r8 113r27 12|95r30 99r31
+104b7*Enabled{boolean} 109r7 113m45 12|100r50
+105e7*Value{98E9} 110r7 113m63 12|101r70
+113r4*AHBPRE_DIV1{103R9}
+115E9*APB_Prescaler_Enum 117e6 121r17 12|43r39
+116n7*DIV2{115E9}
+116n14*DIV4{115E9}
+116n21*DIV8{115E9}
+116n28*DIV16{115E9}
+119R9*APB_Prescaler 122e15 124r8 12|97r32 103r31 108r31
+120b7*Enabled{boolean} 125r7 12|105r51 110r51 119r23 125r23
+121e7*Value{115E9} 126r7 12|106r71 111r71
+129E9*I2S_Clock_Selection 132e6
+130n7*I2SSEL_PLL{129E9}
+131n7*I2SSEL_CKIN{129E9}
+134E9*MC01_Clock_Selection 139e6
+135n7*MC01SEL_HSI{134E9}
+136n7*MC01SEL_LSE{134E9}
+137n7*MC01SEL_HSE{134E9}
+138n7*MC01SEL_PLL{134E9}
+141E9*MC02_Clock_Selection 146e6
+142n7*MC02SEL_SYSCLK{141E9}
+143n7*MC02SEL_PLLI2S{141E9}
+144n7*MC02SEL_HSE{141E9}
+145n7*MC02SEL_PLL{141E9}
+148E9*MC0x_Prescaler 154e6 155r8
+149n7*MC0xPRE_DIV1{148E9} 156r7
+150n7*MC0xPRE_DIV2{148E9} 157r7
+151n7*MC0xPRE_DIV3{148E9} 158r7
+152n7*MC0xPRE_DIV4{148E9} 159r7
+153n7*MC0xPRE_DIV5{148E9} 160r7
+164I12*PLLM_Range{integer}
+165I12*PLLN_Range{integer}
+166I12*PLLP_Range{integer}
+170I12*PLLQ_Range{integer}
+172I12*HSECLK_Range{integer}
+173I12*PLLIN_Range{integer}
+174I12*PLLVC0_Range{integer}
+175I12*PLLOUT_Range{integer}
+176I12*SYSCLK_Range{integer}
+177I12*HCLK_Range{integer}
+178I12*PCLK1_Range{integer}
+179I12*PCLK2_Range{integer}
+180I12*SPII2S_Range{integer} 181r25
+185N4*HSICLK
+186N4*LSICLK
+188r4*MCU_ID{79R9}
+192N4*DEV_ID_STM32F40xxx
+193N4*DEV_ID_STM32F42xxx
+194N4*DEV_ID_STM32F46xxx
+195N4*DEV_ID_STM32F74xxx
+X 12 s-stm32.adb
+38K12 Param=38:36 62r30 67r30 84r33 86r33
+40a4 HPRE_Presc_Table(4|21M9) 101r47
+43a4 PPRE_Presc_Table(4|21M9) 106r47 111r47
+52e7 Source{11|92E9} 57r12
+54r7 Result{11|39R9} 62m13 67m13 89m16 115m10 115r26 116m10 116r26 117m10
+. 117r26 120m13 120r31 122m13 122r31 126m13 126r31 128m13 128r31 132r14
+76m16 Pllm{4|21M9} 84r51 86r51
+77m16 Plln{4|21M9} 84r59 86r59
+78m16 Pllp{4|21M9} 89r44
+79m16 Pllvco{4|21M9} 84m22 86m22 89r33
+94V19 To_AHBP[2|20]{11|103R9} 99s48
+96V19 To_APBP[2|20]{11|119R9} 104s23 109s23
+99r10 HPRE{11|103R9} 100r45 101r65
+100m10 HPRE_Div{4|21M9} 115r42
+103r10 PPRE1{11|119R9} 105r45 106r65 119r17
+105m10 PPRE1_Div{4|21M9} 116r40
+108r10 PPRE2{11|119R9} 110r45 111r65 125r17
+110m10 PPRE2_Div{4|21M9} 117r40
+

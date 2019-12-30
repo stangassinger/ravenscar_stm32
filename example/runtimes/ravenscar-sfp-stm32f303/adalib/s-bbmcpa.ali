@@ -1,0 +1,61 @@
+V "GNAT Lib v2019"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U system.bb.mcu_parameters%b  s-bbmcpa.adb	a114a65d NE OL PK
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
+W interfaces.stm32.pwr%s  i-stm32-pwr.ads	i-stm32-pwr.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+
+U system.bb.mcu_parameters%s  s-bbmcpa.ads	db2f6bf7 NE OL PR PK
+W system.bb%s		s-bb.ads		s-bb.ali
+
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
+D i-stm32-pwr.ads	20191230162436 30600be5 interfaces.stm32.pwr%s
+D system.ads		20191230162106 aa7dab5a system%s
+D s-bb.ads		20190518110050 09e072ae system.bb%s
+D s-bbmcpa.ads		20191230162105 d2cf1959 system.bb.mcu_parameters%s
+D s-bbmcpa.adb		20191230162105 43bbb4e1 system.bb.mcu_parameters%b
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [pwr_initialize system__bb__mcu_parameters 47 14 none]
+G c Z s b [pwr_overdrive_enable system__bb__mcu_parameters 49 14 none]
+G c Z s s [is_pwr_stabilized system__bb__mcu_parameters 51 13 none]
+X 1 interfac.ads
+38K9*Interfaces 184e15 7|35r6 35r32
+X 2 i-stm32.ads
+13K20*STM32 142e21 7|35r17 35r43
+X 3 i-stm32-pwr.ads
+12K26*PWR 140e25 7|35w23 35r49
+X 4 system.ads
+60K9*System 174e11 6|40r9 54r5 7|37r14 61r5
+X 5 s-bb.ads
+40K16*BB 4|60k9 5|95e14 6|40r16 54r12 7|37r21 61r12
+X 6 s-bbmcpa.ads
+40K19*MCU_Parameters 5|40k16 6|54l15 54e29 7|37b24 61l15 61t29
+45N4*Number_Of_Interrupts
+47U14*PWR_Initialize 7|43b14 49l8 49t22
+49U14*PWR_Overdrive_Enable 7|55b14 59l8 59t28
+51V13*Is_PWR_Stabilized{boolean}
+

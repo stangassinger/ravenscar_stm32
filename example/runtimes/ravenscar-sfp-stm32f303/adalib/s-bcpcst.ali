@@ -1,0 +1,85 @@
+V "GNAT Lib v2019"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U system.bb.cpu_primitives.context_switch_trigger%b  s-bcpcst.adb  b5aa84fb NE OL PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+
+U system.bb.cpu_primitives.context_switch_trigger%s  s-bcpcst.ads  a4bbd201 NE OL PR PK
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
+D system.ads		20191230162106 aa7dab5a system%s
+D s-bb.ads		20190518110050 09e072ae system.bb%s
+D s-bbbopa.ads		20191230162105 2d67a084 system.bb.board_parameters%s
+D s-bbcppr.ads		20191230162106 bcfa73ad system.bb.cpu_primitives%s
+D s-bcpcst.ads		20191230162106 1841a1ac system.bb.cpu_primitives.context_switch_trigger%s
+D s-bcpcst.adb		20191230162106 83993e41 system.bb.cpu_primitives.context_switch_trigger%b
+D s-bbmcpa.ads		20191230162105 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20191230162106 431abc17 system.bb.parameters%s
+D s-maccod.ads		20190518110050 6d68a701 system.machine_code%s
+D s-stm32.ads		20191230162105 49d2747d system.stm32%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [initialize_context_switch system__bb__cpu_primitives__context_switch_trigger 42 14 none]
+G c Z s b [trigger_context_switch system__bb__cpu_primitives__context_switch_trigger 47 14 none]
+G c Z b b [pend_sv_handler system__bb__cpu_primitives__context_switch_trigger 55 14 none]
+X 3 system.ads
+60K9*System 174e11 7|39r9 51r5 8|37r6 38r6 38r31 40r14 45r48 48r36 176r5
+X 4 s-bb.ads
+40K16*BB 3|60k9 4|95e14 7|39r16 51r12 8|37r13 40r21 45r55 48r43 176r12
+X 6 s-bbcppr.ads
+39K19*CPU_Primitives 4|40k16 6|142e29 7|39r19 51r15 8|40r24 176r15
+42M9*Word 8|51r11 53r32
+X 7 s-bcpcst.ads
+39K34*Context_Switch_Trigger 6|39k19 7|51l30 51e52 8|40b39 176l30 176t52
+42U14*Initialize_Context_Switch
+47U14*Trigger_Context_Switch 8|72b14 83l8 83t30
+X 8 s-bcpcst.adb
+42a4 NL{string} 99r50 100r33 101r33 110r41 111r41 112r41 113r41 114r41 120r41
+. 121r41 122r41 123r41 124r41 125r41 126r41 127r41 129r41 131r42 132r29 133r29
+. 138r37 139r37 140r37 141r37 142r37 144r39 145r39 146r39 147r39 148r39 149r39
+. 150r39 152r33 153r33 154r39 156r39 163r41 164r41 165r41 166r41 167r41 171r28
+45b4 No_Floating_Point{boolean} 108r14 161r14
+48b4 Is_ARMv6m{boolean} 118r14 136r14
+51m4 ICSR{6|42M9} 77m7 82r23
+53m4 ICSR_Pend_SV_Set{6|42M9} 77r15 82r32
+55U14 Pend_SV_Handler 56r30 57i24 89b14 174l8 174t23
+65U14 Initialize_Context_Switch
+X 10 s-bbpara.ads
+45K19*Parameters 8|37w16 45r58 48r46 10|155e25
+81b4*Has_FPU{boolean} 8|45r69
+92b4*Is_ARMv6m{boolean} 8|48r57
+X 11 s-maccod.ads
+36K16*Machine_Code 8|38w13 38r38 11|131e24
+83U14*Asm 8|97s7
+84a6 Template{string} 8|98r10
+88b6 Volatile{boolean} 8|173r10
+

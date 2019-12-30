@@ -1,0 +1,219 @@
+V "GNAT Lib v2019"
+M P W=b
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U setup_pll%b		setup_pll.adb		50970c29 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
+W interfaces.stm32.flash%s  i-stm32-flash.ads	i-stm32-flash.ali
+W interfaces.stm32.rcc%s  i-stm32-rcc.ads	i-stm32-rcc.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.board_parameters%s  s-bbbopa.ads	s-bbbopa.ali
+W system.bb.mcu_parameters%s  s-bbmcpa.adb	s-bbmcpa.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+W system.stm32%s	s-stm32.adb		s-stm32.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+U setup_pll%s		setup_pll.ads		9252ee35 EE NE OO SU
+
+D ada.ads		20190518110050 76789da1 ada%s
+D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
+D i-stm32-flash.ads	20191230162436 b75552b4 interfaces.stm32.flash%s
+D i-stm32-rcc.ads	20191230162436 65bd2710 interfaces.stm32.rcc%s
+D setup_pll.ads		20191230162105 9252ee35 setup_pll%s
+D setup_pll.adb		20191230162105 2ecd305c setup_pll%b
+D system.ads		20191230162106 aa7dab5a system%s
+D s-bb.ads		20190518110050 09e072ae system.bb%s
+D s-bbbopa.ads		20191230162105 2d67a084 system.bb.board_parameters%s
+D s-bbmcpa.ads		20191230162105 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20191230162106 431abc17 system.bb.parameters%s
+D s-stm32.ads		20191230162105 49d2747d system.stm32%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [setup_pll standard 30 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 8|34r6 143r30 145r30
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 8|34w10 143r34 145r34
+X 3 interfac.ads
+38K9*Interfaces 184e15 8|36r6 36r38 36r50 37r6 37r38 38r6 38r38
+X 4 i-stm32.ads
+13K20*STM32 142e21 8|36w17 36r61 37r17 37r49 38r17 38r49
+24M9*Bit
+26M9*UInt2
+28M9*UInt3 8|146r25
+30M9*UInt4 8|144r25
+X 5 i-stm32-flash.ads
+12K26*Flash 273e27 8|37w23 37r55
+21M12*ACR_PRFTBE_Field{4|24M9}
+22M12*ACR_PRFTBS_Field{4|24M9}
+27m7*LATENCY{20M12} 8|250m24 253m10
+31m7*PRFTBE{21M12} 8|248m24 254m10
+33m7*PRFTBS{22M12} 8|249m24 255m10
+240r7*ACR{25R9} 8|248m20 249m20 250m20 252m20
+270r4*Flash_Periph{238R9} 8|248m7 249m7 250m7 252m7
+X 6 i-stm32-rcc.ads
+12K26*RCC 937e25 8|38w23 38r55
+20M12*CR_HSION_Field{4|24M9}
+21M12*CR_HSIRDY_Field{4|24M9}
+24M12*CR_HSEON_Field{4|24M9}
+25M12*CR_HSERDY_Field{4|24M9}
+26M12*CR_HSEBYP_Field{4|24M9}
+27M12*CR_CSSON_Field{4|24M9}
+28M12*CR_PLLON_Field{4|24M9}
+29M12*CR_PLLRDY_Field{4|24M9}
+34m7*HSION{20M12} 8|184m24 294m21
+36m7*HSIRDY{21M12} 8|187r37
+44m7*HSEON{24M12} 8|193m24 300m21
+46m7*HSERDY{25M12} 8|197r37
+48m7*HSEBYP{26M12} 8|194m24 308m21
+50m7*CSSON{27M12} 8|301m21
+54m7*PLLON{28M12} 8|214m24 229m24 302m21
+56m7*PLLRDY{29M12} 8|231r37
+79M12*CFGR_SW_Field{4|26M9} 8|104r30
+86A9*CFGR_PPRE_Field_Array(83M12)<integer>
+91b7*As_Array{boolean} 8|263m22
+99a13*Arr{86A9} 8|264m22
+109M12*CFGR_PLLSRC_Field{4|24M9}
+113M12*CFGR_I2SSRC_Field{4|24M9}
+115M12*CFGR_MCOF_Field{4|24M9}
+120m7*SW{79M12} 8|261m10
+122m7*SWS{80M12} 8|275r39
+124m7*HPRE{81M12} 8|262m10
+126r7*PPRE{90R9} 8|263m10
+130m7*PLLSRC{109M12} 8|224m13
+138m7*I2SSRC{113M12} 8|267m10
+140m7*MCO{114M12} 8|268m10
+144m7*MCOF{115M12} 8|269m10
+325M12*APB1RSTR_PWRRST_Field{4|24M9}
+375m7*PWRRST{325M12} 8|170m27 171m27
+560M12*APB1ENR_PWREN_Field{4|24M9}
+606m7*PWREN{560M12} 8|167m26
+688M12*CSR_LSION_Field{4|24M9}
+689M12*CSR_LSIRDY_Field{4|24M9}
+702m7*LSION{688M12} 8|204m25
+704m7*LSIRDY{689M12} 8|207r38
+889r7*CR{32R9} 8|184m21 187r34 193m21 194m21 197r34 214m21 229m21 231r34
+. 294m18 300m18 301m18 302m18 308m18
+891r7*CFGR{118R9} 8|218m21 260m18 275r34 297m18 305m18
+893r7*CIR{187R9} 8|311m18
+897r7*APB1RSTR{329R9} 8|170m18 171m18
+903r7*APB1ENR{564R9} 8|167m18
+907r7*CSR{700R9} 8|204m21 207r34
+934r4*RCC_Periph{887R9} 8|167m7 170m7 171m7 184m10 187r23 193m10 194m10 197r23
+. 204m10 207r23 214m10 218m10 229m10 231r23 260m7 275r23 294m7 297m7 300m7
+. 301m7 302m7 305m7 308m7 311m7
+X 7 setup_pll.ads
+30U11*Setup_Pll 32r33 8|45b11 317l5 317t14
+X 8 setup_pll.adb
+46U14 Initialize_Clocks 70b14 285l8 285t25 316s4
+47U14 Reset_Clocks 291b14 312l8 312t20 315s4
+53b4 HSE_Enabled{boolean} 61r57 102r33 181r14 224r27
+54b4 HSE_Bypass{boolean} 194r38
+55b4 LSI_Enabled{boolean} 203r10
+57b4 Activate_PLL{boolean} 61r39 101r27 107r45 212r10 273r10
+58b4 Activate_Overdrive{boolean} 236r10
+59b4 Activate_PLLI2S{boolean} 64r31
+76i7 PLLCLKIN{integer} 81r56 84r41
+80i7 PLLN_Value{integer} 84r52
+84i7 PLLVC0{integer} 85r41 152r10
+85i7 PLLCLKOUT{integer} 108r47 152r45
+100e7 SW{14|92E9} 105r47
+104m7 SW_Value{6|79M12} 261r21
+107i7 SYSCLK{integer} 113r29 116r45 117r45 118r45 119r45 120r45 121r45 122r45
+. 123r45 156r10
+111i7 HCLK{integer} 126r29 129r44 130r44 131r44 132r44 135r29 138r44 139r44
+. 140r44 141r44 160r10
+124i7 PCLK1{integer} 161r20
+133i7 PCLK2{integer} 162r20
+143V16 To_AHB[2|20]{4|30M9} 262s21
+145V16 To_APB[2|20]{4|28M9} 264s40 265s40
+X 9 system.ads
+60K9*System 8|40r6 40r38 41r6 42r6 42r38 43r6 43r38 179r7 237r10 282r23 9|174e11
+X 10 s-bb.ads
+40K16*BB 8|40r13 40r45 41r13 42r13 42r45 179r14 237r17 282r30 10|95e14
+X 11 s-bbbopa.ads
+37K19*Board_Parameters 8|42w16 42r48 11|57e31
+53N4*FLASH_Latency 8|253r22
+54N4*PLLP_Value 8|81r24 85r50 88r10
+55N4*PLLQ_Value 8|91r10
+X 12 s-bbmcpa.ads
+40K19*MCU_Parameters 8|41w16 179r17 237r20 282r33 12|54e29
+47U14*PWR_Initialize 8|179s32
+49U14*PWR_Overdrive_Enable 8|237s35
+51V13*Is_PWR_Stabilized{boolean} 8|282s48
+X 13 s-bbpara.ads
+45K19*Parameters 8|40w16 40r48 13|155e25
+49N4*Clock_Frequency 8|81r37 156r20
+62r4*AHB_PRE{14|103R9} 8|112r31 115r32 262r29
+63r4*APB1_PRE{14|119R9} 8|125r31 128r32 264r48
+65r4*APB2_PRE{14|119R9} 8|134r31 137r32 265r48
+X 14 s-stm32.ads
+33K16*STM32 8|43w13 43r45 14|197e17
+87E9*PLL_Source 8|225r29 226r29 14|90e6
+88n7*PLL_SRC_HSI{87E9} 8|226r50
+89n7*PLL_SRC_HSE{87E9} 8|225r50
+92E9*SYSCLK_Source 8|100r30 105r23 276r15 14|96e6
+93n7*SYSCLK_SRC_HSI{92E9} 8|103r35
+94n7*SYSCLK_SRC_HSE{92E9} 8|102r50
+95n7*SYSCLK_SRC_PLL{92E9} 8|101r45 276r39
+99n7*DIV2{98E9} 8|116r35
+99n14*DIV4{98E9} 8|117r35
+99n22*DIV8{98E9} 8|118r35
+99n30*DIV16{98E9} 8|119r35
+100n7*DIV64{98E9} 8|120r35
+100n14*DIV128{98E9} 8|121r35
+100n22*DIV256{98E9} 8|122r35
+100n30*DIV512{98E9} 8|123r35
+103R9*AHB_Prescaler 8|144r10 14|106e15
+104b7*Enabled{boolean} 8|112r39
+105e7*Value{98E9} 8|115r40
+116n7*DIV2{115E9} 8|129r35 138r35
+116n14*DIV4{115E9} 8|130r35 139r35
+116n21*DIV8{115E9} 8|131r35 140r35
+116n28*DIV16{115E9} 8|132r35 141r35
+119R9*APB_Prescaler 8|146r10 14|122e15
+120b7*Enabled{boolean} 8|125r40 134r40
+121e7*Value{115E9} 8|128r41 137r41
+129E9*I2S_Clock_Selection 8|267r21 14|132e6
+130n7*I2SSEL_PLL{129E9} 8|267r51
+134E9*MC01_Clock_Selection 8|268r21 14|139e6
+135n7*MC01SEL_HSI{134E9} 8|268r52
+148E9*MC0x_Prescaler 8|269r21 14|154e6
+149n7*MC0xPRE_DIV1{148E9} 8|269r46
+166I12*PLLP_Range{integer} 8|88r28
+170I12*PLLQ_Range{integer} 8|91r28
+174I12*PLLVC0_Range{integer} 8|152r24
+175I12*PLLOUT_Range{integer} 8|152r62
+177I12*HCLK_Range{integer} 8|160r22
+178I12*PCLK1_Range{integer} 8|161r33
+179I12*PCLK2_Range{integer} 8|162r33
+185N4*HSICLK 8|109r47
+

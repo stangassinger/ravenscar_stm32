@@ -1,0 +1,99 @@
+V "GNAT Lib v2019"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U interfaces.stm32.pwr%s  i-stm32-pwr.ads	5f065183 NE OL PR PK
+W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
+W system%s		system.ads		system.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
+D i-stm32-pwr.ads	20191230162436 30600be5 interfaces.stm32.pwr%s
+D system.ads		20191230162106 aa7dab5a system%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s s [cr_registerIP interfaces__stm32__pwr 29 9 none]
+G c Z s s [Tcsr_ewup_field_arrayBIP interfaces__stm32__pwr 68 4 none]
+G c Z s s [csr_ewup_fieldIP interfaces__stm32__pwr 72 9 none]
+G c Z s s [csr_registerIP interfaces__stm32__pwr 92 9 none]
+G c Z s s [pwr_peripheralIP interfaces__stm32__pwr 123 9 none]
+X 1 interfac.ads
+38K9*Interfaces 184e15 3|12r9 20r29 21r29 22r29 23r29 24r29 25r28 26r28 45r23
+. 61r29 62r29 63r30 65r32 78r19 100r24 104r24 140r5
+X 2 i-stm32.ads
+13K20*STM32 1|38k9 2|142e21 3|12r20 20r40 21r40 22r40 23r40 24r40 25r39 26r39
+. 45r34 61r40 62r40 63r41 65r43 78r30 100r35 104r35 140r16
+24M9*Bit 3|20r46 21r46 22r46 23r46 24r46 26r45 61r46 62r46 63r47 65r49
+26M9*UInt2 3|78r36
+28M9*UInt3 3|25r45
+32M9*UInt5 3|100r41
+62M9*UInt22 3|104r41
+64M9*UInt23 3|45r40
+117m4*PWR_Base{4|90M9} 3|138r30
+X 3 i-stm32-pwr.ads
+12K26*PWR 2|13k20 3|140l22 140e25
+20M12*CR_LPDS_Field{2|24M9} 31r23
+21M12*CR_PDDS_Field{2|24M9} 33r23
+22M12*CR_CWUF_Field{2|24M9} 35r23
+23M12*CR_CSBF_Field{2|24M9} 37r23
+24M12*CR_PVDE_Field{2|24M9} 39r23
+25M12*CR_PLS_Field{2|28M9} 41r23
+26M12*CR_DBP_Field{2|24M9} 43r23
+29R9*CR_Register 47e6 50r8 125r21
+31m7*LPDS{20M12} 51r7
+33m7*PDDS{21M12} 52r7
+35m7*CWUF{22M12} 53r7
+37m7*CSBF{23M12} 54r7
+39m7*PVDE{24M12} 55r7
+41m7*PLS{25M12} 56r7
+43m7*DBP{26M12} 57r7
+45m7*Reserved_9_31{2|64M9} 58r7
+61M12*CSR_WUF_Field{2|24M9} 94r24
+62M12*CSR_SBF_Field{2|24M9} 96r24
+63M12*CSR_PVDO_Field{2|24M9} 98r24
+65M12*CSR_EWUP_Element{2|24M9} 68r51
+68A9*CSR_EWUP_Field_Array(65M12)<integer> 81r19
+72R9*CSR_EWUP_Field 73d7 84e6 86r8 102r24
+73b7*As_Array{boolean} 75r12 102m43
+78m13*Val{2|26M9} 87r7 102m62
+81a13*Arr{68A9} 88r7
+92R9*CSR_Register 106e6 109r8 127r21
+94m7*WUF{61M12} 110r7
+96m7*SBF{62M12} 111r7
+98m7*PVDO{63M12} 112r7
+100m7*Reserved_3_7{2|32M9} 113r7
+102r7*EWUP{72R9} 114r7
+104m7*Reserved_10_31{2|62M9} 115r7
+123R9*PWR_Peripheral 129e6 131r8 137r25
+125r7*CR{29R9} 132r7
+127r7*CSR{92R9} 133r7
+137r4*PWR_Periph{123R9}
+X 4 system.ads
+60K9*System 3|10w6 48r24 107r24 4|174e11
+90M9*Address
+114n41*Low_Order_First{114E9} 3|48r31 107r31
+

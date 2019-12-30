@@ -1,0 +1,213 @@
+V "GNAT Lib v2019"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U interfaces.stm32.gpio%s  i-stm32-gpio.ads	4f612ec3 NE OL PR PK
+W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
+W system%s		system.ads		system.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
+D i-stm32-gpio.ads	20191230162436 200774a5 interfaces.stm32.gpio%s
+D system.ads		20191230162106 aa7dab5a system%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s s [Tmoder_field_arrayBIP interfaces__stm32__gpio 24 4 none]
+G c Z s s [moder_registerIP interfaces__stm32__gpio 28 9 none]
+G c Z s s [Totyper_ot_field_arrayBIP interfaces__stm32__gpio 52 4 none]
+G c Z s s [otyper_ot_fieldIP interfaces__stm32__gpio 56 9 none]
+G c Z s s [otyper_registerIP interfaces__stm32__gpio 76 9 none]
+G c Z s s [Tospeedr_field_arrayBIP interfaces__stm32__gpio 94 4 none]
+G c Z s s [ospeedr_registerIP interfaces__stm32__gpio 98 9 none]
+G c Z s s [Tpupdr_field_arrayBIP interfaces__stm32__gpio 122 4 none]
+G c Z s s [pupdr_registerIP interfaces__stm32__gpio 126 9 none]
+G c Z s s [Tidr_field_arrayBIP interfaces__stm32__gpio 150 4 none]
+G c Z s s [idr_fieldIP interfaces__stm32__gpio 154 9 none]
+G c Z s s [idr_registerIP interfaces__stm32__gpio 174 9 none]
+G c Z s s [Todr_field_arrayBIP interfaces__stm32__gpio 192 4 none]
+G c Z s s [odr_fieldIP interfaces__stm32__gpio 196 9 none]
+G c Z s s [odr_registerIP interfaces__stm32__gpio 216 9 none]
+G c Z s s [Tbsrr_bs_field_arrayBIP interfaces__stm32__gpio 234 4 none]
+G c Z s s [bsrr_bs_fieldIP interfaces__stm32__gpio 238 9 none]
+G c Z s s [Tbsrr_br_field_arrayBIP interfaces__stm32__gpio 261 4 none]
+G c Z s s [bsrr_br_fieldIP interfaces__stm32__gpio 265 9 none]
+G c Z s s [bsrr_registerIP interfaces__stm32__gpio 285 9 none]
+G c Z s s [Tlckr_lck_field_arrayBIP interfaces__stm32__gpio 303 4 none]
+G c Z s s [lckr_lck_fieldIP interfaces__stm32__gpio 307 9 none]
+G c Z s s [lckr_registerIP interfaces__stm32__gpio 329 9 none]
+G c Z s s [Tafrl_field_arrayBIP interfaces__stm32__gpio 350 4 none]
+G c Z s s [afrl_registerIP interfaces__stm32__gpio 354 9 none]
+G c Z s s [Tafrh_field_arrayBIP interfaces__stm32__gpio 378 4 none]
+G c Z s s [afrh_registerIP interfaces__stm32__gpio 382 9 none]
+G c Z s s [Tbrr_br_field_arrayBIP interfaces__stm32__gpio 406 4 none]
+G c Z s s [brr_br_fieldIP interfaces__stm32__gpio 410 9 none]
+G c Z s s [brr_registerIP interfaces__stm32__gpio 430 9 none]
+G c Z s s [gpio_peripheralIP interfaces__stm32__gpio 449 9 none]
+X 1 interfac.ads
+38K9*Interfaces 184e15 3|12r9 21r29 34r19 49r33 62r19 80r24 91r31 104r19
+. 119r29 132r19 147r27 160r19 178r24 189r27 202r19 220r24 231r31 244r19 258r31
+. 271r19 300r32 313r19 326r31 335r24 347r28 360r19 375r28 388r19 403r30 416r19
+. 434r24 513r5
+66M9*Unsigned_16
+74M9*Unsigned_32
+X 2 i-stm32.ads
+13K20*STM32 1|38k9 2|142e21 3|12r20 21r40 34r30 49r44 62r30 80r35 91r42 104r30
+. 119r40 132r30 147r38 160r30 178r35 189r38 202r30 220r35 231r42 244r30 258r42
+. 271r30 300r43 313r30 326r42 335r35 347r39 360r30 375r39 388r30 403r41 416r30
+. 434r35 513r16
+21M9*UInt32<1|74M9> 3|34r36 104r36 132r36 360r36 388r36
+22M9*UInt16<1|66M9> 3|62r36 80r41 160r36 178r41 202r36 220r41 244r36 271r36
+. 313r36 416r36 434r41
+24M9*Bit 3|49r50 147r44 189r44 231r48 258r48 300r49 326r48 403r47
+26M9*UInt2 3|21r46 91r48 119r46
+30M9*UInt4 3|347r45 375r45
+50M9*UInt15 3|335r41
+87m4*GPIOA_Base{4|90M9} 3|491r30
+88m4*GPIOB_Base{4|90M9} 3|495r30
+89m4*GPIOC_Base{4|90M9} 3|499r30
+90m4*GPIOD_Base{4|90M9} 3|503r30
+91m4*GPIOE_Base{4|90M9} 3|507r30
+92m4*GPIOF_Base{4|90M9} 3|511r30
+X 3 i-stm32-gpio.ads
+12K26*GPIO 2|13k20 3|513l22 513e26
+21M12*MODER_Element{2|26M9} 24r49
+24A9*MODER_Field_Array(21M12)<integer> 37r19
+28R9*MODER_Register 29d7 40e6 43r8 451r25
+29b7*As_Array{boolean} 31r12
+34m13*Val{2|21M9} 44r7
+37a13*Arr{24A9} 45r7
+49M12*OTYPER_OT_Element{2|24M9} 52r53
+52A9*OTYPER_OT_Field_Array(49M12)<integer> 65r19
+56R9*OTYPER_OT_Field 57d7 68e6 70r8 78r24
+57b7*As_Array{boolean} 59r12 78m44
+62m13*Val{2|22M9} 71r7 78m63
+65a13*Arr{52A9} 72r7
+76R9*OTYPER_Register 82e6 85r8 453r25
+78r7*OT{56R9} 86r7
+80m7*Reserved_16_31{2|22M9} 87r7
+91M12*OSPEEDR_Element{2|26M9} 94r51
+94A9*OSPEEDR_Field_Array(91M12)<integer> 107r19
+98R9*OSPEEDR_Register 99d7 110e6 113r8 455r25
+99b7*As_Array{boolean} 101r12
+104m13*Val{2|21M9} 114r7
+107a13*Arr{94A9} 115r7
+119M12*PUPDR_Element{2|26M9} 122r49
+122A9*PUPDR_Field_Array(119M12)<integer> 135r19
+126R9*PUPDR_Register 127d7 138e6 141r8 457r25
+127b7*As_Array{boolean} 129r12
+132m13*Val{2|21M9} 142r7
+135a13*Arr{122A9} 143r7
+147M12*IDR_Element{2|24M9} 150r47
+150A9*IDR_Field_Array(147M12)<integer> 163r19
+154R9*IDR_Field 155d7 166e6 168r8 176r24
+155b7*As_Array{boolean} 157r12
+160m13*Val{2|22M9} 169r7
+163a13*Arr{150A9} 170r7
+174R9*IDR_Register 180e6 183r8 459r25
+176r7*IDR{154R9} 184r7
+178m7*Reserved_16_31{2|22M9} 185r7
+189M12*ODR_Element{2|24M9} 192r47
+192A9*ODR_Field_Array(189M12)<integer> 205r19
+196R9*ODR_Field 197d7 208e6 210r8 218r24
+197b7*As_Array{boolean} 199r12 218m38
+202m13*Val{2|22M9} 211r7 218m57
+205a13*Arr{192A9} 212r7
+216R9*ODR_Register 222e6 225r8 461r25
+218r7*ODR{196R9} 226r7
+220m7*Reserved_16_31{2|22M9} 227r7
+231M12*BSRR_BS_Element{2|24M9} 234r51
+234A9*BSRR_BS_Field_Array(231M12)<integer> 247r19
+238R9*BSRR_BS_Field 239d7 250e6 252r8 287r12
+239b7*As_Array{boolean} 241r12 287m30
+244m13*Val{2|22M9} 253r7 287m49
+247a13*Arr{234A9} 254r7
+258M12*BSRR_BR_Element{2|24M9} 261r51
+261A9*BSRR_BR_Field_Array(258M12)<integer> 274r19
+265R9*BSRR_BR_Field 266d7 277e6 279r8 289r12
+266b7*As_Array{boolean} 268r12 289m30
+271m13*Val{2|22M9} 280r7 289m49
+274a13*Arr{261A9} 281r7
+285R9*BSRR_Register 291e6 294r8 463r25
+287r7*BS{238R9} 295r7
+289r7*BR{265R9} 296r7
+300M12*LCKR_LCK_Element{2|24M9} 303r52
+303A9*LCKR_LCK_Field_Array(300M12)<integer> 316r19
+307R9*LCKR_LCK_Field 308d7 319e6 321r8 331r24
+308b7*As_Array{boolean} 310r12 331m43
+313m13*Val{2|22M9} 322r7 331m62
+316a13*Arr{303A9} 323r7
+326M12*LCKR_LCKK_Field{2|24M9} 333r24
+329R9*LCKR_Register 337e6 340r8 465r25
+331r7*LCK{307R9} 341r7
+333m7*LCKK{326M12} 342r7
+335m7*Reserved_17_31{2|50M9} 343r7
+347M12*AFRL_Element{2|30M9} 350r47
+350A9*AFRL_Field_Array(347M12)<integer> 363r19
+354R9*AFRL_Register 355d7 366e6 369r8 467r25
+355b7*As_Array{boolean} 357r12
+360m13*Val{2|21M9} 370r7
+363a13*Arr{350A9} 371r7
+375M12*AFRH_Element{2|30M9} 378r48
+378A9*AFRH_Field_Array(375M12)<integer> 391r19
+382R9*AFRH_Register 383d7 394e6 397r8 469r25
+383b7*As_Array{boolean} 385r12
+388m13*Val{2|21M9} 398r7
+391a13*Arr{378A9} 399r7
+403M12*BRR_BR_Element{2|24M9} 406r50
+406A9*BRR_BR_Field_Array(403M12)<integer> 419r19
+410R9*BRR_BR_Field 411d7 422e6 424r8 432r24
+411b7*As_Array{boolean} 413r12 432m41
+416m13*Val{2|22M9} 425r7 432m60
+419a13*Arr{406A9} 426r7
+430R9*BRR_Register 436e6 439r8 471r25
+432r7*BR{410R9} 440r7
+434m7*Reserved_16_31{2|22M9} 441r7
+449R9*GPIO_Peripheral 473e6 475r8 490r27 494r27 498r27 502r27 506r27 510r27
+451r7*MODER{28R9} 476r7
+453r7*OTYPER{76R9} 477r7
+455r7*OSPEEDR{98R9} 478r7
+457r7*PUPDR{126R9} 479r7
+459r7*IDR{174R9} 480r7
+461r7*ODR{216R9} 481r7
+463r7*BSRR{285R9} 482r7
+465r7*LCKR{329R9} 483r7
+467r7*AFRL{354R9} 484r7
+469r7*AFRH{382R9} 485r7
+471r7*BRR{430R9} 486r7
+490r4*GPIOA_Periph{449R9}
+494r4*GPIOB_Periph{449R9}
+498r4*GPIOC_Periph{449R9}
+502r4*GPIOD_Periph{449R9}
+506r4*GPIOE_Periph{449R9}
+510r4*GPIOF_Periph{449R9}
+X 4 system.ads
+60K9*System 3|10w6 41r24 83r24 111r24 139r24 181r24 223r24 292r24 338r24
+. 367r24 395r24 437r24 4|174e11
+90M9*Address
+114n41*Low_Order_First{114E9} 3|41r31 83r31 111r31 139r31 181r31 223r31 292r31
+. 338r31 367r31 395r31 437r31
+

@@ -1,0 +1,42 @@
+V "GNAT Lib v2019"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/abc/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs/cortex-m/armv7-m/stm32/stm32f303/ravenscar-sfp/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U system.bb.board_parameters%s  s-bbbopa.ads	2487d22a NE OL PU PK
+W system.bb%s		s-bb.ads		s-bb.ali
+
+D system.ads		20191230162106 aa7dab5a system%s
+D s-bb.ads		20190518110050 09e072ae system.bb%s
+D s-bbbopa.ads		20191230162105 2d67a084 system.bb.board_parameters%s
+G a e
+X 1 system.ads
+60K9*System 174e11 3|37r9 57r5
+X 2 s-bb.ads
+40K16*BB 1|60k9 2|95e14 3|37r16 57r12
+X 3 s-bbbopa.ads
+37K19*Board_Parameters 2|40k16 3|57l15 57e31
+45N4*Main_Clock_Frequency
+50N4*HSE_Clock_Frequency
+53N4*FLASH_Latency
+54N4*PLLP_Value
+55N4*PLLQ_Value
+
