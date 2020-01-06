@@ -42,15 +42,15 @@ Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 D ada.ads		20190518110050 76789da1 ada%s
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
-D i-stm32-rcc.ads	20191230162436 65bd2710 interfaces.stm32.rcc%s
-D system.ads		20191230162106 aa7dab5a system%s
+D i-stm32.ads		20200106185134 c51bf13c interfaces.stm32%s
+D i-stm32-rcc.ads	20200106185134 65bd2710 interfaces.stm32.rcc%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-bb.ads		20190518110050 09e072ae system.bb%s
-D s-bbbopa.ads		20191230162105 2d67a084 system.bb.board_parameters%s
-D s-bbmcpa.ads		20191230162105 d2cf1959 system.bb.mcu_parameters%s
-D s-bbpara.ads		20191230162106 431abc17 system.bb.parameters%s
-D s-stm32.ads		20191230162105 49d2747d system.stm32%s
-D s-stm32.adb		20191230162105 ade995ca system.stm32%b
+D s-bbbopa.ads		20200106185125 2d67a084 system.bb.board_parameters%s
+D s-bbmcpa.ads		20200106185125 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20200106185125 431abc17 system.bb.parameters%s
+D s-stm32.ads		20200106185125 49d2747d system.stm32%s
+D s-stm32.adb		20200106185125 ade995ca system.stm32%b
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s b [system_clocks system__stm32 48 13 none]

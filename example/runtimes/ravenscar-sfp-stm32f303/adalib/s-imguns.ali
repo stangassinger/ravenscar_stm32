@@ -31,7 +31,7 @@ U system.img_uns%s	s-imguns.ads		010feb2e BN NE OL PU PK
 W system%s		system.ads		system.ali
 W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
-D system.ads		20191230162106 aa7dab5a system%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-imguns.ads		20190518110050 9ff43cf7 system.img_uns%s
 D s-imguns.adb		20190518110050 470a82cb system.img_uns%b
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s

@@ -31,9 +31,9 @@ W system%s		system.ads		system.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
-D i-stm32-usart.ads	20191230162436 b733a2be interfaces.stm32.usart%s
-D system.ads		20191230162106 aa7dab5a system%s
+D i-stm32.ads		20200106185134 c51bf13c interfaces.stm32%s
+D i-stm32-usart.ads	20200106185134 b733a2be interfaces.stm32.usart%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s s [cr1_registerIP interfaces__stm32__usart 42 9 none]

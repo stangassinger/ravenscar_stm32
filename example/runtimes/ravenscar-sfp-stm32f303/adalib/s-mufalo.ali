@@ -33,17 +33,17 @@ W system.multiprocessors%s  s-multip.adb	s-multip.ali
 W system.multiprocessors.spin_locks%s  s-musplo.adb  s-musplo.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
-D system.ads		20191230162106 aa7dab5a system%s
+D i-stm32.ads		20200106185134 c51bf13c interfaces.stm32%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-bb.ads		20190518110050 09e072ae system.bb%s
-D s-bbbopa.ads		20191230162105 2d67a084 system.bb.board_parameters%s
+D s-bbbopa.ads		20200106185125 2d67a084 system.bb.board_parameters%s
 D s-bbbosu.ads		20190518110050 0f820a2a system.bb.board_support%s
-D s-bbbosu.adb		20191230162106 21f80941 system.bb.board_support%b
-D s-bbsumu.adb		20191230162106 cbb92b04 system.bb.board_support.multiprocessors
-D s-bbcppr.ads		20191230162106 bcfa73ad system.bb.cpu_primitives%s
+D s-bbbosu.adb		20200106185125 21f80941 system.bb.board_support%b
+D s-bbsumu.adb		20200106185125 cbb92b04 system.bb.board_support.multiprocessors
+D s-bbcppr.ads		20200106185125 bcfa73ad system.bb.cpu_primitives%s
 D s-bbinte.ads		20190518110050 c88d39da system.bb.interrupts%s
-D s-bbmcpa.ads		20191230162105 d2cf1959 system.bb.mcu_parameters%s
-D s-bbpara.ads		20191230162106 431abc17 system.bb.parameters%s
+D s-bbmcpa.ads		20200106185125 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20200106185125 431abc17 system.bb.parameters%s
 D s-bbthre.ads		20190518110050 c94b446f system.bb.threads%s
 D s-bbthqu.ads		20190518110050 db3cad46 system.bb.threads.queues%s
 D s-bbtime.ads		20190518110050 ad086247 system.bb.time%s
@@ -54,7 +54,7 @@ D s-mufalo.adb		20190518110050 468b48c8 system.multiprocessors.fair_locks%b
 D s-musplo.ads		20190518110050 69fa25c4 system.multiprocessors.spin_locks%s
 D s-musplo.adb		20190518110050 3686343a system.multiprocessors.spin_locks%b
 D s-osinte.ads		20190518110050 229b14dd system.os_interface%s
-D s-stm32.ads		20191230162105 49d2747d system.stm32%s
+D s-stm32.ads		20200106185125 49d2747d system.stm32%s
 D s-stoele.ads		20190518110050 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e

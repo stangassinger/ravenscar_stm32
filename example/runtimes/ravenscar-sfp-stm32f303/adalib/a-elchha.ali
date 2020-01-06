@@ -43,7 +43,7 @@ D a-elchha.adb		20190518110050 578208bd ada.exceptions.last_chance_handler%b
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
 D gnat.ads		20190518110050 b5988c27 gnat%s
 D g-io.ads		20190518110050 33cc5d90 gnat.io%s
-D system.ads		20191230162106 aa7dab5a system%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-macres.ads		20190518110050 e352e87a system.machine_reset%s
 G a e
 G c Z s b [last_chance_handler ada__exceptions 36 26 none]

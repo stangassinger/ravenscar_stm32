@@ -29,9 +29,9 @@ W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
 W system%s		system.ads		system.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20191230162436 c51bf13c interfaces.stm32%s
-D i-stm32-flash.ads	20191230162436 b75552b4 interfaces.stm32.flash%s
-D system.ads		20191230162106 aa7dab5a system%s
+D i-stm32.ads		20200106185134 c51bf13c interfaces.stm32%s
+D i-stm32-flash.ads	20200106185134 b75552b4 interfaces.stm32.flash%s
+D system.ads		20200106185125 aa7dab5a system%s
 G a e
 G c Z s s [acr_registerIP interfaces__stm32__flash 25 9 none]
 G c Z s s [sr_registerIP interfaces__stm32__flash 54 9 none]

@@ -35,7 +35,7 @@ W system%s		system.ads		system.ali
 
 D ada.ads		20190518110050 76789da1 ada%s
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
-D system.ads		20191230162106 aa7dab5a system%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-stoele.ads		20190518110050 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20190518110050 ed88f8fb system.storage_elements%b
 G a e

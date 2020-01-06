@@ -29,7 +29,7 @@ W system%s		system.ads		system.ali
 U system.img_int%s	s-imgint.ads		a8a64b98 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20191230162106 aa7dab5a system%s
+D system.ads		20200106185125 aa7dab5a system%s
 D s-imgint.ads		20190518110050 02dbe0c2 system.img_int%s
 D s-imgint.adb		20190518110050 6ef468c0 system.img_int%b
 G a e
