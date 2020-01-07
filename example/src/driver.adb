@@ -13,10 +13,25 @@ package body Driver is
 
 
       loop
-         Put_Line ("using driver ...");
+         Put_Line ("using controller ...");
          Next_Release := Next_Release + Period;
          delay until Next_Release;
       end loop;
    end Controller;
+
+
+   task body Worker is
+      Period       : constant Time_Span := Milliseconds (375);  -- arbitrary
+      Next_Release : Time := Clock;
+
+   begin
+
+
+      loop
+         Put_Line ("using worker ...");
+         Next_Release := Next_Release + Period;
+         delay until Next_Release;
+      end loop;
+   end Worker;
 
 end Driver;

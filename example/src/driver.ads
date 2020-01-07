@@ -2,6 +2,10 @@
 package Driver is
 
    task Controller with
-      Storage_Size => (1 * 1024);
+     Storage_Size => (1 * 128);
+
+   task Worker with
+     Storage_Size => (1 * 128);
+
 
 end Driver;

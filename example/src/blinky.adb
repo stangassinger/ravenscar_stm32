@@ -21,7 +21,7 @@ begin
    Ada.Text_IO.Put_Line ("xxxxxxxxx");
    loop
       --  Toggle (All_LEDs);
-      Ada.Text_IO.Put_Line ("YYYYYYYYYYYYYYYYYYYYYYYYYYY");
+      Ada.Text_IO.Put_Line ("YYYY");
       Next_Release := Next_Release + Period;
       delay until Next_Release;
    end loop;
