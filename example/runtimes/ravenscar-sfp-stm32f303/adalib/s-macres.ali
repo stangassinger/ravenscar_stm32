@@ -29,9 +29,9 @@ U system.machine_reset%s  s-macres.ads		492f4320 NE OL PK
 W system%s		system.ads		system.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D system.ads		20200106185125 aa7dab5a system%s
+D system.ads		20200115175715 aa7dab5a system%s
 D s-macres.ads		20190518110050 e352e87a system.machine_reset%s
-D s-macres.adb		20200106185125 ea442668 system.machine_reset%b
+D s-macres.adb		20200115175715 ea442668 system.machine_reset%b
 G a e
 G c Z s b [stop system__machine_reset 39 14 none]
 X 1 interfac.ads
