@@ -39,7 +39,7 @@ W system%s		system.ads		system.ali
 D ada.ads		20190518110050 76789da1 ada%s
 D a-except.ads		20190518110050 5b5f0f2f ada.exceptions%s
 D a-except.adb		20190518110050 85a38458 ada.exceptions%b
-D system.ads		20200115175715 aa7dab5a system%s
+D system.ads		20200117163211 aa7dab5a system%s
 G a e
 G c Z s b [raise_exception ada__exceptions 51 14 none]
 X 1 ada.ads

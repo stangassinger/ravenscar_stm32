@@ -21,7 +21,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U system.bb.mcu_parameters%b  s-bbmcpa.adb	a114a65d NE OL PK
+U system.bb.mcu_parameters%b  s-bbmcpa.adb	cd7d383d NE OL PK
 W interfaces%s		interfac.ads		interfac.ali
 W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
 W interfaces.stm32.pwr%s  i-stm32-pwr.ads	i-stm32-pwr.ali
@@ -31,12 +31,12 @@ U system.bb.mcu_parameters%s  s-bbmcpa.ads	db2f6bf7 NE OL PR PK
 W system.bb%s		s-bb.ads		s-bb.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20200115180240 c51bf13c interfaces.stm32%s
-D i-stm32-pwr.ads	20200115180240 30600be5 interfaces.stm32.pwr%s
-D system.ads		20200115175715 aa7dab5a system%s
+D i-stm32.ads		20200117163424 c7c723d8 interfaces.stm32%s
+D i-stm32-pwr.ads	20200117163424 5c099585 interfaces.stm32.pwr%s
+D system.ads		20200117163211 aa7dab5a system%s
 D s-bb.ads		20190518110050 09e072ae system.bb%s
-D s-bbmcpa.ads		20200115175715 d2cf1959 system.bb.mcu_parameters%s
-D s-bbmcpa.adb		20200115175715 43bbb4e1 system.bb.mcu_parameters%b
+D s-bbmcpa.ads		20200117163210 d2cf1959 system.bb.mcu_parameters%s
+D s-bbmcpa.adb		20200117163210 43bbb4e1 system.bb.mcu_parameters%b
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s b [pwr_initialize system__bb__mcu_parameters 47 14 none]
@@ -45,9 +45,9 @@ G c Z s s [is_pwr_stabilized system__bb__mcu_parameters 51 13 none]
 X 1 interfac.ads
 38K9*Interfaces 184e15 7|35r6 35r32
 X 2 i-stm32.ads
-13K20*STM32 142e21 7|35r17 35r43
+13K20*STM32 158e21 7|35r17 35r43
 X 3 i-stm32-pwr.ads
-12K26*PWR 140e25 7|35w23 35r49
+12K26*PWR 169e25 7|35w23 35r49
 X 4 system.ads
 60K9*System 174e11 6|40r9 54r5 7|37r14 61r5
 X 5 s-bb.ads

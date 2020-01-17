@@ -25,15 +25,15 @@ RV NO_IMPLICIT_LOOPS
 RR NO_ELABORATION_CODE
 RV SPARK_05
 
-U interfaces.stm32.usart%s  i-stm32-usart.ads	d855f8d8 NE OL PR PK
+U interfaces.stm32.usart%s  i-stm32-usart.ads	da892a3c NE OL PR PK
 W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
 W system%s		system.ads		system.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20200115180240 c51bf13c interfaces.stm32%s
-D i-stm32-usart.ads	20200115180240 b733a2be interfaces.stm32.usart%s
-D system.ads		20200115175715 aa7dab5a system%s
+D i-stm32.ads		20200117163424 c7c723d8 interfaces.stm32%s
+D i-stm32-usart.ads	20200117163424 b733a2be interfaces.stm32.usart%s
+D system.ads		20200117163211 aa7dab5a system%s
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s s [cr1_registerIP interfaces__stm32__usart 42 9 none]
@@ -66,7 +66,7 @@ X 1 interfac.ads
 63M9*Unsigned_8
 66M9*Unsigned_16
 X 2 i-stm32.ads
-13K20*STM32 1|38k9 2|142e21 3|12r20 20r39 21r41 22r39 23r39 24r43 25r43 26r41
+13K20*STM32 1|38k9 2|158e21 3|12r20 20r39 21r41 22r39 23r39 24r43 25r43 26r41
 . 27r42 28r41 29r39 30r40 31r41 32r38 33r40 34r41 35r42 36r41 37r41 38r42
 . 39r42 84r35 113r42 114r41 115r42 116r41 117r41 118r41 119r42 120r41 121r42
 . 122r41 123r42 124r42 125r44 126r45 127r42 128r43 129r42 131r42 144r30 160r33
@@ -99,11 +99,11 @@ X 2 i-stm32.ads
 64M9*UInt23 3|598r40 615r40
 66M9*UInt24 3|360r47
 72M9*UInt27 3|397r40
-105m4*USART1_Base{4|90M9} 3|680r30
-106m4*USART2_Base{4|90M9} 3|684r30
-107m4*USART3_Base{4|90M9} 3|688r30
-108m4*UART4_Base{4|90M9} 3|672r30
-109m4*UART5_Base{4|90M9} 3|676r30
+110m4*USART1_Base{4|90M9} 3|680r30
+111m4*USART2_Base{4|90M9} 3|684r30
+112m4*USART3_Base{4|90M9} 3|688r30
+113m4*UART4_Base{4|90M9} 3|672r30
+114m4*UART5_Base{4|90M9} 3|676r30
 X 3 i-stm32-usart.ads
 12K26*USART 2|13k20 3|690l22 690e27
 20M12*CR1_UE_Field{2|24M9} 44r24

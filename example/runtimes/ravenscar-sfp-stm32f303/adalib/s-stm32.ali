@@ -23,7 +23,7 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U system.stm32%b	s-stm32.adb		53a9fe8b NE OL PK
+U system.stm32%b	s-stm32.adb		4f54a820 NE OL PK
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_conversion%s
 W interfaces%s		interfac.ads		interfac.ali
@@ -33,7 +33,7 @@ W system%s		system.ads		system.ali
 W system.bb%s		s-bb.ads		s-bb.ali
 W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
 
-U system.stm32%s	s-stm32.ads		26b42e1b NE OL PR PK
+U system.stm32%s	s-stm32.ads		2468fcff NE OL PR PK
 W interfaces%s		interfac.ads		interfac.ali
 W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
 W system%s		system.ads		system.ali
@@ -42,15 +42,15 @@ Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 D ada.ads		20190518110050 76789da1 ada%s
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20200115180240 c51bf13c interfaces.stm32%s
-D i-stm32-rcc.ads	20200115180240 65bd2710 interfaces.stm32.rcc%s
-D system.ads		20200115175715 aa7dab5a system%s
+D i-stm32.ads		20200117163424 c7c723d8 interfaces.stm32%s
+D i-stm32-rcc.ads	20200117163424 7b9ca35f interfaces.stm32.rcc%s
+D system.ads		20200117163211 aa7dab5a system%s
 D s-bb.ads		20190518110050 09e072ae system.bb%s
-D s-bbbopa.ads		20200115175715 2d67a084 system.bb.board_parameters%s
-D s-bbmcpa.ads		20200115175715 d2cf1959 system.bb.mcu_parameters%s
-D s-bbpara.ads		20200115175715 431abc17 system.bb.parameters%s
-D s-stm32.ads		20200115175715 49d2747d system.stm32%s
-D s-stm32.adb		20200115175715 ade995ca system.stm32%b
+D s-bbbopa.ads		20200117163210 2d67a084 system.bb.board_parameters%s
+D s-bbmcpa.ads		20200117163210 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20200117163211 431abc17 system.bb.parameters%s
+D s-stm32.ads		20200117163210 49d2747d system.stm32%s
+D s-stm32.adb		20200117163210 ade995ca system.stm32%b
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s b [system_clocks system__stm32 48 13 none]
@@ -68,7 +68,7 @@ X 3 interfac.ads
 66M9*Unsigned_16
 74M9*Unsigned_32
 X 4 i-stm32.ads
-13K20*STM32 142e21 11|31w17 37r36 51r44 58r45 63r46 70r44 76r37 77r37 80r29
+13K20*STM32 158e21 11|31w17 37r36 51r44 58r45 63r46 70r44 76r37 77r37 80r29
 . 81r29 82r29 12|33w17 33r44 34r17 34r44
 21M9*UInt32<3|74M9> 11|37r42 12|40r62 43r62 76r34 77r34 78r34 79r25 100r31
 . 105r31 110r31
@@ -79,7 +79,7 @@ X 4 i-stm32.ads
 30M9*UInt4 11|76r43 77r43 81r35
 44M9*UInt12 11|80r35
 X 5 i-stm32-rcc.ads
-12K26*RCC 937e25 12|34w23 34r50
+12K26*RCC 988e25 12|34w23 34r50
 81M12*CFGR_HPRE_Field{4|30M9} 12|95r13
 83M12*CFGR_PPRE_Element{4|28M9} 12|97r13
 86A9*CFGR_PPRE_Field_Array(83M12)<integer>
@@ -87,9 +87,9 @@ X 5 i-stm32-rcc.ads
 122m7*SWS{80M12} 12|53r58
 124m7*HPRE{81M12} 12|99r73
 126r7*PPRE{90R9} 12|104r48 109r48
-130m7*PLLSRC{109M12} 12|82r53
-891r7*CFGR{118R9} 12|53r53 82r48 99r68 104r43 109r43
-934r4*RCC_Periph{887R9} 12|53r42 82r37 99r57 104r32 109r32
+130m7*PLLSRC{110M12} 12|82r53
+942r7*CFGR{118R9} 12|53r53 82r48 99r68 104r43 109r43
+985r4*RCC_Periph{938R9} 12|53r42 82r37 99r57 104r32 109r32
 X 6 system.ads
 60K9*System 174e11 11|33r9 35r25 189r45 197r5 12|30r6 36r14 38r26 135r5
 90M9*Address 11|189r45

@@ -25,75 +25,83 @@ RV NO_IMPLICIT_LOOPS
 RR NO_ELABORATION_CODE
 RV SPARK_05
 
-U interfaces.stm32.pwr%s  i-stm32-pwr.ads	5f065183 NE OL PR PK
+U interfaces.stm32.pwr%s  i-stm32-pwr.ads	31b31d07 NE OL PR PK
 W interfaces.stm32%s	i-stm32.ads		i-stm32.ali
 W system%s		system.ads		system.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20200115180240 c51bf13c interfaces.stm32%s
-D i-stm32-pwr.ads	20200115180240 30600be5 interfaces.stm32.pwr%s
-D system.ads		20200115175715 aa7dab5a system%s
+D i-stm32.ads		20200117163424 c7c723d8 interfaces.stm32%s
+D i-stm32-pwr.ads	20200117163424 5c099585 interfaces.stm32.pwr%s
+D system.ads		20200117163211 aa7dab5a system%s
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
-G c Z s s [cr_registerIP interfaces__stm32__pwr 29 9 none]
-G c Z s s [Tcsr_ewup_field_arrayBIP interfaces__stm32__pwr 68 4 none]
-G c Z s s [csr_ewup_fieldIP interfaces__stm32__pwr 72 9 none]
-G c Z s s [csr_registerIP interfaces__stm32__pwr 92 9 none]
-G c Z s s [pwr_peripheralIP interfaces__stm32__pwr 123 9 none]
+G c Z s s [Tcr_ensd_field_arrayBIP interfaces__stm32__pwr 31 4 none]
+G c Z s s [cr_ensd_fieldIP interfaces__stm32__pwr 35 9 none]
+G c Z s s [cr_registerIP interfaces__stm32__pwr 55 9 none]
+G c Z s s [Tcsr_ewup_field_arrayBIP interfaces__stm32__pwr 97 4 none]
+G c Z s s [csr_ewup_fieldIP interfaces__stm32__pwr 101 9 none]
+G c Z s s [csr_registerIP interfaces__stm32__pwr 121 9 none]
+G c Z s s [pwr_peripheralIP interfaces__stm32__pwr 152 9 none]
 X 1 interfac.ads
-38K9*Interfaces 184e15 3|12r9 20r29 21r29 22r29 23r29 24r29 25r28 26r28 45r23
-. 61r29 62r29 63r30 65r32 78r19 100r24 104r24 140r5
+38K9*Interfaces 184e15 3|12r9 20r29 21r29 22r29 23r29 24r29 25r28 26r28 28r31
+. 41r19 73r24 90r29 91r29 92r30 94r32 107r19 129r24 133r24 169r5
 X 2 i-stm32.ads
-13K20*STM32 1|38k9 2|142e21 3|12r20 20r40 21r40 22r40 23r40 24r40 25r39 26r39
-. 45r34 61r40 62r40 63r41 65r43 78r30 100r35 104r35 140r16
-24M9*Bit 3|20r46 21r46 22r46 23r46 24r46 26r45 61r46 62r46 63r47 65r49
-26M9*UInt2 3|78r36
-28M9*UInt3 3|25r45
-32M9*UInt5 3|100r41
-62M9*UInt22 3|104r41
-64M9*UInt23 3|45r40
-117m4*PWR_Base{4|90M9} 3|138r30
+13K20*STM32 1|38k9 2|158e21 3|12r20 20r40 21r40 22r40 23r40 24r40 25r39 26r39
+. 28r42 41r30 73r35 90r40 91r40 92r41 94r43 107r30 129r35 133r35 169r16
+24M9*Bit 3|20r46 21r46 22r46 23r46 24r46 26r45 28r48 90r46 91r46 92r47 94r49
+28M9*UInt3 3|25r45 41r36 107r36
+32M9*UInt5 3|129r41
+58M9*UInt20 3|73r41
+60M9*UInt21 3|133r41
+123m4*PWR_Base{4|90M9} 3|167r30
 X 3 i-stm32-pwr.ads
-12K26*PWR 2|13k20 3|140l22 140e25
-20M12*CR_LPDS_Field{2|24M9} 31r23
-21M12*CR_PDDS_Field{2|24M9} 33r23
-22M12*CR_CWUF_Field{2|24M9} 35r23
-23M12*CR_CSBF_Field{2|24M9} 37r23
-24M12*CR_PVDE_Field{2|24M9} 39r23
-25M12*CR_PLS_Field{2|28M9} 41r23
-26M12*CR_DBP_Field{2|24M9} 43r23
-29R9*CR_Register 47e6 50r8 125r21
-31m7*LPDS{20M12} 51r7
-33m7*PDDS{21M12} 52r7
-35m7*CWUF{22M12} 53r7
-37m7*CSBF{23M12} 54r7
-39m7*PVDE{24M12} 55r7
-41m7*PLS{25M12} 56r7
-43m7*DBP{26M12} 57r7
-45m7*Reserved_9_31{2|64M9} 58r7
-61M12*CSR_WUF_Field{2|24M9} 94r24
-62M12*CSR_SBF_Field{2|24M9} 96r24
-63M12*CSR_PVDO_Field{2|24M9} 98r24
-65M12*CSR_EWUP_Element{2|24M9} 68r51
-68A9*CSR_EWUP_Field_Array(65M12)<integer> 81r19
-72R9*CSR_EWUP_Field 73d7 84e6 86r8 102r24
-73b7*As_Array{boolean} 75r12 102m43
-78m13*Val{2|26M9} 87r7 102m62
-81a13*Arr{68A9} 88r7
-92R9*CSR_Register 106e6 109r8 127r21
-94m7*WUF{61M12} 110r7
-96m7*SBF{62M12} 111r7
-98m7*PVDO{63M12} 112r7
-100m7*Reserved_3_7{2|32M9} 113r7
-102r7*EWUP{72R9} 114r7
-104m7*Reserved_10_31{2|62M9} 115r7
-123R9*PWR_Peripheral 129e6 131r8 137r25
-125r7*CR{29R9} 132r7
-127r7*CSR{92R9} 133r7
-137r4*PWR_Periph{123R9}
+12K26*PWR 2|13k20 3|169l22 169e25
+20M12*CR_LPDS_Field{2|24M9} 57r24
+21M12*CR_PDDS_Field{2|24M9} 59r24
+22M12*CR_CWUF_Field{2|24M9} 61r24
+23M12*CR_CSBF_Field{2|24M9} 63r24
+24M12*CR_PVDE_Field{2|24M9} 65r24
+25M12*CR_PLS_Field{2|28M9} 67r24
+26M12*CR_DBP_Field{2|24M9} 69r24
+28M12*CR_ENSD_Element{2|24M9} 31r50
+31A9*CR_ENSD_Field_Array(28M12)<integer> 44r19
+35R9*CR_ENSD_Field 36d7 47e6 49r8 71r24
+36b7*As_Array{boolean} 38r12 71m42
+41m13*Val{2|28M9} 50r7 71m61
+44a13*Arr{31A9} 51r7
+55R9*CR_Register 75e6 78r8 154r21
+57m7*LPDS{20M12} 79r7
+59m7*PDDS{21M12} 80r7
+61m7*CWUF{22M12} 81r7
+63m7*CSBF{23M12} 82r7
+65m7*PVDE{24M12} 83r7
+67m7*PLS{25M12} 84r7
+69m7*DBP{26M12} 85r7
+71r7*ENSD{35R9} 86r7
+73m7*Reserved_12_31{2|58M9} 87r7
+90M12*CSR_WUF_Field{2|24M9} 123r24
+91M12*CSR_SBF_Field{2|24M9} 125r24
+92M12*CSR_PVDO_Field{2|24M9} 127r24
+94M12*CSR_EWUP_Element{2|24M9} 97r51
+97A9*CSR_EWUP_Field_Array(94M12)<integer> 110r19
+101R9*CSR_EWUP_Field 102d7 113e6 115r8 131r24
+102b7*As_Array{boolean} 104r12 131m43
+107m13*Val{2|28M9} 116r7 131m62
+110a13*Arr{97A9} 117r7
+121R9*CSR_Register 135e6 138r8 156r21
+123m7*WUF{90M12} 139r7
+125m7*SBF{91M12} 140r7
+127m7*PVDO{92M12} 141r7
+129m7*Reserved_3_7{2|32M9} 142r7
+131r7*EWUP{101R9} 143r7
+133m7*Reserved_11_31{2|60M9} 144r7
+152R9*PWR_Peripheral 158e6 160r8 166r25
+154r7*CR{55R9} 161r7
+156r7*CSR{121R9} 162r7
+166r4*PWR_Periph{152R9}
 X 4 system.ads
-60K9*System 3|10w6 48r24 107r24 4|174e11
+60K9*System 3|10w6 76r24 136r24 4|174e11
 90M9*Address
-114n41*Low_Order_First{114E9} 3|48r31 107r31
+114n41*Low_Order_First{114E9} 3|76r31 136r31
 
