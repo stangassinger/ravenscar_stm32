@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -24,38 +24,67 @@ package Interfaces.STM32.PWR is
    subtype CR_PVDE_Field is Interfaces.STM32.Bit;
    subtype CR_PLS_Field is Interfaces.STM32.UInt3;
    subtype CR_DBP_Field is Interfaces.STM32.Bit;
+   --  CR_ENSD array element
+   subtype CR_ENSD_Element is Interfaces.STM32.Bit;
+
+   --  CR_ENSD array
+   type CR_ENSD_Field_Array is array (1 .. 3) of CR_ENSD_Element
+     with Component_Size => 1, Size => 3;
+
+   --  Type definition for CR_ENSD
+   type CR_ENSD_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  ENSD as a value
+            Val : Interfaces.STM32.UInt3;
+         when True =>
+            --  ENSD as an array
+            Arr : CR_ENSD_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 3;
+
+   for CR_ENSD_Field use record
+      Val at 0 range 0 .. 2;
+      Arr at 0 range 0 .. 2;
+   end record;
 
    --  power control register
    type CR_Register is record
       --  Low-power deep sleep
-      LPDS          : CR_LPDS_Field := 16#0#;
+      LPDS           : CR_LPDS_Field := 16#0#;
       --  Power down deepsleep
-      PDDS          : CR_PDDS_Field := 16#0#;
+      PDDS           : CR_PDDS_Field := 16#0#;
       --  Clear wakeup flag
-      CWUF          : CR_CWUF_Field := 16#0#;
+      CWUF           : CR_CWUF_Field := 16#0#;
       --  Clear standby flag
-      CSBF          : CR_CSBF_Field := 16#0#;
+      CSBF           : CR_CSBF_Field := 16#0#;
       --  Power voltage detector enable
-      PVDE          : CR_PVDE_Field := 16#0#;
+      PVDE           : CR_PVDE_Field := 16#0#;
       --  PVD level selection
-      PLS           : CR_PLS_Field := 16#0#;
+      PLS            : CR_PLS_Field := 16#0#;
       --  Disable backup domain write protection
-      DBP           : CR_DBP_Field := 16#0#;
+      DBP            : CR_DBP_Field := 16#0#;
+      --  ENable SD1 ADC
+      ENSD           : CR_ENSD_Field := (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_9_31 : Interfaces.STM32.UInt23 := 16#0#;
+      Reserved_12_31 : Interfaces.STM32.UInt20 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CR_Register use record
-      LPDS          at 0 range 0 .. 0;
-      PDDS          at 0 range 1 .. 1;
-      CWUF          at 0 range 2 .. 2;
-      CSBF          at 0 range 3 .. 3;
-      PVDE          at 0 range 4 .. 4;
-      PLS           at 0 range 5 .. 7;
-      DBP           at 0 range 8 .. 8;
-      Reserved_9_31 at 0 range 9 .. 31;
+      LPDS           at 0 range 0 .. 0;
+      PDDS           at 0 range 1 .. 1;
+      CWUF           at 0 range 2 .. 2;
+      CSBF           at 0 range 3 .. 3;
+      PVDE           at 0 range 4 .. 4;
+      PLS            at 0 range 5 .. 7;
+      DBP            at 0 range 8 .. 8;
+      ENSD           at 0 range 9 .. 11;
+      Reserved_12_31 at 0 range 12 .. 31;
    end record;
 
    subtype CSR_WUF_Field is Interfaces.STM32.Bit;
@@ -65,8 +94,8 @@ package Interfaces.STM32.PWR is
    subtype CSR_EWUP_Element is Interfaces.STM32.Bit;
 
    --  CSR_EWUP array
-   type CSR_EWUP_Field_Array is array (1 .. 2) of CSR_EWUP_Element
-     with Component_Size => 1, Size => 2;
+   type CSR_EWUP_Field_Array is array (1 .. 3) of CSR_EWUP_Element
+     with Component_Size => 1, Size => 3;
 
    --  Type definition for CSR_EWUP
    type CSR_EWUP_Field
@@ -75,17 +104,17 @@ package Interfaces.STM32.PWR is
       case As_Array is
          when False =>
             --  EWUP as a value
-            Val : Interfaces.STM32.UInt2;
+            Val : Interfaces.STM32.UInt3;
          when True =>
             --  EWUP as an array
             Arr : CSR_EWUP_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 2;
+     with Unchecked_Union, Size => 3;
 
    for CSR_EWUP_Field use record
-      Val at 0 range 0 .. 1;
-      Arr at 0 range 0 .. 1;
+      Val at 0 range 0 .. 2;
+      Arr at 0 range 0 .. 2;
    end record;
 
    --  power control/status register
@@ -101,7 +130,7 @@ package Interfaces.STM32.PWR is
       --  Enable WKUP1 pin
       EWUP           : CSR_EWUP_Field := (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_10_31 : Interfaces.STM32.UInt22 := 16#0#;
+      Reserved_11_31 : Interfaces.STM32.UInt21 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -111,8 +140,8 @@ package Interfaces.STM32.PWR is
       SBF            at 0 range 1 .. 1;
       PVDO           at 0 range 2 .. 2;
       Reserved_3_7   at 0 range 3 .. 7;
-      EWUP           at 0 range 8 .. 9;
-      Reserved_10_31 at 0 range 10 .. 31;
+      EWUP           at 0 range 8 .. 10;
+      Reserved_11_31 at 0 range 11 .. 31;
    end record;
 
    -----------------

@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -26,7 +26,7 @@ package Interfaces.STM32.SPI is
    subtype CR1_SSI_Field is Interfaces.STM32.Bit;
    subtype CR1_SSM_Field is Interfaces.STM32.Bit;
    subtype CR1_RXONLY_Field is Interfaces.STM32.Bit;
-   subtype CR1_DFF_Field is Interfaces.STM32.Bit;
+   subtype CR1_CRCL_Field is Interfaces.STM32.Bit;
    subtype CR1_CRCNEXT_Field is Interfaces.STM32.Bit;
    subtype CR1_CRCEN_Field is Interfaces.STM32.Bit;
    subtype CR1_BIDIOE_Field is Interfaces.STM32.Bit;
@@ -52,8 +52,8 @@ package Interfaces.STM32.SPI is
       SSM            : CR1_SSM_Field := 16#0#;
       --  Receive only
       RXONLY         : CR1_RXONLY_Field := 16#0#;
-      --  Data frame format
-      DFF            : CR1_DFF_Field := 16#0#;
+      --  CRC length
+      CRCL           : CR1_CRCL_Field := 16#0#;
       --  CRC transfer next
       CRCNEXT        : CR1_CRCNEXT_Field := 16#0#;
       --  Hardware CRC calculation enable
@@ -78,7 +78,7 @@ package Interfaces.STM32.SPI is
       SSI            at 0 range 8 .. 8;
       SSM            at 0 range 9 .. 9;
       RXONLY         at 0 range 10 .. 10;
-      DFF            at 0 range 11 .. 11;
+      CRCL           at 0 range 11 .. 11;
       CRCNEXT        at 0 range 12 .. 12;
       CRCEN          at 0 range 13 .. 13;
       BIDIOE         at 0 range 14 .. 14;
@@ -403,5 +403,9 @@ package Interfaces.STM32.SPI is
    --  Serial peripheral interface/Inter-IC sound
    SPI3_Periph : aliased SPI_Peripheral
      with Import, Address => SPI3_Base;
+
+   --  Serial peripheral interface/Inter-IC sound
+   SPI4_Periph : aliased SPI_Peripheral
+     with Import, Address => SPI4_Base;
 
 end Interfaces.STM32.SPI;

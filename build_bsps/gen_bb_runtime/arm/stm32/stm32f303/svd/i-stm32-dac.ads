@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -384,7 +384,7 @@ package Interfaces.STM32.DAC is
    -----------------
 
    --  Digital-to-analog converter
-   type DAC_Peripheral is record
+   type DAC1_Peripheral is record
       --  control register
       CR      : aliased CR_Register;
       --  software trigger register
@@ -416,7 +416,7 @@ package Interfaces.STM32.DAC is
    end record
      with Volatile;
 
-   for DAC_Peripheral use record
+   for DAC1_Peripheral use record
       CR      at 16#0# range 0 .. 31;
       SWTRIGR at 16#4# range 0 .. 31;
       DHR12R1 at 16#8# range 0 .. 31;
@@ -434,7 +434,7 @@ package Interfaces.STM32.DAC is
    end record;
 
    --  Digital-to-analog converter
-   DAC_Periph : aliased DAC_Peripheral
-     with Import, Address => DAC_Base;
+   DAC1_Periph : aliased DAC1_Peripheral
+     with Import, Address => DAC1_Base;
 
 end Interfaces.STM32.DAC;

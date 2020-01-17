@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -650,8 +650,6 @@ package Interfaces.STM32.RTC is
    subtype TAFCR_TAMPIE_Field is Interfaces.STM32.Bit;
    subtype TAFCR_TAMP2E_Field is Interfaces.STM32.Bit;
    subtype TAFCR_TAMP2TRG_Field is Interfaces.STM32.Bit;
-   subtype TAFCR_TAMP3E_Field is Interfaces.STM32.Bit;
-   subtype TAFCR_TAMP3TRG_Field is Interfaces.STM32.Bit;
    subtype TAFCR_TAMPTS_Field is Interfaces.STM32.Bit;
    subtype TAFCR_TAMPFREQ_Field is Interfaces.STM32.UInt3;
    subtype TAFCR_TAMPFLT_Field is Interfaces.STM32.UInt2;
@@ -676,10 +674,8 @@ package Interfaces.STM32.RTC is
       TAMP2E         : TAFCR_TAMP2E_Field := 16#0#;
       --  Active level for tamper 2
       TAMP2TRG       : TAFCR_TAMP2TRG_Field := 16#0#;
-      --  Tamper 3 detection enable
-      TAMP3E         : TAFCR_TAMP3E_Field := 16#0#;
-      --  Active level for tamper 3
-      TAMP3TRG       : TAFCR_TAMP3TRG_Field := 16#0#;
+      --  unspecified
+      Reserved_5_6   : Interfaces.STM32.UInt2 := 16#0#;
       --  Activate timestamp on tamper detection event
       TAMPTS         : TAFCR_TAMPTS_Field := 16#0#;
       --  Tamper sampling frequency
@@ -716,8 +712,7 @@ package Interfaces.STM32.RTC is
       TAMPIE         at 0 range 2 .. 2;
       TAMP2E         at 0 range 3 .. 3;
       TAMP2TRG       at 0 range 4 .. 4;
-      TAMP3E         at 0 range 5 .. 5;
-      TAMP3TRG       at 0 range 6 .. 6;
+      Reserved_5_6   at 0 range 5 .. 6;
       TAMPTS         at 0 range 7 .. 7;
       TAMPFREQ       at 0 range 8 .. 10;
       TAMPFLT        at 0 range 11 .. 12;

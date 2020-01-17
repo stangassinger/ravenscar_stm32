@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -1056,11 +1056,11 @@ package Interfaces.STM32.CAN is
 
    --  filter master register
    type FMR_Register is record
-      --  Filter init mode
+      --  FINIT
       FINIT          : FMR_FINIT_Field := 16#1#;
       --  unspecified
       Reserved_1_7   : Interfaces.STM32.UInt7 := 16#0#;
-      --  CAN2 start bank
+      --  CAN2SB
       CAN2SB         : FMR_CAN2SB_Field := 16#E#;
       --  unspecified
       Reserved_14_31 : Interfaces.STM32.UInt18 := 16#A870#;

@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -446,7 +446,7 @@ package Interfaces.STM32.GPIO is
    -----------------
 
    --  General-purpose I/Os
-   type GPIO_Peripheral is record
+   type GPIOA_Peripheral is record
       --  GPIO port mode register
       MODER   : aliased MODER_Register;
       --  GPIO port output type register
@@ -472,7 +472,7 @@ package Interfaces.STM32.GPIO is
    end record
      with Volatile;
 
-   for GPIO_Peripheral use record
+   for GPIOA_Peripheral use record
       MODER   at 16#0# range 0 .. 31;
       OTYPER  at 16#4# range 0 .. 31;
       OSPEEDR at 16#8# range 0 .. 31;
@@ -487,27 +487,73 @@ package Interfaces.STM32.GPIO is
    end record;
 
    --  General-purpose I/Os
-   GPIOA_Periph : aliased GPIO_Peripheral
+   GPIOA_Periph : aliased GPIOA_Peripheral
      with Import, Address => GPIOA_Base;
 
    --  General-purpose I/Os
-   GPIOB_Periph : aliased GPIO_Peripheral
+   GPIOB_Periph : aliased GPIOA_Peripheral
      with Import, Address => GPIOB_Base;
 
    --  General-purpose I/Os
-   GPIOC_Periph : aliased GPIO_Peripheral
-     with Import, Address => GPIOC_Base;
-
-   --  General-purpose I/Os
-   GPIOD_Periph : aliased GPIO_Peripheral
+   GPIOD_Periph : aliased GPIOA_Peripheral
      with Import, Address => GPIOD_Base;
 
    --  General-purpose I/Os
-   GPIOE_Periph : aliased GPIO_Peripheral
+   GPIOH_Periph : aliased GPIOA_Peripheral
+     with Import, Address => GPIOH_Base;
+
+   --  General-purpose I/Os
+   type GPIOC_Peripheral is record
+      --  GPIO port mode register
+      MODER   : aliased MODER_Register;
+      --  GPIO port output type register
+      OTYPER  : aliased OTYPER_Register;
+      --  GPIO port output speed register
+      OSPEEDR : aliased OSPEEDR_Register;
+      --  GPIO port pull-up/pull-down register
+      PUPDR   : aliased PUPDR_Register;
+      --  GPIO port input data register
+      IDR     : aliased IDR_Register;
+      --  GPIO port output data register
+      ODR     : aliased ODR_Register;
+      --  GPIO port bit set/reset register
+      BSRR    : aliased BSRR_Register;
+      --  GPIO alternate function low register
+      AFRL    : aliased AFRL_Register;
+      --  GPIO alternate function high register
+      AFRH    : aliased AFRH_Register;
+      --  Port bit reset register
+      BRR     : aliased BRR_Register;
+   end record
+     with Volatile;
+
+   for GPIOC_Peripheral use record
+      MODER   at 16#0# range 0 .. 31;
+      OTYPER  at 16#4# range 0 .. 31;
+      OSPEEDR at 16#8# range 0 .. 31;
+      PUPDR   at 16#C# range 0 .. 31;
+      IDR     at 16#10# range 0 .. 31;
+      ODR     at 16#14# range 0 .. 31;
+      BSRR    at 16#18# range 0 .. 31;
+      AFRL    at 16#20# range 0 .. 31;
+      AFRH    at 16#24# range 0 .. 31;
+      BRR     at 16#28# range 0 .. 31;
+   end record;
+
+   --  General-purpose I/Os
+   GPIOC_Periph : aliased GPIOC_Peripheral
+     with Import, Address => GPIOC_Base;
+
+   --  General-purpose I/Os
+   GPIOE_Periph : aliased GPIOC_Peripheral
      with Import, Address => GPIOE_Base;
 
    --  General-purpose I/Os
-   GPIOF_Periph : aliased GPIO_Peripheral
+   GPIOF_Periph : aliased GPIOC_Peripheral
      with Import, Address => GPIOF_Base;
+
+   --  General-purpose I/Os
+   GPIOG_Periph : aliased GPIOC_Peripheral
+     with Import, Address => GPIOG_Base;
 
 end Interfaces.STM32.GPIO;

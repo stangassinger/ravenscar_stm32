@@ -264,9 +264,9 @@ procedure Setup_Pll is
                      Arr      => (1 => To_APB (APB1_PRE),
                                   2 => To_APB (APB2_PRE))),
 
-         I2SSRC  => I2S_Clock_Selection'Enum_Rep (I2SSEL_PLL),
+   --      I2SSRC  => I2S_Clock_Selection'Enum_Rep (I2SSEL_PLL),
          MCO    =>  MC01_Clock_Selection'Enum_Rep (MC01SEL_HSI),
-         MCOF   =>  MC0x_Prescaler'Enum_Rep (MC0xPRE_DIV1),
+   --      MCOF   =>  MC0x_Prescaler'Enum_Rep (MC0xPRE_DIV1),
 
          others  => <>);
 

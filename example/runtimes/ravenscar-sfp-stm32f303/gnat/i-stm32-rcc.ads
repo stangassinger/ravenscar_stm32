@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -106,13 +106,13 @@ package Interfaces.STM32.RCC is
       Arr at 0 range 0 .. 5;
    end record;
 
+   subtype CFGR_ADCPRE_Field is Interfaces.STM32.UInt2;
    subtype CFGR_PLLSRC_Field is Interfaces.STM32.Bit;
    subtype CFGR_PLLXTPRE_Field is Interfaces.STM32.Bit;
    subtype CFGR_PLLMUL_Field is Interfaces.STM32.UInt4;
-   subtype CFGR_USBPRES_Field is Interfaces.STM32.Bit;
-   subtype CFGR_I2SSRC_Field is Interfaces.STM32.Bit;
+   subtype CFGR_USBPRE_Field is Interfaces.STM32.Bit;
    subtype CFGR_MCO_Field is Interfaces.STM32.UInt3;
-   subtype CFGR_MCOF_Field is Interfaces.STM32.Bit;
+   subtype CFGR_SDPRE_Field is Interfaces.STM32.UInt5;
 
    --  Clock configuration register (RCC_CFGR)
    type CFGR_Register is record
@@ -124,8 +124,8 @@ package Interfaces.STM32.RCC is
       HPRE           : CFGR_HPRE_Field := 16#0#;
       --  APB Low speed prescaler (APB1)
       PPRE           : CFGR_PPRE_Field := (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_14_15 : Interfaces.STM32.UInt2 := 16#0#;
+      --  ADC prescaler
+      ADCPRE         : CFGR_ADCPRE_Field := 16#0#;
       --  PLL entry clock source
       PLLSRC         : CFGR_PLLSRC_Field := 16#0#;
       --  HSE divider for PLL entry
@@ -133,17 +133,13 @@ package Interfaces.STM32.RCC is
       --  PLL Multiplication Factor
       PLLMUL         : CFGR_PLLMUL_Field := 16#0#;
       --  USB prescaler
-      USBPRES        : CFGR_USBPRES_Field := 16#0#;
-      --  I2S external clock source selection
-      I2SSRC         : CFGR_I2SSRC_Field := 16#0#;
+      USBPRE         : CFGR_USBPRE_Field := 16#0#;
+      --  unspecified
+      Reserved_23_23 : Interfaces.STM32.Bit := 16#0#;
       --  Microcontroller clock output
       MCO            : CFGR_MCO_Field := 16#0#;
-      --  unspecified
-      Reserved_27_27 : Interfaces.STM32.Bit := 16#0#;
-      --  Read-only. Microcontroller Clock Output Flag
-      MCOF           : CFGR_MCOF_Field := 16#0#;
-      --  unspecified
-      Reserved_29_31 : Interfaces.STM32.UInt3 := 16#0#;
+      --  SDADC prescaler
+      SDPRE          : CFGR_SDPRE_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -153,16 +149,14 @@ package Interfaces.STM32.RCC is
       SWS            at 0 range 2 .. 3;
       HPRE           at 0 range 4 .. 7;
       PPRE           at 0 range 8 .. 13;
-      Reserved_14_15 at 0 range 14 .. 15;
+      ADCPRE         at 0 range 14 .. 15;
       PLLSRC         at 0 range 16 .. 16;
       PLLXTPRE       at 0 range 17 .. 17;
       PLLMUL         at 0 range 18 .. 21;
-      USBPRES        at 0 range 22 .. 22;
-      I2SSRC         at 0 range 23 .. 23;
+      USBPRE         at 0 range 22 .. 22;
+      Reserved_23_23 at 0 range 23 .. 23;
       MCO            at 0 range 24 .. 26;
-      Reserved_27_27 at 0 range 27 .. 27;
-      MCOF           at 0 range 28 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
+      SDPRE          at 0 range 27 .. 31;
    end record;
 
    subtype CIR_LSIRDYF_Field is Interfaces.STM32.Bit;
@@ -256,26 +250,31 @@ package Interfaces.STM32.RCC is
    end record;
 
    subtype APB2RSTR_SYSCFGRST_Field is Interfaces.STM32.Bit;
-   subtype APB2RSTR_TIM1RST_Field is Interfaces.STM32.Bit;
+   subtype APB2RSTR_ADCRST_Field is Interfaces.STM32.Bit;
    subtype APB2RSTR_SPI1RST_Field is Interfaces.STM32.Bit;
-   subtype APB2RSTR_TIM8RST_Field is Interfaces.STM32.Bit;
    subtype APB2RSTR_USART1RST_Field is Interfaces.STM32.Bit;
    subtype APB2RSTR_TIM15RST_Field is Interfaces.STM32.Bit;
    subtype APB2RSTR_TIM16RST_Field is Interfaces.STM32.Bit;
    subtype APB2RSTR_TIM17RST_Field is Interfaces.STM32.Bit;
+   subtype APB2RSTR_TIM19RST_Field is Interfaces.STM32.Bit;
+   subtype APB2RSTR_SDAD1RST_Field is Interfaces.STM32.Bit;
+   subtype APB2RSTR_SDAD2RST_Field is Interfaces.STM32.Bit;
+   subtype APB2RSTR_SDAD3RST_Field is Interfaces.STM32.Bit;
 
    --  APB2 peripheral reset register (RCC_APB2RSTR)
    type APB2RSTR_Register is record
       --  SYSCFG and COMP reset
       SYSCFGRST      : APB2RSTR_SYSCFGRST_Field := 16#0#;
       --  unspecified
-      Reserved_1_10  : Interfaces.STM32.UInt10 := 16#0#;
-      --  TIM1 timer reset
-      TIM1RST        : APB2RSTR_TIM1RST_Field := 16#0#;
+      Reserved_1_8   : Interfaces.STM32.Byte := 16#0#;
+      --  ADC interface reset
+      ADCRST         : APB2RSTR_ADCRST_Field := 16#0#;
+      --  unspecified
+      Reserved_10_11 : Interfaces.STM32.UInt2 := 16#0#;
       --  SPI 1 reset
       SPI1RST        : APB2RSTR_SPI1RST_Field := 16#0#;
-      --  TIM8 timer reset
-      TIM8RST        : APB2RSTR_TIM8RST_Field := 16#0#;
+      --  unspecified
+      Reserved_13_13 : Interfaces.STM32.Bit := 16#0#;
       --  USART1 reset
       USART1RST      : APB2RSTR_USART1RST_Field := 16#0#;
       --  unspecified
@@ -286,44 +285,65 @@ package Interfaces.STM32.RCC is
       TIM16RST       : APB2RSTR_TIM16RST_Field := 16#0#;
       --  TIM17 timer reset
       TIM17RST       : APB2RSTR_TIM17RST_Field := 16#0#;
+      --  TIM19 timer reset
+      TIM19RST       : APB2RSTR_TIM19RST_Field := 16#0#;
       --  unspecified
-      Reserved_19_31 : Interfaces.STM32.UInt13 := 16#0#;
+      Reserved_20_23 : Interfaces.STM32.UInt4 := 16#0#;
+      --  SDADC1 (Sigma delta ADC 1) reset
+      SDAD1RST       : APB2RSTR_SDAD1RST_Field := 16#0#;
+      --  SDADC2 (Sigma delta ADC 2) reset
+      SDAD2RST       : APB2RSTR_SDAD2RST_Field := 16#0#;
+      --  SDADC3 (Sigma delta ADC 3) reset
+      SDAD3RST       : APB2RSTR_SDAD3RST_Field := 16#0#;
+      --  unspecified
+      Reserved_27_31 : Interfaces.STM32.UInt5 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB2RSTR_Register use record
       SYSCFGRST      at 0 range 0 .. 0;
-      Reserved_1_10  at 0 range 1 .. 10;
-      TIM1RST        at 0 range 11 .. 11;
+      Reserved_1_8   at 0 range 1 .. 8;
+      ADCRST         at 0 range 9 .. 9;
+      Reserved_10_11 at 0 range 10 .. 11;
       SPI1RST        at 0 range 12 .. 12;
-      TIM8RST        at 0 range 13 .. 13;
+      Reserved_13_13 at 0 range 13 .. 13;
       USART1RST      at 0 range 14 .. 14;
       Reserved_15_15 at 0 range 15 .. 15;
       TIM15RST       at 0 range 16 .. 16;
       TIM16RST       at 0 range 17 .. 17;
       TIM17RST       at 0 range 18 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
+      TIM19RST       at 0 range 19 .. 19;
+      Reserved_20_23 at 0 range 20 .. 23;
+      SDAD1RST       at 0 range 24 .. 24;
+      SDAD2RST       at 0 range 25 .. 25;
+      SDAD3RST       at 0 range 26 .. 26;
+      Reserved_27_31 at 0 range 27 .. 31;
    end record;
 
    subtype APB1RSTR_TIM2RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_TIM3RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_TIM4RST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_TIM5RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_TIM6RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_TIM7RST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_TIM12RST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_TIM13RST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_TIM14RST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_TIM18RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_WWDGRST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_SPI2RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_SPI3RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_USART2RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_USART3RST_Field is Interfaces.STM32.Bit;
-   subtype APB1RSTR_UART4RST_Field is Interfaces.STM32.Bit;
-   subtype APB1RSTR_UART5RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_I2C1RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_I2C2RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_USBRST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_CANRST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_DAC3RST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_PWRRST_Field is Interfaces.STM32.Bit;
    subtype APB1RSTR_DACRST_Field is Interfaces.STM32.Bit;
+   subtype APB1RSTR_CECRST_Field is Interfaces.STM32.Bit;
 
    --  APB1 peripheral reset register (RCC_APB1RSTR)
    type APB1RSTR_Register is record
@@ -333,14 +353,22 @@ package Interfaces.STM32.RCC is
       TIM3RST        : APB1RSTR_TIM3RST_Field := 16#0#;
       --  Timer 14 reset
       TIM4RST        : APB1RSTR_TIM4RST_Field := 16#0#;
-      --  unspecified
-      Reserved_3_3   : Interfaces.STM32.Bit := 16#0#;
+      --  Timer 5 reset
+      TIM5RST        : APB1RSTR_TIM5RST_Field := 16#0#;
       --  Timer 6 reset
       TIM6RST        : APB1RSTR_TIM6RST_Field := 16#0#;
       --  Timer 7 reset
       TIM7RST        : APB1RSTR_TIM7RST_Field := 16#0#;
+      --  Timer 12 reset
+      TIM12RST       : APB1RSTR_TIM12RST_Field := 16#0#;
+      --  Timer 13 reset
+      TIM13RST       : APB1RSTR_TIM13RST_Field := 16#0#;
+      --  Timer 14 reset
+      TIM14RST       : APB1RSTR_TIM14RST_Field := 16#0#;
+      --  Timer 18 reset
+      TIM18RST       : APB1RSTR_TIM18RST_Field := 16#0#;
       --  unspecified
-      Reserved_6_10  : Interfaces.STM32.UInt5 := 16#0#;
+      Reserved_10_10 : Interfaces.STM32.Bit := 16#0#;
       --  Window watchdog reset
       WWDGRST        : APB1RSTR_WWDGRST_Field := 16#0#;
       --  unspecified
@@ -355,10 +383,8 @@ package Interfaces.STM32.RCC is
       USART2RST      : APB1RSTR_USART2RST_Field := 16#0#;
       --  USART3 reset
       USART3RST      : APB1RSTR_USART3RST_Field := 16#0#;
-      --  UART 4 reset
-      UART4RST       : APB1RSTR_UART4RST_Field := 16#0#;
-      --  UART 5 reset
-      UART5RST       : APB1RSTR_UART5RST_Field := 16#0#;
+      --  unspecified
+      Reserved_19_20 : Interfaces.STM32.UInt2 := 16#0#;
       --  I2C1 reset
       I2C1RST        : APB1RSTR_I2C1RST_Field := 16#0#;
       --  I2C2 reset
@@ -369,14 +395,18 @@ package Interfaces.STM32.RCC is
       Reserved_24_24 : Interfaces.STM32.Bit := 16#0#;
       --  CAN reset
       CANRST         : APB1RSTR_CANRST_Field := 16#0#;
+      --  DAC3 reset
+      DAC3RST        : APB1RSTR_DAC3RST_Field := 16#0#;
       --  unspecified
-      Reserved_26_27 : Interfaces.STM32.UInt2 := 16#0#;
+      Reserved_27_27 : Interfaces.STM32.Bit := 16#0#;
       --  Power interface reset
       PWRRST         : APB1RSTR_PWRRST_Field := 16#0#;
       --  DAC interface reset
       DACRST         : APB1RSTR_DACRST_Field := 16#0#;
+      --  HDMI CEC reset
+      CECRST         : APB1RSTR_CECRST_Field := 16#0#;
       --  unspecified
-      Reserved_30_31 : Interfaces.STM32.UInt2 := 16#0#;
+      Reserved_31_31 : Interfaces.STM32.Bit := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -385,10 +415,14 @@ package Interfaces.STM32.RCC is
       TIM2RST        at 0 range 0 .. 0;
       TIM3RST        at 0 range 1 .. 1;
       TIM4RST        at 0 range 2 .. 2;
-      Reserved_3_3   at 0 range 3 .. 3;
+      TIM5RST        at 0 range 3 .. 3;
       TIM6RST        at 0 range 4 .. 4;
       TIM7RST        at 0 range 5 .. 5;
-      Reserved_6_10  at 0 range 6 .. 10;
+      TIM12RST       at 0 range 6 .. 6;
+      TIM13RST       at 0 range 7 .. 7;
+      TIM14RST       at 0 range 8 .. 8;
+      TIM18RST       at 0 range 9 .. 9;
+      Reserved_10_10 at 0 range 10 .. 10;
       WWDGRST        at 0 range 11 .. 11;
       Reserved_12_13 at 0 range 12 .. 13;
       SPI2RST        at 0 range 14 .. 14;
@@ -396,17 +430,18 @@ package Interfaces.STM32.RCC is
       Reserved_16_16 at 0 range 16 .. 16;
       USART2RST      at 0 range 17 .. 17;
       USART3RST      at 0 range 18 .. 18;
-      UART4RST       at 0 range 19 .. 19;
-      UART5RST       at 0 range 20 .. 20;
+      Reserved_19_20 at 0 range 19 .. 20;
       I2C1RST        at 0 range 21 .. 21;
       I2C2RST        at 0 range 22 .. 22;
       USBRST         at 0 range 23 .. 23;
       Reserved_24_24 at 0 range 24 .. 24;
       CANRST         at 0 range 25 .. 25;
-      Reserved_26_27 at 0 range 26 .. 27;
+      DAC3RST        at 0 range 26 .. 26;
+      Reserved_27_27 at 0 range 27 .. 27;
       PWRRST         at 0 range 28 .. 28;
       DACRST         at 0 range 29 .. 29;
-      Reserved_30_31 at 0 range 30 .. 31;
+      CECRST         at 0 range 30 .. 30;
+      Reserved_31_31 at 0 range 31 .. 31;
    end record;
 
    subtype AHBENR_DMAEN_Field is Interfaces.STM32.Bit;
@@ -421,8 +456,6 @@ package Interfaces.STM32.RCC is
    subtype AHBENR_IOPEEN_Field is Interfaces.STM32.Bit;
    subtype AHBENR_IOPFEN_Field is Interfaces.STM32.Bit;
    subtype AHBENR_TSCEN_Field is Interfaces.STM32.Bit;
-   subtype AHBENR_ADC12EN_Field is Interfaces.STM32.Bit;
-   subtype AHBENR_ADC34EN_Field is Interfaces.STM32.Bit;
 
    --  AHB Peripheral Clock enable register (RCC_AHBENR)
    type AHBENR_Register is record
@@ -459,13 +492,7 @@ package Interfaces.STM32.RCC is
       --  Touch sensing controller clock enable
       TSCEN          : AHBENR_TSCEN_Field := 16#0#;
       --  unspecified
-      Reserved_25_27 : Interfaces.STM32.UInt3 := 16#0#;
-      --  ADC1 and ADC2 clock enable
-      ADC12EN        : AHBENR_ADC12EN_Field := 16#0#;
-      --  ADC3 and ADC4 clock enable
-      ADC34EN        : AHBENR_ADC34EN_Field := 16#0#;
-      --  unspecified
-      Reserved_30_31 : Interfaces.STM32.UInt2 := 16#0#;
+      Reserved_25_31 : Interfaces.STM32.UInt7 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -487,33 +514,39 @@ package Interfaces.STM32.RCC is
       IOPFEN         at 0 range 22 .. 22;
       Reserved_23_23 at 0 range 23 .. 23;
       TSCEN          at 0 range 24 .. 24;
-      Reserved_25_27 at 0 range 25 .. 27;
-      ADC12EN        at 0 range 28 .. 28;
-      ADC34EN        at 0 range 29 .. 29;
-      Reserved_30_31 at 0 range 30 .. 31;
+      Reserved_25_31 at 0 range 25 .. 31;
    end record;
 
    subtype APB2ENR_SYSCFGEN_Field is Interfaces.STM32.Bit;
+   subtype APB2ENR_ADCEN_Field is Interfaces.STM32.Bit;
    subtype APB2ENR_TIM1EN_Field is Interfaces.STM32.Bit;
    subtype APB2ENR_SPI1EN_Field is Interfaces.STM32.Bit;
-   subtype APB2ENR_TIM8EN_Field is Interfaces.STM32.Bit;
    subtype APB2ENR_USART1EN_Field is Interfaces.STM32.Bit;
    subtype APB2ENR_TIM15EN_Field is Interfaces.STM32.Bit;
    subtype APB2ENR_TIM16EN_Field is Interfaces.STM32.Bit;
    subtype APB2ENR_TIM17EN_Field is Interfaces.STM32.Bit;
+   subtype APB2ENR_TIM19EN_Field is Interfaces.STM32.Bit;
+   subtype APB2ENR_DBGMCUEN_Field is Interfaces.STM32.Bit;
+   subtype APB2ENR_SDAD1EN_Field is Interfaces.STM32.Bit;
+   subtype APB2ENR_SDAD2EN_Field is Interfaces.STM32.Bit;
+   subtype APB2ENR_SDAD3EN_Field is Interfaces.STM32.Bit;
 
    --  APB2 peripheral clock enable register (RCC_APB2ENR)
    type APB2ENR_Register is record
       --  SYSCFG clock enable
       SYSCFGEN       : APB2ENR_SYSCFGEN_Field := 16#0#;
       --  unspecified
-      Reserved_1_10  : Interfaces.STM32.UInt10 := 16#0#;
+      Reserved_1_8   : Interfaces.STM32.Byte := 16#0#;
+      --  ADC 1 interface clock enable
+      ADCEN          : APB2ENR_ADCEN_Field := 16#0#;
+      --  unspecified
+      Reserved_10_10 : Interfaces.STM32.Bit := 16#0#;
       --  TIM1 Timer clock enable
       TIM1EN         : APB2ENR_TIM1EN_Field := 16#0#;
       --  SPI 1 clock enable
       SPI1EN         : APB2ENR_SPI1EN_Field := 16#0#;
-      --  TIM8 Timer clock enable
-      TIM8EN         : APB2ENR_TIM8EN_Field := 16#0#;
+      --  unspecified
+      Reserved_13_13 : Interfaces.STM32.Bit := 16#0#;
       --  USART1 clock enable
       USART1EN       : APB2ENR_USART1EN_Field := 16#0#;
       --  unspecified
@@ -524,41 +557,72 @@ package Interfaces.STM32.RCC is
       TIM16EN        : APB2ENR_TIM16EN_Field := 16#0#;
       --  TIM17 timer clock enable
       TIM17EN        : APB2ENR_TIM17EN_Field := 16#0#;
+      --  TIM19 timer clock enable
+      TIM19EN        : APB2ENR_TIM19EN_Field := 16#0#;
       --  unspecified
-      Reserved_19_31 : Interfaces.STM32.UInt13 := 16#0#;
+      Reserved_20_21 : Interfaces.STM32.UInt2 := 16#0#;
+      --  MCU debug module clock enable
+      DBGMCUEN       : APB2ENR_DBGMCUEN_Field := 16#0#;
+      --  unspecified
+      Reserved_23_23 : Interfaces.STM32.Bit := 16#0#;
+      --  SDADC1 (Sigma Delta ADC 1) clock enable
+      SDAD1EN        : APB2ENR_SDAD1EN_Field := 16#0#;
+      --  SDADC2 (Sigma Delta ADC 2) clock enable
+      SDAD2EN        : APB2ENR_SDAD2EN_Field := 16#0#;
+      --  SDADC3 (Sigma Delta ADC 3) clock enable
+      SDAD3EN        : APB2ENR_SDAD3EN_Field := 16#0#;
+      --  unspecified
+      Reserved_27_31 : Interfaces.STM32.UInt5 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for APB2ENR_Register use record
       SYSCFGEN       at 0 range 0 .. 0;
-      Reserved_1_10  at 0 range 1 .. 10;
+      Reserved_1_8   at 0 range 1 .. 8;
+      ADCEN          at 0 range 9 .. 9;
+      Reserved_10_10 at 0 range 10 .. 10;
       TIM1EN         at 0 range 11 .. 11;
       SPI1EN         at 0 range 12 .. 12;
-      TIM8EN         at 0 range 13 .. 13;
+      Reserved_13_13 at 0 range 13 .. 13;
       USART1EN       at 0 range 14 .. 14;
       Reserved_15_15 at 0 range 15 .. 15;
       TIM15EN        at 0 range 16 .. 16;
       TIM16EN        at 0 range 17 .. 17;
       TIM17EN        at 0 range 18 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
+      TIM19EN        at 0 range 19 .. 19;
+      Reserved_20_21 at 0 range 20 .. 21;
+      DBGMCUEN       at 0 range 22 .. 22;
+      Reserved_23_23 at 0 range 23 .. 23;
+      SDAD1EN        at 0 range 24 .. 24;
+      SDAD2EN        at 0 range 25 .. 25;
+      SDAD3EN        at 0 range 26 .. 26;
+      Reserved_27_31 at 0 range 27 .. 31;
    end record;
 
    subtype APB1ENR_TIM2EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_TIM3EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_TIM4EN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_TIM5EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_TIM6EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_TIM7EN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_TIM12EN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_TIM13EN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_TIM14EN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_TIM18EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_WWDGEN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_SPI2EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_SPI3EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_USART2EN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_USART3EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_I2C1EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_I2C2EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_USBEN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_CANEN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_DAC3EN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_PWREN_Field is Interfaces.STM32.Bit;
    subtype APB1ENR_DACEN_Field is Interfaces.STM32.Bit;
+   subtype APB1ENR_CECEN_Field is Interfaces.STM32.Bit;
 
    --  APB1 peripheral clock enable register (RCC_APB1ENR)
    type APB1ENR_Register is record
@@ -568,14 +632,22 @@ package Interfaces.STM32.RCC is
       TIM3EN         : APB1ENR_TIM3EN_Field := 16#0#;
       --  Timer 4 clock enable
       TIM4EN         : APB1ENR_TIM4EN_Field := 16#0#;
-      --  unspecified
-      Reserved_3_3   : Interfaces.STM32.Bit := 16#0#;
+      --  Timer 5 clock enable
+      TIM5EN         : APB1ENR_TIM5EN_Field := 16#0#;
       --  Timer 6 clock enable
       TIM6EN         : APB1ENR_TIM6EN_Field := 16#0#;
       --  Timer 7 clock enable
       TIM7EN         : APB1ENR_TIM7EN_Field := 16#0#;
+      --  Timer 12 clock enable
+      TIM12EN        : APB1ENR_TIM12EN_Field := 16#0#;
+      --  Timer 13 clock enable
+      TIM13EN        : APB1ENR_TIM13EN_Field := 16#0#;
+      --  Timer 14 clock enable
+      TIM14EN        : APB1ENR_TIM14EN_Field := 16#0#;
+      --  Timer 18 clock enable
+      TIM18EN        : APB1ENR_TIM18EN_Field := 16#0#;
       --  unspecified
-      Reserved_6_10  : Interfaces.STM32.UInt5 := 16#0#;
+      Reserved_10_10 : Interfaces.STM32.Bit := 16#0#;
       --  Window watchdog clock enable
       WWDGEN         : APB1ENR_WWDGEN_Field := 16#0#;
       --  unspecified
@@ -588,8 +660,10 @@ package Interfaces.STM32.RCC is
       Reserved_16_16 : Interfaces.STM32.Bit := 16#0#;
       --  USART 2 clock enable
       USART2EN       : APB1ENR_USART2EN_Field := 16#0#;
+      --  USART 3 clock enable
+      USART3EN       : APB1ENR_USART3EN_Field := 16#0#;
       --  unspecified
-      Reserved_18_20 : Interfaces.STM32.UInt3 := 16#0#;
+      Reserved_19_20 : Interfaces.STM32.UInt2 := 16#0#;
       --  I2C 1 clock enable
       I2C1EN         : APB1ENR_I2C1EN_Field := 16#0#;
       --  I2C 2 clock enable
@@ -600,14 +674,18 @@ package Interfaces.STM32.RCC is
       Reserved_24_24 : Interfaces.STM32.Bit := 16#0#;
       --  CAN clock enable
       CANEN          : APB1ENR_CANEN_Field := 16#0#;
+      --  DAC3 interface clock enable
+      DAC3EN         : APB1ENR_DAC3EN_Field := 16#0#;
       --  unspecified
-      Reserved_26_27 : Interfaces.STM32.UInt2 := 16#0#;
+      Reserved_27_27 : Interfaces.STM32.Bit := 16#0#;
       --  Power interface clock enable
       PWREN          : APB1ENR_PWREN_Field := 16#0#;
       --  DAC interface clock enable
       DACEN          : APB1ENR_DACEN_Field := 16#0#;
+      --  HDMI CEC interface clock enable
+      CECEN          : APB1ENR_CECEN_Field := 16#0#;
       --  unspecified
-      Reserved_30_31 : Interfaces.STM32.UInt2 := 16#0#;
+      Reserved_31_31 : Interfaces.STM32.Bit := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -616,26 +694,33 @@ package Interfaces.STM32.RCC is
       TIM2EN         at 0 range 0 .. 0;
       TIM3EN         at 0 range 1 .. 1;
       TIM4EN         at 0 range 2 .. 2;
-      Reserved_3_3   at 0 range 3 .. 3;
+      TIM5EN         at 0 range 3 .. 3;
       TIM6EN         at 0 range 4 .. 4;
       TIM7EN         at 0 range 5 .. 5;
-      Reserved_6_10  at 0 range 6 .. 10;
+      TIM12EN        at 0 range 6 .. 6;
+      TIM13EN        at 0 range 7 .. 7;
+      TIM14EN        at 0 range 8 .. 8;
+      TIM18EN        at 0 range 9 .. 9;
+      Reserved_10_10 at 0 range 10 .. 10;
       WWDGEN         at 0 range 11 .. 11;
       Reserved_12_13 at 0 range 12 .. 13;
       SPI2EN         at 0 range 14 .. 14;
       SPI3EN         at 0 range 15 .. 15;
       Reserved_16_16 at 0 range 16 .. 16;
       USART2EN       at 0 range 17 .. 17;
-      Reserved_18_20 at 0 range 18 .. 20;
+      USART3EN       at 0 range 18 .. 18;
+      Reserved_19_20 at 0 range 19 .. 20;
       I2C1EN         at 0 range 21 .. 21;
       I2C2EN         at 0 range 22 .. 22;
       USBEN          at 0 range 23 .. 23;
       Reserved_24_24 at 0 range 24 .. 24;
       CANEN          at 0 range 25 .. 25;
-      Reserved_26_27 at 0 range 26 .. 27;
+      DAC3EN         at 0 range 26 .. 26;
+      Reserved_27_27 at 0 range 27 .. 27;
       PWREN          at 0 range 28 .. 28;
       DACEN          at 0 range 29 .. 29;
-      Reserved_30_31 at 0 range 30 .. 31;
+      CECEN          at 0 range 30 .. 30;
+      Reserved_31_31 at 0 range 31 .. 31;
    end record;
 
    subtype BDCR_LSEON_Field is Interfaces.STM32.Bit;
@@ -745,8 +830,6 @@ package Interfaces.STM32.RCC is
    subtype AHBRSTR_IOPERST_Field is Interfaces.STM32.Bit;
    subtype AHBRSTR_IOPFRST_Field is Interfaces.STM32.Bit;
    subtype AHBRSTR_TSCRST_Field is Interfaces.STM32.Bit;
-   subtype AHBRSTR_ADC12RST_Field is Interfaces.STM32.Bit;
-   subtype AHBRSTR_ADC34RST_Field is Interfaces.STM32.Bit;
 
    --  AHB peripheral reset register
    type AHBRSTR_Register is record
@@ -769,13 +852,7 @@ package Interfaces.STM32.RCC is
       --  Touch sensing controller reset
       TSCRST         : AHBRSTR_TSCRST_Field := 16#0#;
       --  unspecified
-      Reserved_25_27 : Interfaces.STM32.UInt3 := 16#0#;
-      --  ADC1 and ADC2 reset
-      ADC12RST       : AHBRSTR_ADC12RST_Field := 16#0#;
-      --  ADC3 and ADC4 reset
-      ADC34RST       : AHBRSTR_ADC34RST_Field := 16#0#;
-      --  unspecified
-      Reserved_30_31 : Interfaces.STM32.UInt2 := 16#0#;
+      Reserved_25_31 : Interfaces.STM32.UInt7 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -790,46 +867,32 @@ package Interfaces.STM32.RCC is
       IOPFRST        at 0 range 22 .. 22;
       Reserved_23_23 at 0 range 23 .. 23;
       TSCRST         at 0 range 24 .. 24;
-      Reserved_25_27 at 0 range 25 .. 27;
-      ADC12RST       at 0 range 28 .. 28;
-      ADC34RST       at 0 range 29 .. 29;
-      Reserved_30_31 at 0 range 30 .. 31;
+      Reserved_25_31 at 0 range 25 .. 31;
    end record;
 
    subtype CFGR2_PREDIV_Field is Interfaces.STM32.UInt4;
-   subtype CFGR2_ADC12PRES_Field is Interfaces.STM32.UInt5;
-   subtype CFGR2_ADC34PRES_Field is Interfaces.STM32.UInt5;
 
    --  Clock configuration register 2
    type CFGR2_Register is record
       --  PREDIV division factor
-      PREDIV         : CFGR2_PREDIV_Field := 16#0#;
-      --  ADC1 and ADC2 prescaler
-      ADC12PRES      : CFGR2_ADC12PRES_Field := 16#0#;
-      --  ADC3 and ADC4 prescaler
-      ADC34PRES      : CFGR2_ADC34PRES_Field := 16#0#;
+      PREDIV        : CFGR2_PREDIV_Field := 16#0#;
       --  unspecified
-      Reserved_14_31 : Interfaces.STM32.UInt18 := 16#0#;
+      Reserved_4_31 : Interfaces.STM32.UInt28 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for CFGR2_Register use record
-      PREDIV         at 0 range 0 .. 3;
-      ADC12PRES      at 0 range 4 .. 8;
-      ADC34PRES      at 0 range 9 .. 13;
-      Reserved_14_31 at 0 range 14 .. 31;
+      PREDIV        at 0 range 0 .. 3;
+      Reserved_4_31 at 0 range 4 .. 31;
    end record;
 
    subtype CFGR3_USART1SW_Field is Interfaces.STM32.UInt2;
    subtype CFGR3_I2C1SW_Field is Interfaces.STM32.Bit;
    subtype CFGR3_I2C2SW_Field is Interfaces.STM32.Bit;
-   subtype CFGR3_TIM1SW_Field is Interfaces.STM32.Bit;
-   subtype CFGR3_TIM8SW_Field is Interfaces.STM32.Bit;
+   subtype CFGR3_CECSW_Field is Interfaces.STM32.Bit;
    subtype CFGR3_USART2SW_Field is Interfaces.STM32.UInt2;
    subtype CFGR3_USART3SW_Field is Interfaces.STM32.UInt2;
-   subtype CFGR3_UART4SW_Field is Interfaces.STM32.UInt2;
-   subtype CFGR3_UART5SW_Field is Interfaces.STM32.UInt2;
 
    --  Clock configuration register 3
    type CFGR3_Register is record
@@ -841,24 +904,16 @@ package Interfaces.STM32.RCC is
       I2C1SW         : CFGR3_I2C1SW_Field := 16#0#;
       --  I2C2 clock source selection
       I2C2SW         : CFGR3_I2C2SW_Field := 16#0#;
+      --  HDMI CEC clock source selection
+      CECSW          : CFGR3_CECSW_Field := 16#0#;
       --  unspecified
-      Reserved_6_7   : Interfaces.STM32.UInt2 := 16#0#;
-      --  Timer1 clock source selection
-      TIM1SW         : CFGR3_TIM1SW_Field := 16#0#;
-      --  Timer8 clock source selection
-      TIM8SW         : CFGR3_TIM8SW_Field := 16#0#;
-      --  unspecified
-      Reserved_10_15 : Interfaces.STM32.UInt6 := 16#0#;
+      Reserved_7_15  : Interfaces.STM32.UInt9 := 16#0#;
       --  USART2 clock source selection
       USART2SW       : CFGR3_USART2SW_Field := 16#0#;
       --  USART3 clock source selection
       USART3SW       : CFGR3_USART3SW_Field := 16#0#;
-      --  UART4 clock source selection
-      UART4SW        : CFGR3_UART4SW_Field := 16#0#;
-      --  UART5 clock source selection
-      UART5SW        : CFGR3_UART5SW_Field := 16#0#;
       --  unspecified
-      Reserved_24_31 : Interfaces.STM32.Byte := 16#0#;
+      Reserved_20_31 : Interfaces.STM32.UInt12 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -868,15 +923,11 @@ package Interfaces.STM32.RCC is
       Reserved_2_3   at 0 range 2 .. 3;
       I2C1SW         at 0 range 4 .. 4;
       I2C2SW         at 0 range 5 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
-      TIM1SW         at 0 range 8 .. 8;
-      TIM8SW         at 0 range 9 .. 9;
-      Reserved_10_15 at 0 range 10 .. 15;
+      CECSW          at 0 range 6 .. 6;
+      Reserved_7_15  at 0 range 7 .. 15;
       USART2SW       at 0 range 16 .. 17;
       USART3SW       at 0 range 18 .. 19;
-      UART4SW        at 0 range 20 .. 21;
-      UART5SW        at 0 range 22 .. 23;
-      Reserved_24_31 at 0 range 24 .. 31;
+      Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
    -----------------

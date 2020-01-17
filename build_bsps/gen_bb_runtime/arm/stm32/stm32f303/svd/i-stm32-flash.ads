@@ -2,7 +2,7 @@
 --  Copyright (C) 2020, AdaCore
 --
 
---  This spec has been automatically generated from STM32F30x.svd
+--  This spec has been automatically generated from STM32F3x8.svd
 
 pragma Ada_2012;
 pragma Style_Checks (Off);
@@ -155,6 +155,7 @@ package Interfaces.STM32.Flash is
    subtype OBR_BOOT1_Field is Interfaces.STM32.Bit;
    subtype OBR_VDDA_MONITOR_Field is Interfaces.STM32.Bit;
    subtype OBR_SRAM_PARITY_CHECK_Field is Interfaces.STM32.Bit;
+   subtype OBR_SDADC12_VDD_MONITOR_Field is Interfaces.STM32.Bit;
    --  OBR_Data array element
    subtype OBR_Data_Element is Interfaces.STM32.Byte;
 
@@ -185,49 +186,49 @@ package Interfaces.STM32.Flash is
    --  Option byte register
    type OBR_Register is record
       --  Read-only. Option byte error
-      OPTERR            : OBR_OPTERR_Field;
+      OPTERR              : OBR_OPTERR_Field;
       --  Read-only. Level 1 protection status
-      LEVEL1_PROT       : OBR_LEVEL1_PROT_Field;
+      LEVEL1_PROT         : OBR_LEVEL1_PROT_Field;
       --  Read-only. Level 2 protection status
-      LEVEL2_PROT       : OBR_LEVEL2_PROT_Field;
+      LEVEL2_PROT         : OBR_LEVEL2_PROT_Field;
       --  unspecified
-      Reserved_3_7      : Interfaces.STM32.UInt5;
+      Reserved_3_7        : Interfaces.STM32.UInt5;
       --  Read-only. WDG_SW
-      WDG_SW            : OBR_WDG_SW_Field;
+      WDG_SW              : OBR_WDG_SW_Field;
       --  Read-only. nRST_STOP
-      nRST_STOP         : OBR_nRST_STOP_Field;
+      nRST_STOP           : OBR_nRST_STOP_Field;
       --  Read-only. nRST_STDBY
-      nRST_STDBY        : OBR_nRST_STDBY_Field;
+      nRST_STDBY          : OBR_nRST_STDBY_Field;
       --  unspecified
-      Reserved_11_11    : Interfaces.STM32.Bit;
+      Reserved_11_11      : Interfaces.STM32.Bit;
       --  Read-only. BOOT1
-      BOOT1             : OBR_BOOT1_Field;
+      BOOT1               : OBR_BOOT1_Field;
       --  Read-only. VDDA_MONITOR
-      VDDA_MONITOR      : OBR_VDDA_MONITOR_Field;
+      VDDA_MONITOR        : OBR_VDDA_MONITOR_Field;
       --  Read-only. SRAM_PARITY_CHECK
-      SRAM_PARITY_CHECK : OBR_SRAM_PARITY_CHECK_Field;
-      --  unspecified
-      Reserved_15_15    : Interfaces.STM32.Bit;
+      SRAM_PARITY_CHECK   : OBR_SRAM_PARITY_CHECK_Field;
+      --  Read-only. SDADC12_VDD_MONITOR
+      SDADC12_VDD_MONITOR : OBR_SDADC12_VDD_MONITOR_Field;
       --  Read-only. Data0
-      Data              : OBR_Data_Field;
+      Data                : OBR_Data_Field;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
    for OBR_Register use record
-      OPTERR            at 0 range 0 .. 0;
-      LEVEL1_PROT       at 0 range 1 .. 1;
-      LEVEL2_PROT       at 0 range 2 .. 2;
-      Reserved_3_7      at 0 range 3 .. 7;
-      WDG_SW            at 0 range 8 .. 8;
-      nRST_STOP         at 0 range 9 .. 9;
-      nRST_STDBY        at 0 range 10 .. 10;
-      Reserved_11_11    at 0 range 11 .. 11;
-      BOOT1             at 0 range 12 .. 12;
-      VDDA_MONITOR      at 0 range 13 .. 13;
-      SRAM_PARITY_CHECK at 0 range 14 .. 14;
-      Reserved_15_15    at 0 range 15 .. 15;
-      Data              at 0 range 16 .. 31;
+      OPTERR              at 0 range 0 .. 0;
+      LEVEL1_PROT         at 0 range 1 .. 1;
+      LEVEL2_PROT         at 0 range 2 .. 2;
+      Reserved_3_7        at 0 range 3 .. 7;
+      WDG_SW              at 0 range 8 .. 8;
+      nRST_STOP           at 0 range 9 .. 9;
+      nRST_STDBY          at 0 range 10 .. 10;
+      Reserved_11_11      at 0 range 11 .. 11;
+      BOOT1               at 0 range 12 .. 12;
+      VDDA_MONITOR        at 0 range 13 .. 13;
+      SRAM_PARITY_CHECK   at 0 range 14 .. 14;
+      SDADC12_VDD_MONITOR at 0 range 15 .. 15;
+      Data                at 0 range 16 .. 31;
    end record;
 
    -----------------
