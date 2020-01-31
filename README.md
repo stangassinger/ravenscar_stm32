@@ -14,3 +14,11 @@ gprinstall -P ravenscar_sfp_stm32f303.gpr --prefix=../../../../example/runtimes 
 echo "------- Compiling example ----------"
 cd ~/ravenscar_stm32/example
 gprbuild   -P blinky_stm32f303.gpr
+
+
+# Known Problems:
+# when debugging you may get this error:
+# ERROR flash_loader.c: write error, count == 1023
+# ERROR common.c: stlink_flash_loader_run(0x8000800) failed! == -1
+# it can be solved with:
+# st-flash erase
