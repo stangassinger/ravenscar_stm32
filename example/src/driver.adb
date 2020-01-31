@@ -6,7 +6,7 @@ package body Driver is
 
 
    task body Controller is
-      Period       : constant Time_Span := Milliseconds (75);  -- arbitrary
+      Period       : constant Time_Span := Milliseconds (7000);  -- arbitrary
       Next_Release : Time := Clock;
 
    begin
@@ -21,7 +21,7 @@ package body Driver is
 
 
    task body Worker is
-      Period       : constant Time_Span := Milliseconds (375);  -- arbitrary
+      Period       : constant Time_Span := Milliseconds (3000);  -- arbitrary
       Next_Release : Time := Clock;
 
    begin
