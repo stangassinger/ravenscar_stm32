@@ -16,6 +16,7 @@ A -gnatn2
 A -fcallgraph-info=su,da
 A -ffunction-sections
 A -fdata-sections
+A -g
 P DB ZX
 
 RN
@@ -24,7 +25,7 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U setup_pll%b		setup_pll.adb		da3b8a6c NE OO SU
+U setup_pll%b		setup_pll.adb		54be4bd3 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_conversion%s
 W interfaces%s		interfac.ads		interfac.ali
@@ -44,17 +45,17 @@ U setup_pll%s		setup_pll.ads		9252ee35 EE NE OO SU
 D ada.ads		20190518110050 76789da1 ada%s
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20200117163424 c7c723d8 interfaces.stm32%s
-D i-stm32-flash.ads	20200117163424 694c8455 interfaces.stm32.flash%s
-D i-stm32-rcc.ads	20200117163424 7b9ca35f interfaces.stm32.rcc%s
-D setup_pll.ads		20200117163210 9252ee35 setup_pll%s
-D setup_pll.adb		20200117163210 66853653 setup_pll%b
-D system.ads		20200117163211 aa7dab5a system%s
+D i-stm32.ads		20200131131207 c7c723d8 interfaces.stm32%s
+D i-stm32-flash.ads	20200131131207 694c8455 interfaces.stm32.flash%s
+D i-stm32-rcc.ads	20200131131207 7b9ca35f interfaces.stm32.rcc%s
+D setup_pll.ads		20200131125509 9252ee35 setup_pll%s
+D setup_pll.adb		20200131131142 e800f7ec setup_pll%b
+D system.ads		20200131125509 aa7dab5a system%s
 D s-bb.ads		20190518110050 09e072ae system.bb%s
-D s-bbbopa.ads		20200117163210 2d67a084 system.bb.board_parameters%s
-D s-bbmcpa.ads		20200117163210 d2cf1959 system.bb.mcu_parameters%s
-D s-bbpara.ads		20200117163211 431abc17 system.bb.parameters%s
-D s-stm32.ads		20200117163210 49d2747d system.stm32%s
+D s-bbbopa.ads		20200131125509 2d67a084 system.bb.board_parameters%s
+D s-bbmcpa.ads		20200131125509 d2cf1959 system.bb.mcu_parameters%s
+D s-bbpara.ads		20200131125509 431abc17 system.bb.parameters%s
+D s-stm32.ads		20200131125509 49d2747d system.stm32%s
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s b [setup_pll standard 30 11 none]
@@ -84,26 +85,21 @@ X 6 i-stm32-rcc.ads
 20M12*CR_HSION_Field{4|24M9}
 21M12*CR_HSIRDY_Field{4|24M9}
 24M12*CR_HSEON_Field{4|24M9}
-25M12*CR_HSERDY_Field{4|24M9}
 26M12*CR_HSEBYP_Field{4|24M9}
 27M12*CR_CSSON_Field{4|24M9}
 28M12*CR_PLLON_Field{4|24M9}
-29M12*CR_PLLRDY_Field{4|24M9}
 34m7*HSION{20M12} 8|184m24 294m21
 36m7*HSIRDY{21M12} 8|187r37
 44m7*HSEON{24M12} 8|193m24 300m21
-46m7*HSERDY{25M12} 8|197r37
 48m7*HSEBYP{26M12} 8|194m24 308m21
 50m7*CSSON{27M12} 8|301m21
 54m7*PLLON{28M12} 8|214m24 229m24 302m21
-56m7*PLLRDY{29M12} 8|231r37
 79M12*CFGR_SW_Field{4|26M9} 8|104r30
 86A9*CFGR_PPRE_Field_Array(83M12)<integer>
 91b7*As_Array{boolean} 8|263m22
 99a13*Arr{86A9} 8|264m22
 110M12*CFGR_PLLSRC_Field{4|24M9}
 120m7*SW{79M12} 8|261m10
-122m7*SWS{80M12} 8|275r39
 124m7*HPRE{81M12} 8|262m10
 126r7*PPRE{90R9} 8|263m10
 130m7*PLLSRC{110M12} 8|224m13
@@ -116,16 +112,16 @@ X 6 i-stm32-rcc.ads
 774M12*CSR_LSIRDY_Field{4|24M9}
 787m7*LSION{773M12} 8|204m25
 789m7*LSIRDY{774M12} 8|207r38
-940r7*CR{32R9} 8|184m21 187r34 193m21 194m21 197r34 214m21 229m21 231r34
-. 294m18 300m18 301m18 302m18 308m18
-942r7*CFGR{118R9} 8|218m21 260m18 275r34 297m18 305m18
+940r7*CR{32R9} 8|184m21 187r34 193m21 194m21 214m21 229m21 294m18 300m18
+. 301m18 302m18 308m18
+942r7*CFGR{118R9} 8|218m21 260m18 297m18 305m18
 944r7*CIR{181R9} 8|311m18
 948r7*APB1RSTR{349R9} 8|170m18 171m18
 954r7*APB1ENR{628R9} 8|167m18
 958r7*CSR{785R9} 8|204m21 207r34
-985r4*RCC_Periph{938R9} 8|167m7 170m7 171m7 184m10 187r23 193m10 194m10 197r23
-. 204m10 207r23 214m10 218m10 229m10 231r23 260m7 275r23 294m7 297m7 300m7
-. 301m7 302m7 305m7 308m7 311m7
+985r4*RCC_Periph{938R9} 8|167m7 170m7 171m7 184m10 187r23 193m10 194m10 204m10
+. 207r23 214m10 218m10 229m10 260m7 294m7 297m7 300m7 301m7 302m7 305m7 308m7
+. 311m7
 X 7 setup_pll.ads
 30U11*Setup_Pll 32r33 8|45b11 317l5 317t14
 X 8 setup_pll.adb
@@ -176,10 +172,10 @@ X 14 s-stm32.ads
 87E9*PLL_Source 8|225r29 226r29 14|90e6
 88n7*PLL_SRC_HSI{87E9} 8|226r50
 89n7*PLL_SRC_HSE{87E9} 8|225r50
-92E9*SYSCLK_Source 8|100r30 105r23 276r15 14|96e6
+92E9*SYSCLK_Source 8|100r30 105r23 14|96e6
 93n7*SYSCLK_SRC_HSI{92E9} 8|103r35
 94n7*SYSCLK_SRC_HSE{92E9} 8|102r50
-95n7*SYSCLK_SRC_PLL{92E9} 8|101r45 276r39
+95n7*SYSCLK_SRC_PLL{92E9} 8|101r45
 99n7*DIV2{98E9} 8|116r35
 99n14*DIV4{98E9} 8|117r35
 99n22*DIV8{98E9} 8|118r35

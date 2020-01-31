@@ -15,6 +15,7 @@ A -gnatn2
 A -fcallgraph-info=su,da
 A -ffunction-sections
 A -fdata-sections
+A -g
 P ZX
 
 RN
@@ -23,7 +24,7 @@ RV SPARK_05
 
 U unchecked_deallocation%s  unchdeal.ads	214516a4 NE OL GE
 
-D system.ads		20200117163211 aa7dab5a system%s
+D system.ads		20200131125509 aa7dab5a system%s
 D unchdeal.ads		20190518110050 214516a4 unchecked_deallocation%s
 G a e
 X 2 unchdeal.ads

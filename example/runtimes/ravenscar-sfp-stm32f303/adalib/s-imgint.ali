@@ -15,6 +15,7 @@ A -gnatn2
 A -fcallgraph-info=su,da
 A -ffunction-sections
 A -fdata-sections
+A -g
 P DB ZX
 
 RN
@@ -29,7 +30,7 @@ W system%s		system.ads		system.ali
 U system.img_int%s	s-imgint.ads		a8a64b98 NE OL PU PK
 W system%s		system.ads		system.ali
 
-D system.ads		20200117163211 aa7dab5a system%s
+D system.ads		20200131125509 aa7dab5a system%s
 D s-imgint.ads		20190518110050 02dbe0c2 system.img_int%s
 D s-imgint.adb		20190518110050 6ef468c0 system.img_int%b
 G a e

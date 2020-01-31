@@ -193,9 +193,9 @@ procedure Setup_Pll is
          RCC_Periph.CR.HSEON := 1;
          RCC_Periph.CR.HSEBYP := (if HSE_Bypass then 1 else 0);
 
-         loop
-            exit when RCC_Periph.CR.HSERDY = 1;
-         end loop;
+--           loop
+--              exit when RCC_Periph.CR.HSERDY = 1;
+--           end loop;
       end if;
 
       --  Configure low-speed internal clock if enabled
@@ -227,9 +227,9 @@ procedure Setup_Pll is
             others => <>);
 
          RCC_Periph.CR.PLLON := 1;
-         loop
-            exit when RCC_Periph.CR.PLLRDY = 1;
-         end loop;
+--           loop
+--              exit when RCC_Periph.CR.PLLRDY = 1;
+--           end loop;
       end if;
 
       --  Configure OverDrive mode
@@ -271,10 +271,10 @@ procedure Setup_Pll is
          others  => <>);
 
       if Activate_PLL then
-         loop
-            exit when RCC_Periph.CFGR.SWS =
-              SYSCLK_Source'Enum_Rep (SYSCLK_SRC_PLL);
-         end loop;
+--           loop
+--              exit when RCC_Periph.CFGR.SWS =
+--                SYSCLK_Source'Enum_Rep (SYSCLK_SRC_PLL);
+--           end loop;
 
          --  Wait until voltage supply scaling has completed
 
