@@ -28,7 +28,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 
 D ada.ads		20190518110050 76789da1 ada%s
 D a-textio.ads		20190518110050 ffc84532 ada.text_io%s
-D system.ads		20200209153822 aa7dab5a system%s
+D system.ads		20200315135449 aa7dab5a system%s
 D text_io.ads		20190518110050 21b2c898 text_io%s
 G a e
 X 1 ada.ads

@@ -119,3 +119,11 @@ dc61d0c00cbec665df0825ccacb7ec6c ../../../../ravenscar-sfp-stm32f303/runtime.xml
 3f10b53d680e18fdbd9abe4d416a49e2 ../../../../ravenscar-sfp-stm32f303/ada_source_path
 ed9cf9709ec3cf8f4466ab7fbbba9581 ../../../../ravenscar-sfp-stm32f303/ada_object_path
 2158cf49c27793b13389dd9282be183f ../../../../ravenscar-sfp-stm32f303/target_properties
+dc61d0c00cbec665df0825ccacb7ec6c ../../../../ravenscar-sfp-stm32f303/runtime.xml
+044d61d327e79c00639b86a757c2e81a ../../../ld/memory-map.ld
+8fba527e69b716666f1bb1add800ebe8 ../../../ld/common-ROM.ld
+4459cfa73b46d66f0921de8d88489c79 ../../../ld/common-RAM.ld
+dc61d0c00cbec665df0825ccacb7ec6c ../../../../ravenscar-sfp-stm32f303/runtime.xml
+3f10b53d680e18fdbd9abe4d416a49e2 ../../../../ravenscar-sfp-stm32f303/ada_source_path
+ed9cf9709ec3cf8f4466ab7fbbba9581 ../../../../ravenscar-sfp-stm32f303/ada_object_path
+2158cf49c27793b13389dd9282be183f ../../../../ravenscar-sfp-stm32f303/target_properties

@@ -38,7 +38,7 @@ D ada.ads		20190518110050 76789da1 ada%s
 D a-except.ads		20190518110050 5b5f0f2f ada.exceptions%s
 D a-except.adb		20190518110050 85a38458 ada.exceptions%b
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
-D system.ads		20200209153822 aa7dab5a system%s
+D system.ads		20200315135449 aa7dab5a system%s
 D s-fatgen.ads		20190518110050 49cbaf86 system.fat_gen%s
 D s-fatgen.adb		20190518110050 28cd35f5 system.fat_gen%b
 D s-fatllf.ads		20190518110050 4d5c1475 system.fat_llf%s

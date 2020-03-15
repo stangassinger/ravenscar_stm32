@@ -11,6 +11,7 @@ with Driver;               pragma Unreferenced (Driver);
 
 with Ada.Real_Time; use Ada.Real_Time;
 with Ada.Text_IO;
+with STM32.Board;
 procedure Blinky is
 
    Period       : constant Time_Span := Milliseconds (1000);  -- arbitrary
@@ -18,7 +19,7 @@ procedure Blinky is
    count :  Integer := 0;
 --     count :  constant Integer := 0;
 begin
-   --  STM32.Board.Initialize_LEDs;
+   STM32.Board.Initialize_LEDs;
 --   Ada.Text_IO.Put_Line ("xxxxxxxxx");
    loop
       --        Toggle (All_LEDs);

@@ -32,9 +32,9 @@ W system%s		system.ads		system.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D i-stm32.ads		20200209153849 c7c723d8 interfaces.stm32%s
-D i-stm32-gpio.ads	20200209153849 85c9d13d interfaces.stm32.gpio%s
-D system.ads		20200209153822 aa7dab5a system%s
+D i-stm32.ads		20200315135454 c7c723d8 interfaces.stm32%s
+D i-stm32-gpio.ads	20200315135454 85c9d13d interfaces.stm32.gpio%s
+D system.ads		20200315135449 aa7dab5a system%s
 D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s s [Tmoder_field_arrayBIP interfaces__stm32__gpio 24 4 none]

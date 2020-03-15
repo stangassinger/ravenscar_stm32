@@ -32,7 +32,7 @@ W system.memory_types%s	s-memtyp.ads		s-memtyp.ali
 
 D ada.ads		20190518110050 76789da1 ada%s
 D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
-D system.ads		20200209153822 aa7dab5a system%s
+D system.ads		20200315135449 aa7dab5a system%s
 D s-memcom.ads		20190518110050 7885dee2 system.memory_compare%s
 D s-memcom.adb		20190518110050 88f4b6ed system.memory_compare%b
 D s-memtyp.ads		20190518110050 bc90fe5b system.memory_types%s
