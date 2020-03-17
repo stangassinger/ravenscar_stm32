@@ -28,7 +28,7 @@ W system.semihosting%s	s-semiho.adb		s-semiho.ali
 U system.text_io%s	s-textio.ads		886a2493 NE OL PR PK
 W system%s		system.ads		system.ali
 
-D system.ads		20200315135449 aa7dab5a system%s
+D system.ads		20200315163606 aa7dab5a system%s
 D s-semiho.ads		20190518110050 bee239dc system.semihosting%s
 D s-textio.ads		20190518110050 22178fc9 system.text_io%s
 D s-textio.adb		20190518110050 9e7e8384 system.text_io%b
