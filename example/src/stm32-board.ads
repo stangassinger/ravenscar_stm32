@@ -1,3 +1,4 @@
+with STM32.GPIO;    use STM32.GPIO;
 
 package STM32.Board is
 

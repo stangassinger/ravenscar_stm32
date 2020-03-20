@@ -42,9 +42,9 @@
 --  This file provides definitions for the GPIO ports on the STM32F4 (ARM
 --  Cortex M4F) microcontrollers from ST Microelectronics.
 
-private with STM32_SVD.GPIO;
-with STM32.EXTI;
-with HAL.GPIO;
+--  private with STM32_SVD.GPIO;
+--  with STM32.EXTI;
+--  with HAL.GPIO;
 
 package STM32.GPIO is
 
