@@ -11,7 +11,7 @@ package STM32.Board is
 
        subtype User_LED is GPIO_Point;
 --
-       Green_LED : User_LED renames PG13a;
+       Green_LED : User_LED renames PB3;
 --     Red_LED   : User_LED renames PG14;
 --
 --     LCH_LED : User_LED renames Red_LED;
