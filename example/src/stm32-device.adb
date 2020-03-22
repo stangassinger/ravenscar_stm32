@@ -1,6 +1,7 @@
---  with System; use System;
+with System; use System;
 
-with STM32_SVD.RCC; use STM32_SVD.RCC;
+
+with Interfaces.STM32.RCC; use Interfaces.STM32.RCC;
 
 package body STM32.Device is
 

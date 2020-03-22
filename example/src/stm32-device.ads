@@ -1,5 +1,4 @@
---  with STM32_SVD;      use STM32_SVD;
---  with STM32_SVD.SDIO;
+
 with STM32.GPIO;     use STM32.GPIO;
 
 package STM32.Device is
