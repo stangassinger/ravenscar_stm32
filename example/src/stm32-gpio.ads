@@ -42,8 +42,8 @@
 --  This file provides definitions for the GPIO ports on the STM32F4 (ARM
 --  Cortex M4F) microcontrollers from ST Microelectronics.
 
---  private with STM32_SVD.GPIO;
 --  with STM32.EXTI;
+private with Interfaces.STM32.GPIO;
 with HAL.GPIO;
 
 package STM32.GPIO is
@@ -284,7 +284,7 @@ package STM32.GPIO is
 
 private
 
-     type GPIO_Port is new STM32_SVD.GPIO.GPIO_Peripheral;
+     type GPIO_Port is new Interfaces.STM32.GPIO.GPIOA_Peripheral;
 
    LCCK : constant UInt32 := 16#0001_0000#;
    --  As per the Reference Manual (RM0090; Doc ID 018909 Rev 6) pg 282,
