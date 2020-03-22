@@ -13,7 +13,7 @@
 --   COPYRIGHT(c) 2014 STMicroelectronics                                   --
 ------------------------------------------------------------------------------
 
-with  STM32.Device;
+
 
 package body STM32.Board is
 
@@ -41,7 +41,7 @@ package body STM32.Board is
 
    procedure Initialize_LEDs is
    begin
-         STM32.Device.Enable_Clock (All_LEDs);
+         STM32.Device.Enable_Clock (Green_LED);
 
 --        Configure_IO
 --          (All_LEDs,

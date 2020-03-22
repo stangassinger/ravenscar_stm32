@@ -25,10 +25,9 @@ package STM32.Device is
    GPIO_F : aliased GPIO_Port with Import, Volatile, Address => GPIOF_Base;
    GPIO_G : aliased GPIO_Port with Import, Volatile, Address => GPIOG_Base;
    GPIO_H : aliased GPIO_Port with Import, Volatile, Address => GPIOH_Base;
-   GPIO_I : aliased GPIO_Port with Import, Volatile, Address => GPIOI_Base;
-   GPIO_J : aliased GPIO_Port with Import, Volatile, Address => GPIOJ_Base;
-   GPIO_K : aliased GPIO_Port with Import, Volatile, Address => GPIOK_Base;
 
+   
+   
    PA0  : aliased GPIO_Point := (GPIO_A'Access, Pin_0);
    PA1  : aliased GPIO_Point := (GPIO_A'Access, Pin_1);
    PA2  : aliased GPIO_Point := (GPIO_A'Access, Pin_2);
@@ -157,55 +156,6 @@ package STM32.Device is
    PH13 : aliased GPIO_Point := (GPIO_H'Access, Pin_13);
    PH14 : aliased GPIO_Point := (GPIO_H'Access, Pin_14);
    PH15 : aliased GPIO_Point := (GPIO_H'Access, Pin_15);
-   PI0  : aliased GPIO_Point := (GPIO_I'Access, Pin_0);
-   PI1  : aliased GPIO_Point := (GPIO_I'Access, Pin_1);
-   PI2  : aliased GPIO_Point := (GPIO_I'Access, Pin_2);
-   PI3  : aliased GPIO_Point := (GPIO_I'Access, Pin_3);
-   PI4  : aliased GPIO_Point := (GPIO_I'Access, Pin_4);
-   PI5  : aliased GPIO_Point := (GPIO_I'Access, Pin_5);
-   PI6  : aliased GPIO_Point := (GPIO_I'Access, Pin_6);
-   PI7  : aliased GPIO_Point := (GPIO_I'Access, Pin_7);
-   PI8  : aliased GPIO_Point := (GPIO_I'Access, Pin_8);
-   PI9  : aliased GPIO_Point := (GPIO_I'Access, Pin_9);
-   PI10 : aliased GPIO_Point := (GPIO_I'Access, Pin_10);
-   PI11 : aliased GPIO_Point := (GPIO_I'Access, Pin_11);
-   PI12 : aliased GPIO_Point := (GPIO_I'Access, Pin_12);
-   PI13 : aliased GPIO_Point := (GPIO_I'Access, Pin_13);
-   PI14 : aliased GPIO_Point := (GPIO_I'Access, Pin_14);
-   PI15 : aliased GPIO_Point := (GPIO_I'Access, Pin_15);
-   PJ0  : aliased GPIO_Point := (GPIO_J'Access, Pin_0);
-   PJ1  : aliased GPIO_Point := (GPIO_J'Access, Pin_1);
-   PJ2  : aliased GPIO_Point := (GPIO_J'Access, Pin_2);
-   PJ3  : aliased GPIO_Point := (GPIO_J'Access, Pin_3);
-   PJ4  : aliased GPIO_Point := (GPIO_J'Access, Pin_4);
-   PJ5  : aliased GPIO_Point := (GPIO_J'Access, Pin_5);
-   PJ6  : aliased GPIO_Point := (GPIO_J'Access, Pin_6);
-   PJ7  : aliased GPIO_Point := (GPIO_J'Access, Pin_7);
-   PJ8  : aliased GPIO_Point := (GPIO_J'Access, Pin_8);
-   PJ9  : aliased GPIO_Point := (GPIO_J'Access, Pin_9);
-   PJ10 : aliased GPIO_Point := (GPIO_J'Access, Pin_10);
-   PJ11 : aliased GPIO_Point := (GPIO_J'Access, Pin_11);
-   PJ12 : aliased GPIO_Point := (GPIO_J'Access, Pin_12);
-   PJ13 : aliased GPIO_Point := (GPIO_J'Access, Pin_13);
-   PJ14 : aliased GPIO_Point := (GPIO_J'Access, Pin_14);
-   PJ15 : aliased GPIO_Point := (GPIO_J'Access, Pin_15);
-   PK0  : aliased GPIO_Point := (GPIO_K'Access, Pin_0);
-   PK1  : aliased GPIO_Point := (GPIO_K'Access, Pin_1);
-   PK2  : aliased GPIO_Point := (GPIO_K'Access, Pin_2);
-   PK3  : aliased GPIO_Point := (GPIO_K'Access, Pin_3);
-   PK4  : aliased GPIO_Point := (GPIO_K'Access, Pin_4);
-   PK5  : aliased GPIO_Point := (GPIO_K'Access, Pin_5);
-   PK6  : aliased GPIO_Point := (GPIO_K'Access, Pin_6);
-   PK7  : aliased GPIO_Point := (GPIO_K'Access, Pin_7);
-   PK8  : aliased GPIO_Point := (GPIO_K'Access, Pin_8);
-   PK9  : aliased GPIO_Point := (GPIO_K'Access, Pin_9);
-   PK10 : aliased GPIO_Point := (GPIO_K'Access, Pin_10);
-   PK11 : aliased GPIO_Point := (GPIO_K'Access, Pin_11);
-   PK12 : aliased GPIO_Point := (GPIO_K'Access, Pin_12);
-   PK13 : aliased GPIO_Point := (GPIO_K'Access, Pin_13);
-   PK14 : aliased GPIO_Point := (GPIO_K'Access, Pin_14);
-   PK15 : aliased GPIO_Point := (GPIO_K'Access, Pin_15);
 
- 
 
 end STM32.Device;
