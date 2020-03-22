@@ -44,7 +44,7 @@
 
 --  private with STM32_SVD.GPIO;
 --  with STM32.EXTI;
---  with HAL.GPIO;
+with HAL.GPIO;
 
 package STM32.GPIO is
 
