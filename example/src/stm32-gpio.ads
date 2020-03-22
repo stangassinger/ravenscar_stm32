@@ -211,17 +211,17 @@ package STM32.GPIO is
    --  characteristics specified by Config
 
    function Pin_IO_Mode (This : GPIO_Point) return Pin_IO_Modes with Inline;
-
-   function Interrupt_Line_Number
-     (This : GPIO_Point) return EXTI.External_Line_Number;
-   --  Returns the external interrupt line number that corresponds to the
-   --  GPIO point.
-
-   procedure Configure_Trigger
-     (This    : GPIO_Point;
-      Trigger : EXTI.External_Triggers);
-   --  For Point.Pin on Point.Port.all, connects the external line and enables
-   --  the external Trigger.  Enables the SYSCFG clock.
+-- GSt no EXTI defined right now
+--     function Interrupt_Line_Number
+--       (This : GPIO_Point) return EXTI.External_Line_Number;
+--     --  Returns the external interrupt line number that corresponds to the
+--     --  GPIO point.
+--
+--     procedure Configure_Trigger
+--       (This    : GPIO_Point;
+--        Trigger : EXTI.External_Triggers);
+--     --  For Point.Pin on Point.Port.all, connects the external line and enables
+--     --  the external Trigger.  Enables the SYSCFG clock.
 
    procedure Configure_Alternate_Function
      (This : GPIO_Point;
@@ -269,12 +269,12 @@ package STM32.GPIO is
       Config : GPIO_Port_Configuration);
    --  For Point.Pin on the Point.Port.all, configures the
    --  characteristics specified by Config
-
-   procedure Configure_Trigger
-     (Points  : GPIO_Points;
-      Trigger : EXTI.External_Triggers);
-   --  For Point.Pin on Point.Port.all, configures the
-   --  characteristics specified by Trigger
+-- GSt no Exti defined now
+--     procedure Configure_Trigger
+--       (Points  : GPIO_Points;
+--        Trigger : EXTI.External_Triggers);
+--     --  For Point.Pin on Point.Port.all, configures the
+--     --  characteristics specified by Trigger
 
    procedure Configure_Alternate_Function
      (Points : GPIO_Points;
@@ -284,7 +284,7 @@ package STM32.GPIO is
 
 private
 
-   type GPIO_Port is new STM32_SVD.GPIO.GPIO_Peripheral;
+     type GPIO_Port is new STM32_SVD.GPIO.GPIO_Peripheral;
 
    LCCK : constant UInt32 := 16#0001_0000#;
    --  As per the Reference Manual (RM0090; Doc ID 018909 Rev 6) pg 282,
