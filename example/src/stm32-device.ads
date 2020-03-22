@@ -14,8 +14,6 @@ package STM32.Device is
      with Inline;
    procedure Enable_Clock (Points : GPIO_Points)
      with Inline;
-
-  
    GPIO_A : aliased GPIO_Port with Import, Volatile, Address => GPIOA_Base;
    GPIO_B : aliased GPIO_Port with Import, Volatile, Address => GPIOB_Base;
    GPIO_C : aliased GPIO_Port with Import, Volatile, Address => GPIOC_Base;
@@ -25,8 +23,6 @@ package STM32.Device is
    GPIO_G : aliased GPIO_Port with Import, Volatile, Address => GPIOG_Base;
    GPIO_H : aliased GPIO_Port with Import, Volatile, Address => GPIOH_Base;
 
-   
-   
    PA0  : aliased GPIO_Point := (GPIO_A'Access, Pin_0);
    PA1  : aliased GPIO_Point := (GPIO_A'Access, Pin_1);
    PA2  : aliased GPIO_Point := (GPIO_A'Access, Pin_2);
