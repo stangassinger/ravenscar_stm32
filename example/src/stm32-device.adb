@@ -13,27 +13,27 @@ package body STM32.Device is
    procedure Enable_Clock (This : aliased in out GPIO_Port) is
    begin
       if This'Address = GPIOA_Base then
-         RCC_Periph.AHB1ENR.GPIOAEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOAEN := True;
       elsif This'Address = GPIOB_Base then
-         RCC_Periph.AHB1ENR.GPIOBEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOBEN := True;
       elsif This'Address = GPIOC_Base then
-         RCC_Periph.AHB1ENR.GPIOCEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOCEN := True;
       elsif This'Address = GPIOD_Base then
-         RCC_Periph.AHB1ENR.GPIODEN := True;
+         RCC_Peripheral.AHB1ENR.GPIODEN := True;
       elsif This'Address = GPIOE_Base then
-         RCC_Periph.AHB1ENR.GPIOEEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOEEN := True;
       elsif This'Address = GPIOF_Base then
-         RCC_Periph.AHB1ENR.GPIOFEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOFEN := True;
       elsif This'Address = GPIOG_Base then
-         RCC_Periph.AHB1ENR.GPIOGEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOGEN := True;
       elsif This'Address = GPIOH_Base then
-         RCC_Periph.AHB1ENR.GPIOHEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOHEN := True;
       elsif This'Address = GPIOI_Base then
-         RCC_Periph.AHB1ENR.GPIOIEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOIEN := True;
       elsif This'Address = GPIOJ_Base then
-         RCC_Periph.AHB1ENR.GPIOJEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOJEN := True;
       elsif This'Address = GPIOK_Base then
-         RCC_Periph.AHB1ENR.GPIOKEN := True;
+         RCC_Peripheral.AHB1ENR.GPIOKEN := True;
       else
          raise Unknown_Device;
       end if;
