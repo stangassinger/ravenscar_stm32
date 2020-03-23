@@ -40,12 +40,7 @@
 ------------------------------------------------------------------------------
 
 with System;          use System;
-with STM32_SVD.GPIO;  use STM32_SVD.GPIO;
-
-with STM32.RCC;
-with STM32.SYSCFG;
 with System.Machine_Code;
-
 package body STM32.GPIO is
 
    procedure Lock_The_Pin (This : in out GPIO_Port;  Pin : GPIO_Pin);
