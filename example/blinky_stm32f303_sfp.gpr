@@ -2,7 +2,7 @@
 
 --  project blinky_stm32f303 extends "common.gpr" is
 
-project Blinky_Stm32F303 extends "common.gpr" is
+project Blinky_Stm32F303_sfp extends "common.gpr" is
 
    for Runtime ("ada") use project'Project_Dir & "./runtimes/ravenscar-sfp-stm32f303";
    for Target use "arm-eabi";
@@ -14,5 +14,5 @@ project Blinky_Stm32F303 extends "common.gpr" is
 
 
 
-end Blinky_Stm32F303;
+end Blinky_Stm32F303_sfp;
 

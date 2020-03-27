@@ -9,11 +9,20 @@ cd  ~/ravenscar_stm32/build_bsps/gen_bb_runtime
 ./build_rts.py --bsps-only --output=build --prefix=. --link stm32f303
 cd ~/ravenscar_stm32/build_bsps/gen_bb_runtime/build/BSPs
 echo "------------- Compiling RTS -----------------------"
-gprbuild   -P ravenscar_sfp_stm32f303.gpr   -j0 -f -g
-gprinstall -P ravenscar_sfp_stm32f303.gpr --prefix=../../../../example/runtimes -f -p 
+gprbuild   -P zfp_stm32f303.gpr   -j0 -f -g
+gprinstall -P zfp_stm32f303.gpr --prefix=../../../../example/runtimes -f -p 
+
+#gprbuild   -P ravenscar_sfp_stm32f303.gpr   -j0 -f -g
+#gprinstall -P ravenscar_sfp_stm32f303.gpr --prefix=../../../../example/runtimes -f -p
+
+#gprbuild   -P ravenscar_full_stm32f303.gpr   -j0 -f -g
+#gprinstall -P ravenscar_full_stm32f303.gpr --prefix=../../../../example/runtimes -f -p
+
 echo "------- Compiling example ----------"
 cd ~/ravenscar_stm32/example
-gprbuild   -P blinky_stm32f303.gpr
+gprbuild   -P blinky_stm32f303_zfp.gpr
+#gprbuild   -P blinky_stm32f303_sfp.gpr
+#gprbuild   -P blinky_stm32f303_full.gpr
 
 
 # Known Problems:
