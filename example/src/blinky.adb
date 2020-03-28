@@ -1,4 +1,4 @@
-with Driver;               pragma Unreferenced (Driver);
+-- with Driver;               pragma Unreferenced (Driver);
 --  The Driver package contains the task that actually controls the app so
 --  although it is not referenced directly in the main procedure, we need it
 --  in the closure of the context clauses so that it will be included in the
@@ -22,7 +22,7 @@ begin
    STM32.Board.Initialize_LEDs;
 --   Ada.Text_IO.Put_Line ("xxxxxxxxx");
    loop
-      --        Toggle (All_LEDs);
+         STM32.Board.Toggle ( STM32.Board.Green_LED);
 --         Ada.Text_IO.Put_Line ("bbbbbb");
          Ada.Text_IO.Put_Line ("Y:  " & Integer'Image (count));
          count := count + 1;

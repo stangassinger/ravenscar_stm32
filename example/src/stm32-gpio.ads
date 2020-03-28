@@ -204,9 +204,9 @@ package STM32.GPIO is
    function Locked (This : GPIO_Point) return Boolean
      with Inline;
 
-   procedure Configure_IO
-     (This   : GPIO_Point;
-      Config : GPIO_Port_Configuration);
+--     procedure Configure_IO
+--       (This   : GPIO_Point;
+--        Config : GPIO_Port_Configuration);
    --  For Point.Pin on the Point.Port.all, configures the
    --  characteristics specified by Config
 
@@ -264,9 +264,9 @@ package STM32.GPIO is
    --  For the given GPIO port, locks the current configuration of Pin until
    --  the MCU is reset.
 
-   procedure Configure_IO
-     (Points : GPIO_Points;
-      Config : GPIO_Port_Configuration);
+--     procedure Configure_IO
+--       (Points : GPIO_Points;
+--        Config : GPIO_Port_Configuration);
    --  For Point.Pin on the Point.Port.all, configures the
    --  characteristics specified by Config
 -- GSt no Exti defined now

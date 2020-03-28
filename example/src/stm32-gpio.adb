@@ -354,41 +354,41 @@ package body STM32.GPIO is
    -- Configure_IO --
    ------------------
 
-   procedure Configure_IO
-     (This   : GPIO_Point;
-      Config : GPIO_Port_Configuration)
-   is
-      Index : constant GPIO_Pin_Index := GPIO_Pin'Pos (This.Pin);
-   begin
-      This.Periph.MODER.Arr (Index) := Pin_IO_Modes'Enum_Rep (Config.Mode);
-      This.Periph.PUPDR.Arr (Index) := Internal_Pin_Resistors'Enum_Rep (Config.Resistors);
-
-      case Config.Mode is
-         when Mode_In | Mode_Analog =>
-            null;
-         when Mode_Out =>
-            This.Periph.OTYPER.OT.Arr (Index) := Config.Output_Type = Open_Drain;
-            This.Periph.OSPEEDR.Arr (Index)   := Pin_Output_Speeds'Enum_Rep (Config.Speed);
-         when Mode_AF =>
-            This.Periph.OTYPER.OT.Arr (Index) := Config.AF_Output_Type = Open_Drain;
-            This.Periph.OSPEEDR.Arr (Index)   := Pin_Output_Speeds'Enum_Rep (Config.AF_Speed);
-            Configure_Alternate_Function (This, Config.AF);
-      end case;
-   end Configure_IO;
+--     procedure Configure_IO
+--       (This   : GPIO_Point;
+--        Config : GPIO_Port_Configuration)
+--     is
+--        Index : constant GPIO_Pin_Index := GPIO_Pin'Pos (This.Pin);
+--     begin
+--        This.Periph.MODER.Arr (Index) := Pin_IO_Modes'Enum_Rep (Config.Mode);
+--        This.Periph.PUPDR.Arr (Index) := Internal_Pin_Resistors'Enum_Rep (Config.Resistors);
+--
+--        case Config.Mode is
+--           when Mode_In | Mode_Analog =>
+--              null;
+--           when Mode_Out =>
+--              This.Periph.OTYPER.OT.Arr (Index) := Config.Output_Type = Open_Drain;
+--              This.Periph.OSPEEDR.Arr (Index)   := Pin_Output_Speeds'Enum_Rep (Config.Speed);
+--           when Mode_AF =>
+--              This.Periph.OTYPER.OT.Arr (Index) := Config.AF_Output_Type = Open_Drain;
+--              This.Periph.OSPEEDR.Arr (Index)   := Pin_Output_Speeds'Enum_Rep (Config.AF_Speed);
+--              Configure_Alternate_Function (This, Config.AF);
+--        end case;
+--     end Configure_IO;
 
    ------------------
    -- Configure_IO --
    ------------------
 
-   procedure Configure_IO
-     (Points : GPIO_Points;
-      Config : GPIO_Port_Configuration)
-   is
-   begin
-      for Point of Points loop
-         Point.Configure_IO (Config);
-      end loop;
-   end Configure_IO;
+--     procedure Configure_IO
+--       (Points : GPIO_Points;
+--        Config : GPIO_Port_Configuration)
+--     is
+--     begin
+--        for Point of Points loop
+--           Point.Configure_IO (Config);
+--        end loop;
+--     end Configure_IO;
 
    ----------------------------------
    -- Configure_Alternate_Function --
@@ -425,47 +425,47 @@ package body STM32.GPIO is
    -- Interrupt_Line_Number --
    ---------------------------
 
-   function Interrupt_Line_Number
-     (This : GPIO_Point) return EXTI.External_Line_Number
-   is
-   begin
-      return EXTI.External_Line_Number'Val (GPIO_Pin'Pos (This.Pin));
-   end Interrupt_Line_Number;
+--     function Interrupt_Line_Number
+--       (This : GPIO_Point) return EXTI.External_Line_Number
+--     is
+--     begin
+--        return EXTI.External_Line_Number'Val (GPIO_Pin'Pos (This.Pin));
+--     end Interrupt_Line_Number;
 
    -----------------------
    -- Configure_Trigger --
    -----------------------
 
-   procedure Configure_Trigger
-     (This    : GPIO_Point;
-      Trigger : EXTI.External_Triggers)
-   is
-      use STM32.EXTI;
-      Line : constant External_Line_Number := External_Line_Number'Val (GPIO_Pin'Pos (This.Pin));
-      use STM32.SYSCFG, STM32.RCC;
-   begin
-      SYSCFG_Clock_Enable;
-
-      Connect_External_Interrupt (This);
-      if Trigger in Interrupt_Triggers then
-         Enable_External_Interrupt (Line, Trigger);
-      else
-         Enable_External_Event (Line, Trigger);
-      end if;
-   end Configure_Trigger;
+--     procedure Configure_Trigger
+--       (This    : GPIO_Point;
+--        Trigger : EXTI.External_Triggers)
+--     is
+--        use STM32.EXTI;
+--        Line : constant External_Line_Number := External_Line_Number'Val (GPIO_Pin'Pos (This.Pin));
+--        use STM32.SYSCFG, STM32.RCC;
+--     begin
+--        SYSCFG_Clock_Enable;
+--
+--        Connect_External_Interrupt (This);
+--        if Trigger in Interrupt_Triggers then
+--           Enable_External_Interrupt (Line, Trigger);
+--        else
+--           Enable_External_Event (Line, Trigger);
+--        end if;
+--     end Configure_Trigger;
 
    -----------------------
    -- Configure_Trigger --
    -----------------------
 
-   procedure Configure_Trigger
-     (Points  : GPIO_Points;
-      Trigger : EXTI.External_Triggers)
-   is
-   begin
-      for Point of Points loop
-         Point.Configure_Trigger (Trigger);
-      end loop;
-   end Configure_Trigger;
+--     procedure Configure_Trigger
+--       (Points  : GPIO_Points;
+--        Trigger : EXTI.External_Triggers)
+--     is
+--     begin
+--        for Point of Points loop
+--           Point.Configure_Trigger (Trigger);
+--        end loop;
+--     end Configure_Trigger;
 
 end STM32.GPIO;
